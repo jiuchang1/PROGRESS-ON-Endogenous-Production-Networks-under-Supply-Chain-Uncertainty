@@ -524,12 +524,118 @@ skipbelow=10pt
 		\frac{\partial \mathcal{E}}{\partial\Sigma_{ij}} = - \frac{1}{2}(\rho-1) (\omega_j\mathbbm{1}_i + \omega_i\mathbbm{1}_j) \label{eq-29} 
 	\end{align}
 	
+	Using the definition of $\mathcal{E}$, we can write the first-order condition of the planner’s problem (\ref{eq-26}) at an interior solution as
+	\begin{align}
+		\nabla \bar{a}(\omega) + \mathcal{E} = 0 \label{eq-30}
+	\end{align}
+	where $\nabla$ is the gradient of the aggregate TFP shifter function $\bar{a}$. This first-order condition shows that the planner balances the benefit of a sector in terms of risk-adjusted TFP against its impact on the aggregate TFP shifter.
+	
+	\begin{prop}
+		Let $\gamma$ denote either the mean $\mu_i$ or an element of the covariance matrix $\Sigma_{ij}$. If $\omega \in \text{int} \mathcal{O}$, then the response of the equilibrium Domar weights to a change in $\gamma$ is given by
+		\begin{align}
+			\frac{d\omega}{d\gamma} = \underbrace{-\mathcal{H}^{-1}}\limits_{\text{propagation}} \times \underbrace{\frac{\partial\mathcal{E}}{\partial\gamma}}\limits_{\text{impulse}} \label{eq-31}
+		\end{align}
+		where the $n\times n$ negative definite matrix $\mathcal{H}$ is given by
+		\begin{align}
+			\mathcal{H} = \nabla^2\bar{a} + \frac{\partial\mathcal{E}}{\partial\omega} \label{eq-32}
+		\end{align}
+		and where the matrix $ \nabla^2\bar{a}$ is the Hessian of the aggregate TFP shifter function $\bar{a}$, and $\frac{\partial\mathcal{E}}{\partial\omega} = - \frac{d\text{Cov}[\varepsilon,\lambda]}{d\omega} = - (\rho-1)\Sigma$ is the Jacobian matrix of the risk-adjusted TFP vector $\mathcal{E}$.
+	\end{prop}
+	
+	The response of the Domar weights to a change in beliefs, as given by (\ref{eq-31}), can be decomposed into an impulse component and a propagation component. The impulse captures the direct impact of the change on risk-adjusted TFP. It is simply given by the partial derivative of $\mathcal{E}$ with respect to the moment of interest (see (\ref{eq-28}) and (\ref{eq-29}) above). This impulse is then propagated through $\mathcal{H}^{-1}$ to capture its full equilibrium effect on the Domar weights.
+	
+	\paragraph{Global complements and substitutes}
+	Just as $\mathcal{H}_i^{-1}$ captured local substitution patterns between inputs in the problem of firm $i$, $\mathcal{H}^{-1}$
+	captures global, economy-wide substitution patterns between sectors. If $\mathcal{H}_{ij}^{-1}<0$, we say that $i$ and $j$ are \textbf{global complements}. If instead $\mathcal{H}_{ij}^{-1}>0$, we say that $i$ and $j$ are \textbf{global substitutes}.
+	
+	The following corollary justifies this terminology by showing that the sign of $\mathcal{H}_{ij}^{-1}$ is sufficient to characterize how Domar weights respond to a change in the productivity process.
+	
+	\begin{cor}
+		If $w\in\text{int}\mathcal{O}$, then the following holds.
+		\begin{enumerate}[leftmargin=1cm, label=\arabic*.]
+			\item An increase in the expected value $\mu_i$ or a decline in the variance $\Sigma_{ii}$ leads to an increase in $\omega_j$ if $i$ and $j$ are global complements, and to a decline in $\omega_j$ if $i$ and $j$ are global substitutes.
+			\item An increase in the covariance $\Sigma_{ij}$, $i \neq j$, leads to a decline in $\omega_k$ if $k$ is global complement
+			with $i$ and $j$, and to an increase in $\omega_k$ if $k$ is global substitute with $i$ and $j$.
+		\end{enumerate}
+	\end{cor}
 	
 	
+	\paragraph{$\Sigma$ and global substition patterns}
+	The following lemma describes how an increase in covariance $\Sigma_{ij}$ between any two sectors affects the degree of global substitution between them.
 	
+	\begin{lemma}
+		An increase in the covariance $\Sigma_{ij}$ induces stronger global substitution between $i$ and $j$, in the sense that $\frac{\partial \mathcal{H}_{ij}^{-1}}{\partial\Sigma_{ij}}>0$.
+	\end{lemma}
 	
+	Intuitively, if the correlation between $\varepsilon_i$ and $\varepsilon_j$ becomes larger, the planner has stronger incentives to lower $\omega_j$ after an increase in $\omega_i$ in order to reduce aggregate risk. From (\ref{eq-32}), we see that the strength of that diversification mechanism depends on the household’s risk aversion through $\rho$.
 	
+	\paragraph{$\nabla^2\bar{a}$ and global substitution patterns}
+	The next lemma establishes sufficient conditions under which local complementarities translate into global complementarities.
 	
+	\begin{lemma}
+		Suppose that all input shares are (weak) local complements in the production of all goods, that is $[H_i^{-1}]_{kl} \leqslant 0$ for all $i$ and all $k\neq l$. If $\alpha\in\text{int}\mathcal{A}$, there exists a scalar $\bar{\Sigma}>0$ such that if $\|\Sigma\| \leqslant \bar{\Sigma}$, all sectors are global complements, that is $\mathcal{H}_{ij}^{-1} < 0$ for all $i\neq j$.
+	\end{lemma}
+	
+	\paragraph{Impact of Lemma 6}
+	\textcolor{blue}{\begin{enumerate}[leftmargin=1cm, label=\arabic*.]
+			\item \textbf{Generation of Global Complementarities}: Even if the local TFP shifter functions are neutral (i.e., \(\left[ H_i^{-1} \right]_{kl} = 0\) for all \(i\) and \(k \neq l\)), the equilibrium forces of the model generate global complementarities between sectors. This means that the model itself induces sectors to be globally complementary without requiring local TFP shifter functions to exhibit local complementarities.
+			\item \textbf{Equilibrium Forces} Suppose a sector \(i\) becomes more attractive, for instance due to an increase in \(\mu_i\). Any other sector \(j\) that relies on \(i\) (either directly or indirectly, if \(L_{ji} > 0\)) would benefit from that change and also become more attractive. This triggers an increase in Domar weights throughout the network and a shift away from labor, generating global complementarities between sectors.
+			\item \textbf{Policy and Practical Applications} Understanding the conditions under which local complementarities translate into global complementarities can help in formulating more effective economic policies, especially regarding resource allocation and inter-sector coordination. This is crucial for improving overall economic efficiency and welfare.
+			\item \textbf{Role of Covariance Matrix (\(\Sigma\))} The lemma highlights that the degree of global substitution or complementarity between sectors can be influenced by the covariance matrix \(\Sigma\). If \(\Sigma\) is sufficiently small, local complementarities can lead to global complementarities, while larger \(\Sigma\) might induce stronger global substitution forces due to diversification effects.
+	\end{enumerate}}
+
+	\paragraph{Parametrize $H_i$}
+	Let
+	\begin{align}
+		H_i^{-1} = \left[\begin{array}{cccc}
+			-1 & \frac{s}{n-1} & \cdots & \frac{s}{n-1} \\
+			\frac{s}{n-1} & -1 &  & \vdots \\
+			\vdots & & \ddots & \frac{s}{n-1} \\
+			\frac{s}{n-1} & \cdots & \frac{s}{n-1} & -1 \\
+		\end{array} \right] \label{eq-33}
+	\end{align}
+	where we impose $-(n-1) < s < 1$ to guarantee that $H_i^{-1}$ is negative definite. When $s < 0$ all input shares are complements in the production of good $i$, and when $s > 0$ they are substitutes. The next lemma describes sufficient conditions under which local substitution imply global substitution.
+	
+	\begin{lemma}
+		Suppose that all the TFP shifter functions $(a_1, \cdots ,a_n)$ take the form (\ref{eq-2}), with $\alpha_i^{\circ} = \alpha_j^{\circ}$ for all $i, j$, and that $H_i^{-1}$ is of the form (\ref{eq-33}) for all $i$. If $\alpha\in\text{int}\mathcal{A}$, there exists a scalar $\bar{\Sigma} > 0$ and a threshold $0 < \bar{s} < 1$ such that if $\|\Sigma\| \leqslant \bar{\Sigma}$ and $s > \bar{s}$, then all sectors are global substitutes, that is $\mathcal{H}_{ij}^{-1} > 0$ for all $i\neq j$.
+	\end{lemma}
+	
+	\paragraph{An approximate equation for the equilibrium Domar weights}
+	This section discusses how to derive an approximate equation for the equilibrium Domar weights using a Taylor expansion of \(\nabla\bar{a}\). The key steps and impacts are outlined as follows:
+	
+	First, we define the ideal shares \( \alpha^\circ \), which maximize the values of the TFP shifters \( (a_1, \dots, a_n) \). Based on this, we can write:
+	\begin{align}
+		\nabla \bar{a} (\omega) \approx \nabla \bar{a} (\omega^\circ) + \nabla^2 \bar{a} (\omega^\circ) (\omega - \omega^\circ) \label{eq-34}
+	\end{align}
+	
+	This approximation is accurate if the cost of deviating from the ideal shares embedded in the local TFP shifters is large.
+	
+	Using this approximation, the first-order condition (\ref{eq-30}) becomes linear in \( \omega \), allowing us to solve for the equilibrium Domar weights.
+	
+	\begin{lemma}
+		If \( \omega \in\text{int}\mathcal{O} \), the equilibrium Domar weights are approximately given by:
+		\begin{align}
+			\omega = \omega^\circ - [\mathcal{H}^\circ]^{-1} \mathcal{E}^\circ + O\left(\|\omega - \omega^\circ\|^2\right) \label{eq-35}
+		\end{align}
+		where the superscript \( \circ \) indicates that \( \mathcal{H} \) and \( \mathcal{E} \) are evaluated at \( \omega^\circ \).
+	\end{lemma}
+	
+	\paragraph{Impacts of Lemma 8}
+	\textcolor{blue}{\begin{enumerate}[leftmargin=1cm, label=\arabic*.]
+		\item \textbf{Global Substitution Patterns} This approximation shows that the equilibrium Domar weights can be explained in terms of the global substitution patterns embedded in \( [ \mathcal{H}^\circ]^{-1} \) and the expected attractiveness of all sectors, captured by the risk-adjusted productivity \(  \mathcal{E}^\circ \).
+		\item \textbf{Inter-Sector Interactions} If a sector \( i \) is endowed with a productivity process that is high in expectation or has a low covariance with the stochastic discount factor, \(  \mathcal{E}^\circ_i \) will be large. Since the diagonal elements of \( [ \mathcal{H}^\circ]^{-1} \) are negative, \( \omega_i \) tends to be larger than \( \omega^\circ_i \).
+		\item \textbf{Relative Weight Changes} A large \( \mathcal{E}^\circ_i \) also contributes to increasing the Domar weights of all sectors that are global complements with \( i \) and to decreasing the Domar weights of sectors that are global substitutes with \( i \).
+	\end{enumerate}}
+
+	
+	\subsection{The production network}
+	
+
+
+	
+
+
+
 	
 	
 	

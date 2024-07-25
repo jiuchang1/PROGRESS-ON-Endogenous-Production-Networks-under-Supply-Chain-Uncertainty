@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.28)  24 JUL 2024 11:31
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.28)  25 JUL 2024 11:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1164,17 +1164,17 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 [1
 
 
-] [2] [3] [4]
+] [2] [3] [4] [5]
 Overfull \hbox (12.77524pt too wide) in paragraph at lines 143--174
  [][] 
  []
 
-[5] [6]
+[6] [7]
 
 LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
 (Font)              using `TU/lmr/bx/n' instead on input line 190.
 
-[7] [8] [9]
+[8] [9] [10]
 Overfull \hbox (39.7244pt too wide) in paragraph at lines 271--272
 [][]\TU/lmr/bx/sc/10.95 Definition 1. []\TU/lmr/m/n/10.95 An equilibirum is a c
 hoice of technique $\OML/cmm/m/it/10.95 ^^K[] \OT1/cmr/m/n/10.95 = (\OML/cmm/m/
@@ -1183,36 +1183,36 @@ stic tuple $\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 P[]; C[]; L[]; X[]; Q[]\OT1
 /cmr/m/n/10.95 )$
  []
 
-[10] [11]
+[11] [12]
 LaTeX Font Info:    Trying to load font information for U+bbm on input line 359
 .
  (d:/texlive/2022/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [12]
+) [13]
 Missing character: There is no λ (U+03BB) in font [lmroman10-regular]:mapping=t
 ex-text;!
-[13] [14]
+[14] [15]
 File: F:/12004835/replication_package_final/replication_package_final/output_fi
 gures/fig1/1.eps Graphic file (type eps)
 <F:/12004835/replication_package_final/replication_package_final/output_figures
 /fig1/1.eps>
- [15]
+ [16]
 Missing character: There is no α (U+03B1) in font [lmroman10-regular]:mapping=t
 ex-text;!
-[16] [17] [18] [19] (./main_progress.aux)
+[17] [18] [19] [20] [21] [22] [23] (./main_progress.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main_progress.out' has not changed.
-(rerunfilecheck)             Checksum: FE4539AE36F96EB160F8946B2B7C24A8;2981.
+(rerunfilecheck)             Checksum: 6572B7305170FCD2CEDC7E2BDBF55A23;3155.
  ) 
 Here is how much of TeX's memory you used:
- 29353 strings out of 476179
- 574647 string characters out of 5813072
+ 29359 strings out of 476179
+ 574689 string characters out of 5813072
  1067514 words of memory out of 5000000
- 49548 multiletter control sequences out of 15000+600000
+ 49554 multiletter control sequences out of 15000+600000
  479852 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  100i,19n,104p,1134b,813s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main_progress.pdf (19 pages).
+Output written on main_progress.pdf (23 pages).
