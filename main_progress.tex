@@ -1,0 +1,536 @@
+\documentclass[11pt]{article}
+% \usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{geometry}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
+% \urlstyle{same}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{ulem}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{mathrsfs}
+\usepackage{subcaption}
+\usepackage{tikz}
+% \usepackage[version=4]{mhchem}
+%\usepackage{stmaryrd}
+\usepackage{float}
+\usepackage{booktabs}
+%\usepackage{pgfplots}
+\usepackage{annotate-equations}
+% \pgfplotsset{compat=1.18}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{listings}
+%\usepackage{bbold}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{mdframed}
+\usepackage{enumitem}
+\usepackage{zhlipsum}
+\newmdenv[
+backgroundcolor=gray!20,
+linecolor=black,
+linewidth=2pt,
+skipabove=10pt,
+skipbelow=10pt
+]{customquote}
+
+
+\makeatletter
+\makeatother
+\hypersetup{hidelinks,
+	colorlinks=true,
+	allcolors=black,
+	pdfstartview=Fit,
+	breaklinks=true
+}
+
+\theoremstyle{definition}
+\newtheorem{define}{\noindent \textbf{\textsc{Definition}}}
+\newtheorem{theorem}{\noindent \sc Theorem}
+\newtheorem{lemma}{\noindent \textbf{\textsc{Lemma}}}
+\newtheorem{prop}{\noindent \textbf{\textsc{Proposition}}}
+\newtheorem{cor}{\noindent \textbf{\textsc{Corollary}}}
+\newtheorem{example}{\noindent \sc Example}
+\newtheorem{remark}{\indent Remark}
+\newtheorem{assume}{\noindent \textbf{\textsc{Assumption}}}
+
+\title{PROGRESS ON \\
+	Endogenous Production Networks under Supply Chain Uncertainty}
+\author{Jinhua Wu}
+\newgeometry{left=2cm,right=2cm}
+\linespread{1.3}
+
+\newcommand{\basepath}{F:/12004835/replication_package_final/replication_package_final/output_figures}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\newpage
+	
+	\section{Some Notes on Introdution Part}
+	\subsection{Definitions}
+	\paragraph{Production Network} A production network refers to a complex system of interconnected entities and processes involved in the production and distribution of goods and services. This network includes suppliers, manufacturers, distributors, retailers, and end customers, all working together to ensure the efficient flow of products from raw materials to finished goods. The production network encompasses various stages such as procurement, manufacturing, logistics, and sales, each playing a crucial role in maintaining the overall efficiency and effectiveness of the production process. Effective management of a production network can lead to improved productivity, cost savings, and competitive advantage.
+	
+	\paragraph{Domar Weights} Domar weights, named after the economist Evsey Domar, are used to measure the contribution of each sector to the overall economy. Specifically, in a production network, the Domar weight of a sector is the ratio of that sector's output to the total GDP. This weight reflects the relative importance of a sector in the economy, considering both direct and indirect contributions through the production network. The concept is crucial in understanding how shocks to different sectors can propagate through the economy and affect overall productivity and welfare.
+	
+	\paragraph{Rish-averse representative household} A risk-averse representative household is a theoretical construct used in economic models to represent the behavior of a typical household that prefers to avoid risk. This household supplies a fixed amount of labor and makes consumption decisions to maximize its utility, which depends on the consumption of various goods. The utility function used in the model typically exhibits constant relative risk aversion (CRRA), meaning the household's aversion to risk remains constant regardless of its wealth level. The household makes consumption decisions after uncertainty in the economy is resolved, facing a budget constraint based on the prices of goods and the household’s income. The risk aversion parameter $(\rho)$ in the utility function quantifies how much the household dislikes risk: a higher $(\rho)$ indicates greater risk aversion. The household's decisions influence the production network because firms take into account the household's preferences and risk aversion when making their own production and pricing decisions.
+	
+	\paragraph{TFP Process} The TFP process refers to the Total Factor Productivity process, which is a crucial component in understanding economic growth and production efficiency. TFP measures the efficiency with which labor and capital are used together in the production process. The TFP process involves both the endogenous and exogenous factors that affect productivity in different sectors of the economy.
+	
+	\paragraph{Risk exposure} Risk exposure refers to the extent to which an entity (such as a firm, household, or economy) is vulnerable to various types of risks that can affect its performance or stability. In an economic context, risk exposure often involves uncertainties related to price fluctuations, supply chain disruptions, productivity shocks, and other external factors that can impact costs, revenues, and overall economic welfare.
+	
+	Variance of Unit Costs: Firms prefer inputs with stable prices and avoid techniques relying on inputs with positively correlated prices. This helps in diversifying risk and minimizing cost volatility.
+	
+	Correlation with Productivity Shocks: Firms prefer inputs whose prices are positively correlated with their productivity shocks. This means that during a negative shock, input prices are likely to be low, reducing expected cost increases.
+	
+	Risk-Adjusted Prices: Firms' technique choices are influenced by risk-adjusted prices, which account for the expected price of inputs and their covariance with the stochastic discount factor. Goods that are cheaper when aggregate consumption is low are particularly attractive.
+	
+	Impact on Supply Chain: Higher supplier volatility increases the likelihood of link destruction in supply relationships. Firms tend to move away from riskier suppliers to ensure stability.
+	
+	\paragraph{Hulten's Theorem} Hulten's theorem, named after economist Charles R. Hulten, is a fundamental result in the field of growth accounting and productivity analysis. The theorem states that the aggregate output (GDP) of an economy is a weighted sum of the outputs of its individual sectors, with the weights being the sectoral shares in total output. In simple terms, it implies that the proportional change in aggregate output is equal to the weighted sum of the proportional changes in the output of individual sectors.
+	
+	Mathematically, if $\Delta Y$ represents the change in aggregate output and $\Delta y_i$ represents the change in the output of sector $i$, Hulten's theorem can be expressed as:
+	\begin{align*}
+		\Delta Y = \sum\limits_i w_i \Delta y_i
+	\end{align*}
+	where $w_i$ is the Domar weight of sector $i$, reflecting its importance in the overall economy. It simplifies the analysis of how shocks to individual sectors affect the whole economy. It assumes a fixed production network, meaning the input-output relationships between sectors do not change in response to the shocks.
+	
+	\paragraph{Alternative Economy} An alternative economy refers to an economic system or a set of practices that differ from the traditional market-driven economy. It encompasses a wide range of economic models and activities that prioritize social, environmental, and ethical considerations over profit maximization. These alternative economic systems often emphasize community-oriented, cooperative, and sustainable practices.
+	
+	In the context of the provided document, alternative economies are used as benchmarks to evaluate the impact of various factors such as uncertainty on the production network and macroeconomic aggregates. Specifically, the document compares the baseline economy to alternative economies where firms are either unconcerned about risk when making sourcing decisions or have perfect foresight of productivity shocks. These comparisons help isolate the impact of uncertainty on the production network and its subsequent effect on GDP and welfare.
+	
+	\paragraph{Multi-sector economy} A multi-sector economy refers to an economic model that includes multiple sectors or industries, each producing different goods or services. This approach allows for a more detailed and realistic analysis of the economy by capturing the interactions and dependencies between various sectors. In a multi-sector economy, each sector may have its own production function, input requirements, and productivity shocks, and the outputs of some sectors serve as inputs for others, creating a complex network of interconnections.
+	
+	\paragraph{Productivity shifter} the productivity shifter is a function that represents how effectively a sector combines its inputs to produce output. It reflects the total factor productivity (TFP) of the sector, which varies depending on the chosen production technique $\alpha_i$. This shifter function is crucial in determining the productivity level of a sector and is influenced by the allocation of input shares among different suppliers.	
+	
+	\paragraph{Aggregate Risk} refers to the overall level of risk that affects the entire economy or a significant portion of it. It encompasses the uncertainties and potential fluctuations in economic variables that can impact multiple sectors simultaneously. Unlike idiosyncratic risk, which affects only individual firms or sectors, aggregate risk involves macroeconomic factors that can influence the entire economic system.
+	
+	\paragraph{Pareto Efficient Allocations} A Pareto efficient allocation is a state of resource distribution where it is impossible to make any individual better off without making at least one individual worse off. In other words, an allocation is Pareto efficient if no further reallocation can improve someone's situation without harming another person's situation. This concept is named after the Italian economist Vilfredo Pareto.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	\subsection{Summary for innovations} 
+	\paragraph{Modeling Supply Chain Uncertainty} The authors construct a model of endogenous network formation to investigate how firms' decisions to mitigate supply chain risks affect the production network and macroeconomic aggregates. This model builds on and extends the work of Acemoglu and Azar (2020).
+	
+	\paragraph{Focus on Uncertainty}Unlike previous models that assume firms know the realization of shocks when choosing production techniques, this model incorporates uncertainty and beliefs about future productivity shocks into the decision-making process. This change allows the model to capture the impact of uncertainty on the structure of the production network.
+	
+	\paragraph{Technique Choice and Production Network} The model allows firms to choose production techniques that specify which intermediate inputs to use and how to combine them. These techniques can vary in terms of productivity, and firms can adjust the importance of suppliers or drop them altogether. This flexibility captures adjustments in the production network along both intensive and extensive margins.
+	
+	\paragraph{Risk-Adjusted Prices}
+	Firms in the model choose techniques by considering risk-adjusted prices, reflecting the risk attitude of the representative household. This approach shows how aggregate risk and firms' sourcing decisions interact to shape the production network.
+	
+	\paragraph{Empirical Relevance}	
+	The authors provide a basic calibration of the model using U.S. data to evaluate the importance of these mechanisms. They also highlight the model's ability to predict that increased uncertainty leads firms to prefer more stable suppliers, which reduces macroeconomic volatility but also lowers aggregate output.
+	
+	\paragraph{Comparative Analysis with Alternative Economies}
+	The paper compares the baseline economy with alternative economies where firms either do not consider risk in their sourcing decisions or have perfect foresight of productivity shocks. This comparison helps to isolate the impact of uncertainty on the production network and macroeconomic outcomes.
+	
+	
+	\section{Model}
+	\subsection*{Notations and Symbols}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{c|l}
+			\hline
+			\textbf{Notations} & \textbf{Meanings} \\
+			\hline
+			$\rho$ & The utility function quantifies how much the household dislikes risk\\
+			$i\in\{1,\cdots,n\}$ & $n$ sectors \\
+			$\mathcal{A}_i$ & The representative firm in sector $i$has access to a set of production techniques\\ 
+			$\alpha_i = (\alpha_{i1},\cdots,\alpha_{in}) \in \mathcal{A}_i$ & Inputs used in production and combined in production \\
+			$A_i(\alpha_i)$ & a productivity shitfer \\
+			$L_i$ & Labor \\
+			$X_i = (X_{i1},\cdots, X_{in})$ & A vector of intermediate inputs \\
+			$\varepsilon_i$ & Stochastic component of sector $i$'s total factor productivity \\
+			$\varepsilon\sim\mathcal{N}(\mu,\Sigma)$ & Collect the previous shock $\varepsilon = (\varepsilon_1,\cdots,\varepsilon_n)$ \\
+			$\zeta(\alpha_i)$ & A normalization to simplify future expressions \\
+			$\mathcal{A} = \mathcal{A}_1\times\cdots\times\mathcal{A}_n$ & Cartesian product \\
+			$C = (C_1,\cdots,C_n)$ & consumption vector \\
+			$u(\cdot)$ & CRRA with a coefficient of relative risk aversion $\rho\geqslant 1$ \\
+			$P_i$ & the price of good $i$ \\
+			$\Lambda$ & Stochastic discount factor \\
+			$\overline{P}$ & Price index \\
+			$\beta$ & consumption shares \\
+			$K_i(\alpha_i, P)$ & The unit cost of production \\
+			$Q_i$ & the equilibrium demand for good $i$ \\
+			$\mathcal{L}(\alpha) = (I - \alpha)^{-1}$ & The Leontief inverse \\
+			$\omega_i$ & Domar weight of sector $i$ \\
+			$\alpha_i^*$ & a technique to maximize expected discounted profits \\
+			$\lambda(\alpha^*)$ & stochastic discount factor \\
+			$k_i(\alpha_i,\alpha^*)$ & The log of unit cost \\
+			$\mathcal{R}(\alpha^*)$ & The vector of equilibirum risk-adjusted price \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\subsection{Firms and production functions}
+	\paragraph{The corresponding production function} 
+	\begin{align}
+		F(\alpha_i, L_i, X_i) = e^{\varepsilon_i} A_i(\alpha_i) \zeta(\alpha_i) L_i^{1 - \sum\limits_{j=1}^n \alpha_{ij}} \prod\limits_{j=1}^n X_{ij}^{\alpha_{ij}} \label{eq-1}
+	\end{align}
+	where $L_i$ is labor and $X_i = (X_{i1},\cdots, X_{in})$ is a vector of intermediate inputs. The term $\varepsilon_i$ is the stochastic component of sector $i$'s total factor productivity. Finally, $\zeta(\alpha_i)$ is a normalization to simplify future expressions.
+	
+	\paragraph{Set of feasible production techniques} 
+	\begin{align*}
+		\mathcal{A}_i = \left\lbrace \alpha_i \in [0,1]^n :\ \sum\limits_{j=1}^n \alpha_{ij} \leqslant \bar{\alpha}_i \right\rbrace
+	\end{align*}
+	where $0< 1 - \bar{\alpha}_i < 1$ provides a lower bound on the share of labor in the production of good $i$. 
+	
+	\begin{assume}
+		$A_i(\alpha_i)$ is smooth and strictly log-concave.
+	\end{assume}
+	
+	For each sector $i$, there is a unique vector of ideal input shares $\alpha_i^{\circ}\in\mathcal{A}_i$ that maximize $A_i$ and that represents the most productive way to combine intermediate inputs to produce good $i$. \textbf{We normalize $A_i(\alpha_i^{\circ}) = 1$ for all $i$.}
+	
+	\paragraph{Example} One example of a function $A_i(\alpha_i)$ that satisfies Assumption 1 is the quadratic form 
+	\begin{align}
+		\log A_i(\alpha_i) = \frac{1}{2} (\alpha_i - \alpha_i^{\circ})^{T} \bar{H}_i (\alpha_i - \alpha_i^{\circ}) \label{eq-2}
+	\end{align}
+	where $\bar{H}_i$ is a negative-definite matrix that is also the Hessian of log $A_i$.
+	
+	\subsection{Household preferences}
+	\paragraph{CRRA}
+	A risk-averse representative household supplies one unit of labor in elastically and chooses aconsumption vector $C = (C_1,\cdots,C_n)$ to maximize
+	\begin{align}
+		u\left(\left(\frac{C_1}{\beta_1}\right)^{\beta_1}\cdots \left(\frac{C_n}{\beta_n}\right)^{\beta_n}  \right) \label{eq-3}
+	\end{align}
+	where $\beta_i>0$ for all $i$ and $\sum\limits_{i=1}^n \beta_i = 1$. We refer to $Y = \prod\limits_{i=1}^n (\beta_i^{-1} C_i)^{\beta_i}$ as aggregate consumption or, equivalently in this setting, GDP. The utility function $u(\cdot)$ is CRRA\footnote{CRRA stands for Constant Relative Risk Aversion. It is a type of utility function used in economics to describe the behavior of agents who have a consistent attitude towards risk, regardless of their wealth level. The CRRA utility function is commonly used in models of consumer behavior, finance, and macroeconomics because it has several desirable properties, including scalability and tractability.} with a coefficient of relative risk aversion $\rho\geqslant 1$. The household makes consumption decisions after uncertainty is resolved and so in each state of the world it faces the budget constraint
+	\begin{align}
+		\sum\limits_{i=1}^n P_iC_i \leqslant 1 \label{eq-4}
+	\end{align}
+	where $P_i$ is the price of good $i$, and the wage is used as the numeraire.
+	
+	\paragraph{Stochastic discount factor} 
+	Firms are owned by the representative household and maximize expected profits discounted by the household’s stochastic discount factor
+	\begin{align}
+		\Lambda = u^{\prime}(Y) / \overline{P} \label{eq-5}
+	\end{align}
+	wbere $\overline{P} = \prod\limits_{i=1}^n P_i^{\beta_i}$ is the price index. 
+	
+	\paragraph{Log GDP}
+	From the optimization problem of the household it is straightforward to show that
+	\begin{align}
+		y = -\beta^T p \label{eq-6}
+	\end{align}
+	where $y = \log Y$, $p = (\log P_1,\cdots,\log P_n)$ and $\beta = (\beta_1,\cdots,\beta_n)$. Log GDP is thus the negative of the sum of log prices weighted by the consumption shares $\beta$. Intuitively, as prices decrease relative to wages, the household can purchase more goods, and aggregate consumption increases.
+	
+	\subsection{Unit cost minimization}
+	\paragraph{The second stage problem}
+	Under a given technique $\alpha_i$, the cost minimization problem of a firm in sector $i$ is
+	\begin{align}
+		K_i(\alpha_i, P) = \min\limits_{L_i, X_i} \left( L_i + \sum\limits_{j=1}^n P_j X_{ij} \right),\quad \text{subject to} \ F(\alpha_i, L_i, X_i) \geqslant 1 \label{eq-7}
+	\end{align}
+	
+	\textcolor{blue}{Thus we construct a Lagrangian Function as:}
+	\begin{align*}
+		\color{blue} \mathcal{L} = L_i + \sum_{j=1}^{n} P_j X_{ij} + \lambda \left(1 - e^{\varepsilon_i} A_i(\alpha_i) \zeta(\alpha_i) \left(\prod\limits_{j=1}^{n} X_{ij}^{\alpha_{ij}}\right) L_i^{\left(1 - \sum\limits_{j=1}^{n} \alpha_{ij}\right)} \right)
+	\end{align*}
+	
+	\textcolor{blue}{First-Order Conditions: Taking the first-order conditions with respect to \(L_i\), \(X_{ij}\), and \(\lambda\), we get:}
+	\textcolor{blue}{\begin{align*}
+	 	0 &= 1 - \left(1 - \sum\limits_{j=1}^{n} \alpha_{ij}\right)  e^{\varepsilon_i} \lambda A_i(\alpha_i) \zeta(\alpha_i) \left(\prod\limits_{j=1}^{n} X_{ij}^{\alpha_{ij}}\right) L_i^{\left(- \sum\limits_{j=1}^{n} \alpha_{ij}\right)} \\
+		0 &= P_j - \lambda e^{\varepsilon_i} A_i(\alpha_i) \zeta(\alpha_i) L_i^{\left(1 - \sum\limits_{j=1}^{n} \alpha_{ij}\right)} \left(\prod\limits_{j=1}^{n} X_{ij}^{\alpha_{ij}}\right) X_{ij}^{- 1} \alpha_{ij} 
+	\end{align*}}
+	\textcolor{blue}{Thus we could get the following things:}
+	\textcolor{blue}{\begin{align*}
+			L_i &= \left(1 - \sum\limits_{j=1}^n \alpha_{ij} \right) \lambda \\
+			X_{ij} &= \frac{\lambda \alpha_{ij}}{P_j}
+	\end{align*}}
+	\textcolor{blue}{Thus we could substitute to the equation and get the following:}
+	\begin{align}
+		K_i(\alpha_i, P) = \frac{1}{e^{\varepsilon_i} A_i(\alpha_i)} \prod\limits_{j=1}^n P_j^{\alpha_{ij}} \label{eq-8}
+	\end{align}
+	
+	\subsection{Technique choice}
+	\paragraph{The first stage problem} 
+	Given an expression for $K_i$, the first stage of the representative firm’s problem is to pick a technique $\alpha_i\in \mathcal{A}_i$ to maximize expected discounted profits, that is,
+	\begin{align}
+		\alpha_i^* \in \underset{\alpha_i \in \mathcal{A}_i}{\arg\max}\ \mathbb{E}\ [\Lambda Q_i (P_i - K_i(\alpha_i, P))] \label{eq-9}
+	\end{align}
+	
+	where $Q_i$ is the equilibrium demand for good $i$, and where the profits in different states of the world are weighted by the household’s stochastic discount factor $\Lambda$. The representative firm takes $P$, $Q_i$ and $\Lambda$ as given, and so the only term in (\ref{eq-9}) over which it has any control is the unit cost $K_i(\alpha_i, P)$.
+	
+	\subsection{Equilibrium conditions}
+	\paragraph{Competitive Pressure} 
+	In equilibrium, competitive pressure pushes prices to be equal to unit costs, so that
+	\begin{align}
+		P_i = K_i(\alpha_i, P) \quad \text{for all} \ i\in\{1,2,\cdots, n\} \label{eq-10}
+	\end{align}
+	
+	\begin{define}
+		An equilibirum is a choice of technique $\alpha^* = (\alpha_1^*,\cdots, \alpha_n^*)$ and a stochastic tuple $(P^*, C^*, L^*, X^*, Q^*)$ such that
+		\begin{enumerate}[leftmargin=1cm, label=\arabic*.]
+			\item (Optimal technique choice) For each $i\in\{1,2,\cdots,n\}$, the technique choice $\alpha_i^*\in\mathcal{A}_i$ solves (\ref{eq-9}) given price $P^*$, demand $Q^*_i$ and the stochastic discount factor $\Lambda^*$ given by (\ref{eq-5}).
+			\item (Optimal input choice) For each $i\in\{1,2,\cdots,n\}$, factor demands per unit of output $L_i^*/Q_i^*$ and $X_i^*/Q_i^*$ are a solution to (\ref{eq-7}) given price $P^*$ and the chosen technique $\alpha_i*$.
+			\item (Consumer maximization) The consumption vector $C^*$ maximizes (\ref{eq-3}) subject to (\ref{eq-4}) given prices $P^*$.
+			\item (Unit cost pricing) For each $i\in\{1,2,\cdots,n\}$, $P^*_i$ solves (\ref{eq-10}) where $K_i(\alpha_i^*, P^*)$ is given by (\ref{eq-8}).
+			\item (Market clearning) For each $i\in\{1,2,\cdots,n\}$,
+			\begin{align}
+				C_i^* + \sum\limits_{j=1}^n X_{ji}^* = Q_i^* = F_i(\alpha_i^*, L_i^*, X_i^*), \quad \text{and} \ \sum\limits_{i=1}^n L_i^* = 1 \label{eq-11}
+			\end{align}
+		\end{enumerate}
+	\end{define}
+	
+	
+	\section{Equilibirum prices and GDP in a fixed-network economy}
+	\paragraph{Domar weight} 
+	We also define the Domar weight $\omega_i$ of sector $i$ as the ratio of its sales to nominal GDP, such that
+	\begin{align*}
+		\omega_i = \frac{P_iQ_i}{P^TC}
+	\end{align*}
+	Also $\omega^T = \beta^T \mathcal{L}(\alpha) > 0$ in the model.
+	
+	\begin{lemma}
+		Under a given network $\alpha$, the vector of log prices is given by
+		\begin{align}
+			p(\alpha) = -\mathcal{L}(\alpha)(\varepsilon + a(\alpha)) \label{eq-12}
+		\end{align}
+		and log GDP is given by
+		\begin{align}
+			y(a) = \omega (a)^T (\varepsilon + a(\alpha)) \label{eq-13}
+		\end{align}
+		where $a(\alpha) = (\log A_i(\alpha_i),\cdots, \log A_n(\alpha_n))$
+	\end{lemma}
+	
+	
+	\paragraph{The first and second moments}
+	\begin{align}
+		\mathbb{E}[y(\alpha)] = \omega(a)^T (\mu + a(\alpha)) \quad \mathbb{V}[y(\alpha)] = \omega (a)^T \Sigma\omega(\alpha) \label{eq-14}
+	\end{align}
+	
+	
+	\begin{cor}
+		For a fixed production network $\alpha$, the following holds:
+		\begin{enumerate}[leftmargin=1cm, label=\arabic*.]
+			\item The impact of a change in expected TFP $\mu_i$ on the moments of log GDP is given by
+			\begin{align*}
+				\frac{\partial\mathbb{E}[y]}{\partial \mu_i} = \omega_i \quad \frac{\partial \mathbb{V}}{\partial\mu_i} = 0
+			\end{align*}
+			\item The impact of a change in volatility $\Sigma_{ij}$ on the moments of log GDP is given by
+			\begin{align*}
+				\frac{\partial\mathbb{E}[y]}{\partial \Sigma_{ij}} = 0 \quad \frac{\partial \mathbb{V}}{\partial\Sigma_{ij}} = \omega_i\omega_j
+			\end{align*}
+		\end{enumerate}
+	\end{cor}
+	
+	
+	\section{Firm decisions}
+	\paragraph{Log of those things}
+	Log of the stochastic discount factor
+	\begin{align*}
+		\lambda(\alpha^*) = \log\Lambda(\alpha^*)
+	\end{align*}
+	
+	The log of the unit cost
+	\begin{align*}
+		k_i(\alpha_i,\alpha^*) = \log K_i(\alpha_i, P^*(\alpha^*))
+	\end{align*}
+	where $\alpha^*$ denotes the equilibrium network.
+	
+	\paragraph{Probelm of the firm}
+	Using this notation, we can reorganize the problem of the firm (\ref{eq-9}) as
+	\begin{align}
+		\alpha_i^* \in \underset{\alpha_i\in\mathcal{A}_i}{\arg\min} \mathbb{E}[k_i(\alpha_i, \alpha^*)] + \text{Cov}[\lambda(\alpha^*), k_i(\alpha_i,\alpha^*)] \label{eq-15}
+	\end{align}
+	\textcolor{blue}{Combining the equation with (\ref{eq-5}) we can write $\lambda = \log(\Lambda)$ as}
+	\begin{align*}
+		\color{blue}\lambda(\alpha^*) = -(1-\rho) \sum\limits_{i=1}^n \beta_ip_i(\alpha^*)
+	\end{align*}
+	\textcolor{blue}{Taking the log of (\ref{eq-8}) yields}
+	\begin{align*}
+		\color{blue} k_i(\alpha_i,\alpha^*) = -(\varepsilon_i + a(\alpha_i)) + \sum\limits_{j=1}^n \alpha_{ij} p_j (\alpha^*)
+	\end{align*}
+	\textcolor{blue}{Both $\lambda(\alpha^*)$ and $k_i(\alpha_i,\alpha^*)$ are normally distributed since they are linear combinations of $\varepsilon$ and the
+	log price vector, which is normally distributed by Lemma 1.}
+	
+	\textcolor{blue}{Turning to the firm problem 9, we can write}
+	\begin{align*}
+		\color{blue} \alpha_i^* \in \underset{\alpha_i\in\mathcal{A}_i}{\arg\min} \mathbb{E}\left[\Lambda\frac{\beta^T\mathcal{L}(\alpha^*)\mathbbm{1}_i}{P_i} K_i(\alpha_i, P) \right],
+	\end{align*}
+	\textcolor{blue}{where we have used (A.7) from Supplemental Appendix A in Kopytov et al.(2024). We can drop $\beta^T\mathcal{L}(\alpha^*)\mathbbm{1}_i>0$ since it is a deterministic scalar that does not depend on $\alpha_i$. Rewriting thisequation in terms of log quantities yields}
+	\begin{align*}
+		\color{blue} \alpha_i^* \in \underset{\alpha_i\in\mathcal{A}_i}{\arg\min} \mathbb{E}[k_i(\alpha_i, \alpha^*)] + \text{Cov}[\lambda(\alpha^*), k_i(\alpha_i,\alpha^*)]
+	\end{align*}
+	
+	The objective function in (\ref{eq-15}) captures how beliefs and uncertainty affect the production network. Its first term implies that the firm prefers to adopt techniques that provide, in expectation, a lower unit cost of production. Taking the expected value of the log of (\ref{eq-8}), we can write this term as
+	\begin{align*}
+		\mathbb{E} [k_i(\alpha_i,\alpha^*)] = -\mu_i - a_i(\alpha_i) + \sum\limits_{j=1}^n \alpha_{ij}\mathbb{E}[p_j]
+	\end{align*}
+	
+	\textcolor{blue}{Thus we could substitute $k_i(\alpha_i,\alpha^*)$ to the (\ref{eq-15}):}
+	\textcolor{blue}{\begin{align*}
+		 \mathbb{E}[k_i(\alpha_i,\alpha^*)] &= \mathbb{E}[\log K_i(\alpha_i,\alpha^*)] = \mathbb{E}[-\varepsilon_i - \log A_i(\alpha_i) + \sum\limits_{j=1}^n \alpha_{ij} P_j] \\
+		& = -\mu_i - \eqnmarkbox[red]{1}{a_i(\alpha_i)} +  \sum\limits_{j=1}^n \alpha_{ij} \mathbb{E}[P_j] 
+	\end{align*}}
+	\annotate[yshift = -0.5em]{below, right}{1}{By the definition $a(\alpha) = (\log A_i(\alpha_i), \cdots, \log A_n(\alpha_n))$}
+	
+	so that, unsurprisingly, the firm prefers techniques that have high productivity ai and that rely on inputs that are expected to be cheap.
+	
+	The second term in (\ref{eq-15}) captures the importance of aggregate risk for the firm’s decision. It implies that the firm prefers to have a low unit cost in states of the world in which the marginal utility of consumption is high. As a result, the coefficient of risk aversion $\rho$ of the household indirectly determines how risk-averse firms are. We can expand this term as
+	\begin{align*}
+		\text{Cov}[\lambda,k_i] = \text{Corr}[\lambda, k_i]\sqrt{\mathbb{V}[\lambda]}\sqrt{\mathbb{V}[k_i]}
+	\end{align*}
+	which implies that the firm tries to minimize the correlation of its unit cost with λ$\lambda$. Furthermore, since prices and GDP tend to move in opposite directions (see Lemma 1), $\text{Corr}[\lambda, k_i]$ is typically positive, and so firms seek to minimize the variance of their unit cost. This has several implications for their choice of suppliers. To see this, we can use (\ref{eq-8}) to write
+	\textcolor{blue}{\begin{align*}
+		\mathbb{V}[k_i(\alpha_i,\alpha)] &= \mathbb{V}[\log K_i(\alpha_i,\alpha)] = \mathbb{V}[-\varepsilon_i - \log A_i(\alpha_i) + \sum\limits_{j=1}^n \alpha_{ij} P_j] \\
+		& = \Sigma_{ii} + \sum\limits_{j=1}^n \alpha_{ij} \mathbb{V}[p_j] + \sum\limits_{j\neq k} \alpha_{ij}\alpha_{ik} \text{Cov}[p_j,p_k] + 2\text{Cov}\left[-\varepsilon_i,\sum\limits_{j=1}^n \alpha_{ij}p_j \right] 
+	\end{align*}}
+	
+	\textcolor{blue}{Thus we could conclude:}
+	\begin{align}
+		\mathbb{V}[k_i(\alpha_i,\alpha)] = \sum\limits_{j=1}^n \alpha_{ij} \mathbb{V}[p_j] + \sum\limits_{j\neq k} \alpha_{ij}\alpha_{ik} \text{Cov}[p_j,p_k] + 2\text{Cov}\left[-\varepsilon_i,\sum\limits_{j=1}^n \alpha_{ij}p_j \right]  +  \Sigma_{ii} \label{eq-16}
+	\end{align}
+	
+	\begin{lemma}
+		In equilibirum, the technique choice problem of the representative firm in sector $i$ is
+		\begin{align}
+			\alpha_i^* \in \underset{\alpha_i\in\mathcal{A}_i}{\arg\max} a_i(\alpha_i) - \sum\limits_{j=1}^n \alpha_{ij}\mathcal{R}_j(\alpha^*) \label{eq-17}
+		\end{align}
+		where
+		\begin{align}
+			\mathcal{R}(\alpha^*) = \mathbb{E}[p(\alpha^*)] + \text{Cov}[p(\alpha^*),\lambda(\alpha^*)] \label{eq-18}
+		\end{align}
+		is the vector of equilibirum risk-adjusted price, and where
+		\begin{align*}
+			\mathbb{E}[p(\alpha^*)] = -\mathcal{L}(\alpha^*) (\mu + a(\alpha^*)) \quad \text{Cov}[p(\alpha^*),\lambda(\alpha^*)] = (\rho-1)\mathcal{L}(\alpha^*)\Sigma [\mathcal{L}(\alpha^*)]^T\beta
+		\end{align*}
+	\end{lemma}
+	
+	\paragraph{First-order Condition} 
+	Se can take the first-order condition for an interior solution of problem (\ref{eq-17}) and use the implicit function theorem to write
+	\begin{align}
+		\frac{\partial \alpha_{ij}}{\partial \mathcal{R}_k} = [H_i^{-1}(\alpha_i)]_{jk} \label{eq-19}
+	\end{align}
+	where $H^{-1}_i$ is the inverse of the Hessian matrix of $a_i$ and where $[\cdot]_{jk}$ denotes its element $j,k$. This equation implies that if a good $k$ becomes marginally more expensive or more risky (higher $\mathcal{R}_k$), firm $i$ responds by changing its share $\alpha_{ik}$ of good $k$ by $[H_i^{-1} (\alpha_i)]{}_{kk}$. Since $a_i$ is strictly concave by Assumption 1, the diagonal elements of $H_i^{-1}$ are negative, and so a higher $\mathcal{R}_k$ always leads to a decline in $\alpha_{ik}$. The size of that decline depends on the curvature of $a_i$.
+	
+	\paragraph{Substitutes and Complements} 
+	Whether the increase in $\mathcal{R}_k$ leads to a decline or an increase in the share of other inputs $j\neq k$ depends on whether the shares of $j$ and $k$ are complements or substitutes in the production of good $i$. If $[H_i^{-1}]_{jk} > 0$ we say that they are \textbf{substitutes}, and in that case a higher risk-adjusted price $\mathcal{R}_k$ leads to an increase in $\alpha_{ij}$. As the firm decreases $\alpha_{ik}$, the incentives embedded in $a_i$ to increase
+	$\alpha_{ij}$ get stronger, and the firm substitutes $\alpha_{ij}$ for $\alpha_{ik}$. In contrast, if $[H_i^{-1}]_{jk} < 0$ we say that the
+	shares of $j$ and $k$ are \textbf{complements}, and an increase in $\mathcal{R}_k$ leads to a decline in $\alpha_{ij}$. One sufficient
+	condition for a Hessian matrix $H_i$ to feature complementarities for all sectors is $[H_i]_{jk} \geqslant 0 $ for all $j\neq k$.
+	
+	\subsection*{Example: Substitutability and complementarity in partial equilibrium}
+	To show how the substitution patterns embedded in ai affect technique choices, we can revisit the car manufacturer example from the introduction. Suppose that this manufacturer primarily uses steel (input 1) to produce cars, and that it relies on equipment (input 2) such as milling machines and lathes to transform raw steel into usable components. As before, the manufacturer also has the option to purchase carbon fiber (input 3) to replace steel components if needed. It would be natural to endow this manufacturer (sector $i = 4$) with a TFP shifter function of the form
+	\begin{align}
+		a_4(\alpha_4) = -\sum\limits_{j=1}^4 \kappa_j (\alpha_{4j} - \alpha_{4j}^{\circ})^2 - \psi_1(\alpha_{41}-\alpha_{42})^2 - \psi_2[(\alpha_{41} + \alpha_{43}) - (\alpha_{41}^{\circ} + \alpha_{43}^{\circ})]^2,
+	\end{align}
+	where $\kappa_j>0$, $\psi_1>0$ and $\psi_2>0$. From the second term, we see that any increase in the share $\alpha_{41}$ of steel would incentivize the firm to increase the share $\alpha_{42}$ of steel machinery as well. Inputs 1 and 2 are therefore complements in the production of cars. In contrast, the third term implies that any increase in the share $\alpha_{41}$ of steel would make it optimal to reduce the share $\alpha_{43}$ of carbon fiber, and so the shares of inputs 1 and 3 are substitutes. These patterns can be confirmed by computing the inverse Hessian of $a_4$ directly and inspecting the off-diagonal terms. The parameters $\psi_1>0$ and $\psi_2 > 0$ determine the strength of these substitution-complementarity patterns.
+	
+	Figure 1 shows what happens to the production technique chosen by this car manufacturer if the risk-adjusted price of steel increases. In panel (a) the increase in $\mathcal{R}_1$ comes from a higher expectedprice $\mathbb{R}[p_1]$, while in panel (b) the price of steel becomes more volatile (higher $\mathbb{V}[p_1]$). Naturally, when the risk-adjusted price of steel rises, the manufacturer relies less on steel in production, and $\alpha_{41}$ falls. Since steel machinery is only useful when steel is used in production, the share $\alpha_{42}$ falls as well. If the increase in $\mathcal{R}_1$ is large enough, the manufacturer severs the link with its steel and steelmachinery suppliers completely so that both $\alpha_{41} = \alpha_{42} = 0$. At the same time, as steel becomes more expensive in ris-adjusted terms, the firm finds a carbon fiber supplier and progressively increases the share $\alpha_{i3}$.
+	
+	\begin{figure}[ht]
+		\caption{Impact of rising the risk-adjusted price of steel}
+		\includegraphics[width=\textwidth, trim={2cm 0cm 2cm 0cm},clip]{\basepath/fig1/1.eps}
+		\label{fig:1}
+	\end{figure}
+	
+	\section{Equilibrium existence, uniqueness and efficiency}
+	
+	\subsection{The efficient allocation}
+	\begin{lemma}
+		An efficient production network $\alpha^*$ solves
+		\begin{align*}
+			\mathcal{W} := \max\limits_{\alpha\in\mathcal{A}} W(a,\mu,\Sigma)
+		\end{align*}
+		where $\mathcal{W}$ is a measure of the welfare of the household, and where
+		\begin{align}
+			W(a,\mu,\Sigma) := \mathbb{E}[y(\alpha)] - \frac{1}{2}(\eqnmarkbox[red]{1}{\rho} - 1) \mathbb{V}[y(\alpha)]\label{eq-21}
+		\end{align}
+		\annotate[yshift=-0.5em]{below,right}{1}{Risk aversion parameter}
+		\noindent is a welfare under a given network $\alpha$.
+	\end{lemma}
+	
+	\subsection*{Recasting household welfare in terms of Domar weights}
+	Since Domar weights play a crucial role in determining the expected value and the variance of GDP, it will be useful to recast the problem of the social planner in the space of $\omega$. Using (\ref{eq-14}), we can write the objective function (\ref{eq-21}) as
+	\begin{align*}
+		\color{blue} W(a,\mu,\Sigma) := \mathbb{E}[y(\alpha)] - \frac{1}{2}(\rho - 1) \mathbb{V}[y(\alpha)] = \omega(\alpha)^T(\mu + a(\alpha)) - \frac{1}{2}(\rho-1) \omega(\alpha)^T\Sigma\omega(\alpha) 
+	\end{align*}
+	\textcolor{blue}{Thus we conclude that:}
+	\begin{align}
+		\omega^T\mu + \omega^Ta(\alpha) - \frac{1}{2}(\rho-1)\omega^T\Sigma\omega \label{eq-22}
+	\end{align}
+	
+	The only term in this expression that does not depend exclusively on $\omega$ is $\omega^Ta(\alpha)$, which corresponds to the contribution of the TFP shifter functions $(a_1,\cdots,a_n)$ to aggregate TFP. We want to write this object in terms of $\omega$ alone. For that purpose, notice that several networks α areconsistent with a given Domar weight vector $\omega$, but that not all of them are equivalent in termsof welfare. Indeed, to achieve a given $\omega$ the planner will only select the network $\alpha$ that maximizes welfare, which amounts to maximizing $\omega^Ta(\alpha)$.
+	
+	Formally, consider the optimization problem
+	\begin{align}
+		\bar{a}(\omega) := \max\limits_{\alpha\in\mathcal{A}} w^Ta(\alpha) \label{eq-23}
+	\end{align}
+	
+	subject to the definition of the Domar weights given by $\omega^T = \beta^T\mathcal{L}(\alpha)$. We refer to the value function $\bar{a}$ as the aggregate TFP shifter function. It provides the maximum value of TFP $\omega^Ta(\alpha)$ that can be achieved under the constraint that the Domar weights must be equal to some given vector $\omega$. We denote by $\alpha(\omega)$ the solution to (\ref{eq-23}). Since both $\bar{a}(\omega)$ and $\alpha(\omega)$ depend exclusively on the TFP shifter functions $(a_1,\cdots,a_n)$ and on the preference vector $\beta$, these two functions will be invariant, for a given $\omega$, to the changes in beliefs $(\mu, \Sigma)$ that we consider in the next sections.
+	
+	\subsection*{Example.} 
+	We can solve explicitly for $\bar{a}(\omega)$ and $\alpha(\omega)$ under the quadratic TFP shifter function specified in (\ref{eq-2}). At an interior solution $\alpha\in \text{int} \mathcal{A}$, the optimal production network $\alpha(\omega)$ that solves (\ref{eq-23}) for a given vector of Domar weights $\omega$ is
+	\begin{align}
+		\alpha_i(\omega) - \alpha_i^{\circ} = H_i^{-1} \left(\sum\limits_{j=1}^n \omega_j H_j^{-1}\right)^{-1} \left(\omega - \beta - \sum\limits_{j=1}^n \omega_j \alpha_j^{\circ}\right), \label{eq-24}
+	\end{align}
+	for all $i$, and the associated value function $\bar{a}$ is
+	\begin{align}
+		\bar{a}(\omega) = \frac{1}{2}\sum\limits_{i=1}^n\omega_i(\alpha_i(\omega) - \alpha_i^{\circ})^T H_i (\alpha_i(\omega) - \alpha_i^{\circ}). \label{eq-25}
+	\end{align}
+	
+	
+	\begin{cor}
+		The efficient Domar Weight vector $\omega^*$ solves
+		\begin{align}
+			\mathcal{W} = \max\limits_{w\in\mathcal{O}} \underbrace{\omega^T\mu + \bar{a}(\omega)}\limits_{\mathbb{E}[y]} - \frac{1}{2}(\rho -1)\underbrace{\omega^T\Sigma\omega}\limits_{\mathbb{V}[y]} \label{eq-26}
+		\end{align}
+		where $\mathcal{O} = \{\omega\in\mathbb{R}_+^n:\ \omega\geqslant\beta\ \text{and}\ 1\geqslant \omega^T(\mathbbm{1}-\bar{\alpha}) \}$ and $\bar{a}(\omega)$ is given by (\ref{eq-23})
+	\end{cor}
+	
+	\begin{lemma}
+		The objective function of the planner's problem (\ref{eq-26}) is strictly concave. Furthermore, there is a unique vector of Domar weights $\omega^*$ that solves that problme, and there is a unique production network $\alpha(\omega^*)$ associated with that solution.
+	\end{lemma}
+	
+	\subsection{Fundamental properties of the equilibrium}
+	\begin{prop}
+		There exists a unique equilibrium, and it is efficient.
+	\end{prop}
+	
+	
+	\newpage
+	\section{Beliefs and the production network}
+	In this section, we characterize how beliefs $(\mu,\Sigma)$ affect the equilibrium production network. We begin with a general result that describes how a change in a sector’s risk or expected TFP impacts its own Domar weight. We then provide an expression that characterizes how the full vector ofDomar weights responds to a marginal change in $(\mu,\Sigma)$. Finally, we investigate how beliefs affect the structure of the underlying production network $\alpha$. As we only consider the equilibrium networkfrom now on, we lighten the notation by dropping the superscript $*$ when referring to equilibrium variables.
+	
+	\subsection{Domar weights}
+	In contrast, when the network isendogenous, they are equilibrium objects that vary with $(\mu,\Sigma)$. The next proposition describes the relationship between these quantities.
+	
+	\begin{prop}
+		The Domar weight $\omega_i$ of sector $i$ is (weakly) increasing in $\mu_i$ and (weakly) decreasing in $\Sigma_{ii}$.
+	\end{prop}
+	
+	\subsection*{Risk-adjusted productivity shocks}
+	Proposition 2 describes how the Domar weight of a sector responds to a change in its own TFP process, and it holds generally. At an interior equilibrium, we can also characterize how any change in beliefs affects the full vector $\omega$. For that purpose, we introduce a risk-adjusted version of the productivity vector $\varepsilon$ defined as
+	\begin{align}
+		\mathcal{E} = \underbrace{\mu}\limits_{\mathbb{E}[\varepsilon]} - \underbrace{(\rho-1)\Sigma\omega}\limits_{\text{Cov}[\varepsilon,\lambda]} \label{eq-27}
+	\end{align}
+	
+	The vector $\mathcal{E}$ captures how higher exposure to the productivity process $\varepsilon_i$ affects the representative household’s utility. It depends on how productive each sector $i$ is in expectation, and on how its $\varepsilon_i$ covaries with the stochastic discount factor $\lambda$. If we denote by $\mathbbm{1}_i$ the column vector with $a$ $1$ as $i$th element and zeros elsewhere, we can write
+	\begin{align}
+		\frac{\partial \mathcal{E}}{\partial\mu_i} = \mathbbm{1}_i,\label{eq-28}
+	\end{align}
+	such that an increase in $\mu_i$ makes sector $i$ more attractive. It however leaves the risk-adjusted TFP of other sectors unchanged. Similarly, for a change in $\Sigma_{ij}$, we can compute
+	\begin{align}
+		\frac{\partial \mathcal{E}}{\partial\Sigma_{ij}} = - \frac{1}{2}(\rho-1) (\omega_j\mathbbm{1}_i + \omega_i\mathbbm{1}_j) \label{eq-29} 
+	\end{align}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}
