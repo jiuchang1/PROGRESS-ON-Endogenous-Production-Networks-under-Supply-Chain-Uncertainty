@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.28)  25 JUL 2024 11:57
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.28)  28 JUL 2024 12:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1156,15 +1156,15 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 71
 
 (d:/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) (./main_progress.toc)
-\tf@toc=\write5
-\openout5 = `main_progress.toc'.
-
-
+) (./main_progress.toc
 [1
 
 
-] [2] [3] [4] [5]
+])
+\tf@toc=\write5
+\openout5 = `main_progress.toc'.
+
+ [2] [3] [4] [5]
 Overfull \hbox (12.77524pt too wide) in paragraph at lines 143--174
  [][] 
  []
@@ -1199,20 +1199,26 @@ gures/fig1/1.eps Graphic file (type eps)
  [16]
 Missing character: There is no α (U+03B1) in font [lmroman10-regular]:mapping=t
 ex-text;!
-[17] [18] [19] [20] [21] [22] [23] (./main_progress.aux)
+[17] [18] [19] [20] [21] [22] [23] [24]
+File: F:/12004835/replication_package_final/replication_package_final/output_fi
+gures/fig2/1.png Graphic file (type bmp)
+<F:/12004835/replication_package_final/replication_package_final/output_figures
+/fig2/1.png>
+ [25] [26] [27] [28]
+(./main_progress.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main_progress.out' has not changed.
-(rerunfilecheck)             Checksum: 6572B7305170FCD2CEDC7E2BDBF55A23;3155.
+(rerunfilecheck)             Checksum: 1746FC69A210650E3070249739AEB2DE;3510.
  ) 
 Here is how much of TeX's memory you used:
- 29359 strings out of 476179
- 574689 string characters out of 5813072
- 1067514 words of memory out of 5000000
- 49554 multiletter control sequences out of 15000+600000
+ 29377 strings out of 476179
+ 575579 string characters out of 5813072
+ 1069514 words of memory out of 5000000
+ 49568 multiletter control sequences out of 15000+600000
  479852 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  100i,19n,104p,1134b,813s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main_progress.pdf (23 pages).
+Output written on main_progress.pdf (28 pages).

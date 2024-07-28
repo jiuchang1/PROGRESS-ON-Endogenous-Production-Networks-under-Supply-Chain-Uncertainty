@@ -629,13 +629,139 @@ skipbelow=10pt
 
 	
 	\subsection{The production network}
+	\begin{prop}
+		If $\alpha\in\text{int}\mathcal{A}$, there exists a scalar $\bar{\Sigma}>0$ such that if $\|\Sigma\|\leqslant\bar{\Sigma}$ the following holds.
+		\begin{enumerate}[leftmargin=1cm, label=\arabic*.]
+			\item (Complementarity) Suppose that input shares are local complements in the production of good $i$, that is $[H_i^{-1}]_{kl} < 0$ for all $k\neq l$. Then a beneficial change to $k$ ($\partial \mathcal{E}_k / \partial \gamma > 0$) increases $\alpha_{ij}$ for all $j$.
+			\item (Substitution) Suppose that the conditions of Lemma 7 about the TFP shifters $(a_1,\cdots,a_n)$ hold. Then there exists a threshold $0<\bar{s}<1$ such that if $s > \bar{s}$, a beneficial change to $k$ ($\partial \mathcal{E}_k / \partial \gamma > 0$) decreases $\alpha_{ij}$ for all $i$ and all $j \neq k$, and increases $\alpha_{ik}$ for all $i$.
+		\end{enumerate}
+	\end{prop}
 	
-
-
+	\textcolor{blue}{Proposition 4 illustrates the impact of complementarity and substitution of input shares on the adjustment of production networks. When input shares are locally complementary in the production of a product, a beneficial change to one input increases its share in the production of all products. Conversely, in the presence of strong substitution effects, a beneficial change to one input decreases the shares of other inputs in production while increasing its own share.}
 	
+	\subsection*{An approximate equation for the equilibrium production network}
+	As for the Domar weights, one must in general use numerical methods to find the equilibrium network $\alpha$. We can, however, derive an approximation for the equilibrium production network when the cost of deviating from the ideal shares $\alpha^{\circ}$ is large. Specifically, let $a_i (\alpha_i) = \bar{\kappa} \times \hat{a}_i (\alpha_i)$, where $\hat{\alpha}$ does not depend on $\kappa$, and suppose that $\alpha_i^{\circ}\in\text{int}\mathcal{A}_i$. The parameter $\hat{\kappa}>0$ captures how costly it is for the firms to deviate from $\alpha^{\circ}$ in terms of TFP loss. When $\hat{\kappa}$ is large, we can use perturbation theory to derive an approximate equation for $\alpha$.
+	
+	\begin{lemma}
+		If $\alpha\in\text{int}\mathcal{A}$, the equilibrium input shares in sector $i$ are approximately given by
+		\begin{align}
+			\alpha_i = \alpha_i^{\circ} + \bar{\kappa}^{-1} \left(\hat{H}_i^{\circ}\right)^{-1} \mathcal{R}^{\circ} + O(\kappa^{-2}) \label{eq-36}
+		\end{align}
+		where $\hat{H}_i^{\circ}$ is the Hessian of $\hat{a}_i$ at $\alpha_i^{\circ}$, and where the vector of risk-adjusted prices at $\alpha^{\circ}$ is given by
+		\begin{align*}
+			\mathcal{R}^{\circ} = -\mathcal{L}\mu + (\rho - 1)\mathcal{L}^{\circ}\Sigma\omega^{\circ}
+		\end{align*}
+	\end{lemma}
 
+	Lemma 9 primarily addresses the approximate solution for the production network when the cost function is nonlinear. Specifically, when it is costly for firms to deviate from the ideal shares \(\alpha^\circ\), the equilibrium production network can be approximated using perturbation theory. Equation (\ref{eq-36}) provides an approximation indicating that the equilibrium input shares \(\alpha_i\) depend on the risk-adjusted prices \(\mathcal{R}^\circ\). This result demonstrates that when the cost of deviating from the ideal shares is high, the equilibrium production network can be approximated by evaluating the equilibrium prices as if firms chose the ideal shares.
 
+	\subsection*{Example: cascading link destruction}
+	The example of ``cascading link destruction'' discusses how an increase in uncertainty in a single sector can trigger a chain reaction throughout the production network. Specifically, when the volatility of a sector increases, multiple producers sequentially switch to more stable suppliers, causing a series of adjustments in the production network.
+	
+	The specific example is as follows:
+	\begin{enumerate}[leftmargin=1cm, label=\arabic*.]
+		\item In a low-uncertainty state (left figure): Firms in sectors 1 to 3 directly or indirectly rely on sector 4 as a supplier.
+		\item In a high-uncertainty state (right figure): As the uncertainty in sector 4 increases, firms in sector 3, seeking a more stable supply, switch to using inputs from sector 7. This change implies that firms in sector 2, to avoid risk, switch to using inputs from sector 6, and so on, creating a cascade of adjustments.
+	\end{enumerate}
 
+	Through this example, the paper demonstrates how the production network adjusts in response to changes in uncertainty. These adjustments not only affect the directly related firms but also propagate through the supply chain, impacting firms far removed from the initial shock.
+	
+	\begin{figure}[ht]
+		\caption{Cascading impact of a change in $\Sigma_{44}$}
+		\includegraphics[width=\textwidth]{\basepath/fig2/1.png}
+		\label{fig:2}
+	\end{figure}
+	
+	We can interpret this cascading network adjustment through the lens of Lemma 9. Differentiating the expression with respect to $\Sigma_{44}$ yields
+	\begin{align}
+		\frac{d\alpha_{ij}}{d\Sigma_{44}} = \bar{\kappa}^{-1} (\rho - 1) \omega_4^{\circ} \left( \underbrace{\left[ \left(\hat{H}_i^{\circ}\right)^{-1} \right]_{jj} \mathcal{L}^{\circ}_{j4}}\limits_{\text{direct effect of }\Sigma_{44}\text{ on }j} + \underbrace{\sum\limits_{l\neq j} \left[\left(\hat{H}_i^{\circ}\right)^{-1}\right]_{jl}\mathcal{L}^{\circ}_{jl}}_{\text{indirect effect of }\Sigma_{44}\text{ through other suppliers }l\neq j}
+		 \right) + O(\bar{\kappa}^{-2}) \label{eq-37}
+	\end{align}
+	
+	Equation (\ref{eq-37}) states that if a firm $j$ relies on sector 4 as an input (either immediate or distant, such that $\mathcal{L}_{j4}^{\circ} > 0$), an increase in $\Sigma_{44}$ makes $j$ less attractive. This direct effect pushes $\alpha_{ij}$ down (recall
+	that $[H_i^{\circ}]_{jj} < 0$ by the concavity of $a_i$). There is also an indirect effect that operates through the second term in (\ref{eq-37}). If another sector $l\neq j$ also relies on 4 ($\mathcal{L}_{l4}^{\circ} > 0$), then an increase in $\Sigma_{44}$
+	makes $l$ less attractive as well. This indirect channel can lead to either a decrease or an increase in $\alpha_{ij}$, depending on whether $j$ and $l$ are complements or substitutes in the production of $i$; that is, whether $[(H_i^{\circ})^{-1}]_{jl}$ is negative or positive.
+	
+	\section{Implications for GDP and welfare}
+	\begin{prop}
+		Let $\gamma$ denote either the mean $\mu_i$ or an element of the covariance matrix $\Sigma_{ij}$. Under an endogenous network, welfare responds to a marginal change in $\gamma$ as if the network were fixed at its equilibrium value $\alpha^*$, that is
+		\begin{align*}
+			\frac{d\mathcal{W}(\mu,\Sigma)}{d\gamma} = \frac{\partial W(\alpha^*,\mu,\Sigma)}{\partial\gamma}
+		\end{align*}
+	\end{prop}
+	
+	\textcolor{blue}{Let \(\alpha^*\) be the equilibrium network, i.e., \(\alpha^* = \alpha(\mu, \Sigma)\). When we make a small change to \(\gamma\), the equilibrium network will adjust to accommodate the new \(\gamma\). However, Proposition 5 states that the effect of this adjustment on the marginal change can be neglected.}
+
+	While this proposition shows that the flexibility of the network plays no role for the response of welfare to a marginal change in beliefs, this is generally not true for non-infinitesimal changes. In that case, shifts in $(\mu, \Sigma)$ that are beneficial to welfare are amplified, compared to the fixed-network benchmark, while changes that are harmful are dampened (see Proposition 2). Indeed, if we denote by $\alpha^*(\mu,\Sigma)$ the equilibrium production network under $(\mu, \Sigma)$ and by $W(\alpha,\mu,\Sigma)$ welfare under a network $\alpha$, we can write that the difference in welfare after a change in beliefs from $(\mu,\Sigma)$ to $(\mu^{\prime},\Sigma^{\prime})$ satisfies the inequality
+	\begin{align}
+		\underbrace{\mathcal{W}(\mu^{\prime},\Sigma^{\prime}) - \mathcal{W}(\mu,\Sigma)}\limits_{\text{Change in welfare under a flexible network}} \geqslant \underbrace{W(\alpha^*(\mu,\Sigma),\mu^{\prime},\Sigma^{\prime}) - W(\alpha^*(\mu,\Sigma),\mu,\Sigma)}\limits_{\text{Change in welfare under a fixed network}}. \label{eq-38}
+	\end{align}
+	
+	\begin{cor}
+		The impact of an increase in $\mu_i$ on welfare is given by
+		\begin{align}
+			\frac{d\mathcal{W}}{d\mu_i} = \omega_i \label{eq-39}
+		\end{align}
+		and the impact of an increase in $\Sigma_{ij}$ on welfare is given by
+		\begin{align}
+			\frac{d\mathcal{W}}{d\Sigma_{ij}} = -\frac{1}{2}(\rho-1)\omega_i\omega_j
+		\end{align}
+	\end{cor}
+	
+	\subsection{Beliefs and GDP}
+	\begin{prop}
+		The presence of uncertainty lowers expected log GDP, in the sense that $\mathbb{E}[y]$ is largest when $\Sigma = 0$.
+	\end{prop}
+	
+	This proposition follows directly from Lemma 3. Without uncertainty $(\Sigma = 0)$, the variance $\mathbb{V} [y]$ of log GDP is zero for all networks $\alpha\in\mathcal{A}$. The social planner then maximizes $\mathbb{E}[y]$ only. When, instead, the productivity vector $\varepsilon$ is uncertain $(\Sigma \neq 0)$, the planner also seeks to lower $\mathbb{V} [y]$ which necessarily lowers expected log GDP in equilibrium.
+	
+	
+	\begin{cor}
+		Let $\gamma$ denote either the mean $\mu_i$ or an element of the covariance matrix $\Sigma_{ij}$. The equilibrium response to a change in beliefs $\gamma$ must satisfy
+		\begin{align}
+			\underbrace{\frac{d\mathbb{E}[y]}{d\gamma} - \frac{\partial\mathbb{E}[y]}{\partial \gamma}}\limits_{\text{Excess response of }\mathbb{E}[y]} = \frac{1}{2}(\rho - 1)\underbrace{\left(\frac{d\mathbb{V}[y]}{d\gamma} - \frac{\partial \mathbb{V}[y]}{\partial\gamma}\right)}\limits_{\text{Excess response of }\mathbb{V}[y]} \label{eq-41}
+		\end{align}
+	\end{cor}
+	
+	Corollary 5 is a direct consequence of Proposition 5. Since the response of welfare to a marginal change in beliefs must be the same under a flexible and a fixed network, a larger increase in $\mathbb{E}[y]$ under a flexible network must come at the cost of alarger increase in the variance $\mathbb{V}[y]$. 
+	
+	\begin{prop}
+		If $\omega\in\text{int}\mathcal{O}$, the following holds.
+		\begin{enumerate}[leftmargin=1cm, label=\arabic*.]
+			\item The impact of an increase in $\mu_i$ on log GDP is given by
+			\begin{align*}
+				\frac{d\mathbb{E}[y]}{d\mu_i} = \underbrace{\omega_i}\limits_{\text{Fixed network}} - (\rho-1)\omega^T\Sigma\mathcal{H}^{-1}\frac{\partial\mathcal{E}}{\partial\mu_i}, \quad \text{and}\quad \frac{d\mathbb{V}[y]}{d\mu_i} = \underbrace{0}\limits_{\text{Fixed network}} - 2\omega^T\Sigma\mathcal{H}^{-1}\frac{\partial\mathcal{E}}{\partial\mu_i}. 
+			\end{align*}
+			\item The impact of an increase in $\Sigma_{ij}$ on log GDP is given by
+			\begin{align*}
+				\frac{d\mathbb{E}[y]}{d\Sigma_{ij}} = \underbrace{0}\limits_{\text{Fixed network}} - (\rho-1)\omega^T\Sigma\mathcal{H}^{-1}\frac{\partial\mathcal{E}}{\partial\Sigma_{ij}}, \quad \text{and}\quad \frac{d\mathbb{V}[y]}{d\Sigma_{ij}} = \underbrace{\omega_i\omega_j}\limits_{\text{Fixed network}} - 2\omega^T\Sigma\mathcal{H}^{-1}\frac{\partial\mathcal{E}}{\partial\Sigma_{ij}}. 
+			\end{align*}
+		\end{enumerate}
+	\end{prop}
+	
+	\begin{cor}
+		Without uncertainty $(\Sigma = 0)$ the moments of GDP respond to changes in beliefs as if the network were fixed, such that
+		\begin{align*}
+			\frac{d\mathbb{E}[y]}{d\mu_i} = \frac{\partial\mathbb{E}[y]}{\partial\mu_i} = \omega_i, \quad \text{and} \quad \frac{d\mathbb{V}[y]}{d\Sigma_{ij}} = \frac{\partial\mathbb{V}[y]}{\partial\Sigma_{ij}} = \omega_i\omega_j
+ 		\end{align*}
+	\end{cor}
+	
+	\begin{cor}
+		Suppose that $\omega\in\text{int}\mathcal{O}$. There exists a threshold $\bar{\Sigma} < 0$ such that if $\Sigma_{kl} > \bar{\Sigma}$ for all $k, l$, then the following holds.
+		\begin{enumerate}[leftmargin=1cm, label=\arabic*.]
+			\item If all sectors are global complements with sector $i$, that is $\mathcal{H}_{ik}^{-1} < 0$ for $k\neq i$, then
+			\begin{align*}
+				\frac{d\mathbb{E}[y]}{d\mu_i} = \frac{\partial\mathbb{E}[y]}{\partial\mu_i} > \omega_i, \quad \text{and} \quad \frac{d\mathbb{V}[y]}{d\Sigma_{ij}} = \frac{\partial\mathbb{V}[y]}{\partial\mu_i} > 0
+			\end{align*}
+			\item If all sectors are global complements with sectors $i$ and $j$, that is $\mathcal{H}_{ik}^{-1} < 0$ and $\mathcal{H}_{jk}^{-1}$ for $k \neq i, j$, then
+			\begin{align*}
+				\frac{d\mathbb{E}[y]}{d\mu_i} = \frac{\partial\mathbb{E}[y]}{\partial\Sigma_{ij}} < 0, \quad \text{and} \quad \frac{d\mathbb{V}[y]}{d\Sigma_{ij}} = \frac{\partial\mathbb{V}[y]}{\partial\mu_i} < \omega_i\omega_j
+			\end{align*}
+		\end{enumerate}
+	\end{cor}
+	
+	
+	
 	
 	
 	
