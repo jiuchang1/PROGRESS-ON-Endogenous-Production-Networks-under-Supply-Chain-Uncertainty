@@ -460,7 +460,7 @@ skipbelow=10pt
 		\omega^T\mu + \omega^Ta(\alpha) - \frac{1}{2}(\rho-1)\omega^T\Sigma\omega \label{eq-22}
 	\end{align}
 	
-	The only term in this expression that does not depend exclusively on $\omega$ is $\omega^Ta(\alpha)$, which corresponds to the contribution of the TFP shifter functions $(a_1,\cdots,a_n)$ to aggregate TFP. We want to write this object in terms of $\omega$ alone. For that purpose, notice that several networks α areconsistent with a given Domar weight vector $\omega$, but that not all of them are equivalent in termsof welfare. Indeed, to achieve a given $\omega$ the planner will only select the network $\alpha$ that maximizes welfare, which amounts to maximizing $\omega^Ta(\alpha)$.
+	The only term in this expression that does not depend exclusively on $\omega$ is $\omega^Ta(\alpha)$, which corresponds to the contribution of the TFP shifter functions $(a_1,\cdots,a_n)$ to aggregate TFP. We want to write this object in terms of $\omega$ alone. For that purpose, notice that several networks $\alpha$ areconsistent with a given Domar weight vector $\omega$, but that not all of them are equivalent in termsof welfare. Indeed, to achieve a given $\omega$ the planner will only select the network $\alpha$ that maximizes welfare, which amounts to maximizing $\omega^Ta(\alpha)$.
 	
 	Formally, consider the optimization problem
 	\begin{align}
@@ -759,6 +759,180 @@ skipbelow=10pt
 			\end{align*}
 		\end{enumerate}
 	\end{cor}
+	
+	\begin{cor}
+		Suppose that $\omega\in\text{int}\mathcal{O}$. There exists a threshold $\uline{\Sigma} < 0$ and $\bar{\Sigma}>0$ such that
+		\begin{enumerate}[leftmargin=1cm, label=\arabic*.]
+			\item If all sectors are global substitutes with sector $i$, that is $\mathcal{H}_{ik}^{-1} > 0$ for $k\neq i$, and sector $i$ is not too risky while other sectors are sufficiently risky in the sense that $\Sigma_{ji} < \uline{\Sigma}$ for all $j$ and $\Sigma_{jk} > \bar{\Sigma}$ for all $j, k\neq i$, then
+			\begin{align*}
+				\frac{d\mathbb{E}[y]}{d\mu_i} < \omega_i,\quad \text{and}\quad \frac{d\mathbb{V}[y]}{d\mu_i} < 0.
+			\end{align*}
+			\item If all sectors are global substitutes with sectors $i$ and $j$, that is $\mathcal{H}_{ik}^{-1} > 0$ and $\mathcal{H}_{jk}^{-1} > 0$ for $k\neq i,j$, and sectors $i$ and $j$ are not too risky while other sectors are sufficiently risky in the sense that $\Sigma_{li}<\uline{\Sigma}$ and $\Sigma_{lj} < \uline{\Sigma}$ for all $l$, and $\Sigma_{lk}>\bar{\Sigma}$ for all $l, k\neq i$ and $l, k \neq j$, then
+			\begin{align*}
+				\frac{d\mathbb{E}[y]}{d\Sigma_{ij}} > 0,\quad \text{and}\quad \frac{d\mathbb{V}[y]}{d\Sigma_{ij}} > \omega_i\omega_j.
+			\end{align*}
+		\end{enumerate} 
+	\end{cor}
+	
+	After an increase in the TFP mean ($\mu_i$) of a sector, the Domar weight ($\omega_i$) of that sector increases, which pushes up the variance of log GDP ($\mathbb{V}[y]$). However, if the sector's TFP variance ($\Sigma_{ii}$) is small, the increase in $\mathbb{V}[y]$ is also small. Since other sectors are global substitutes with this sector, the increase in ωi leads to a decline in the Domar weights of all other sectors. If the variances of these other sectors are large relative to Σii, this decline in their Domar weights results in a substantial decrease in $\mathbb{V}[y]$. According to the logic of Proposition 7, this means that the expected log GDP ($\mathbb{E}[y]$) must increase by less than the fixed-network term ωi. Similarly, an increase in Σii leads to an increase in $\mathbb{V}[y]$ that is larger than under a fixed network. In this case, $\mathbb{E}[y]$ increases in response to the higher $\Sigma_{ii}$, indicating that uncertainty can be beneficial to expected log GDP at the margin.
+	
+	\subsection*{Counterintuitive implications of changes in beliefs}
+	\begin{enumerate}[leftmargin=1cm, label=\arabic*.]
+		\item \textbf{Belief Changes and GDP Response}
+		\begin{enumerate}[leftmargin=1cm]
+			\item Corollaries 7 and 8 indicate that the response of GDP to changes in beliefs can be different from the predictions of Hulten’s theorem in a fixed-network economy. The endogenous adjustment of the network can lead to more extreme outcomes.
+			\item An increase in the mean productivity ($\mu$) of a sector can lead to a decrease in the expected log GDP ($\mathbb{E}[y]$), and an increase in the variance ($\Sigma$) of a sector can lead to a decrease in the variance of log GDP ($\mathbb{V}[y]$).
+		\end{enumerate} 
+		\item \textbf{Example of a Low-Productivity but Stable Producer}
+		\begin{enumerate}[leftmargin=1cm]
+			\item Consider a producer with low but stable productivity. The high price of its goods makes it less attractive as a supplier.
+			\item If its expected productivity increases, its risk-reward profile improves, attracting more buyers. This can lead producers to move away from more productive but riskier suppliers, potentially causing expected GDP to fall.
+		\end{enumerate} 
+		\item \textbf{Impact of Increased Volatility} An increase in the volatility of a sector’s productivity can lead to a decline in $\mathbb{V}[y]$. This is because producers may shift away from more volatile sectors, leading to a network that is less susceptible to fluctuations.
+	\end{enumerate}
+
+	In the economy depicted in Figure 3, sectors 4 and 5 use only labor to produce, while sectors 1 to 3 can also use goods 4 and 5 as inputs. For sectors 1 to 3, goods 4 and 5 are either local substitutes (panels (a) to (c)) or local complements (panels (d) to (f)). Sector 4 is more productive and volatile than sector 5.
+	
+	Consider the impact of a positive shock to $\mu_5$ when inputs 4 and 5 are substitutes. Initially, the increase in $\mu_5$ negatively impacts expected log GDP ($\mathbb{E}[y]$) because sector 5, although less productive, now offers a better risk-reward trade-off. This causes sectors 1 to 3 to shift towards good 5 and away from good 4, reducing $\mathbb{E}[y]$ since $\mu_4 > \mu_5$. V[y] also declines because sector 5 is less volatile, aligning with Proposition 7. Ultimately, the overall effect on welfare is positive, as shown in panel (c), because the welfare gain from reduced volatility outweighs the initial drop in $\mathbb{E}[y]$.
+	
+	To emphasize the role of the endogenous network for this mechanism, Figure 3 also shows the effect of the same increase in $\mu_5$ when the network is kept fixed (dashed red lines). From Corollary 1, the marginal impact of $\mu_5$ on expected log GDP is equal to its Domar weight, and increasing $\mu_5$ has a positive impact on $\mathbb{E}[y]$. At the same time, $\mathbb{V}[y]$ is unaffected by changes in $\mu$. Whilean increase in $\mu_5$ is welfare-improving in this case, the effect is less pronounced than in the flexible network economy. Indeed, in the latter case the equilibrium network adjusts precisely to maximize the beneficial impact of the change in beliefs on welfare, as implied by (\ref{eq-38}).
+	
+	We can use a small variation of this economy to illustrate how an increase in an element of $\Sigma$ can lower the variance of log GDP, and simultaneously lower welfare. Start again from the economy in the left column of Figure 3 (point O) but suppose that inputs 4 and 5 are complements in the production of goods 1 to 3. Consider an increase in the volatility of sector 5. In response, sectors 1 to 3 start to rely less on sector 5. But since inputs 4 and 5 are complements, sectors 1 to 3 also reduce their shares of input 4, thus increasing the overall share of labor which is a safe input. As a result, the variance of log GDP declines (panel e). Expected log GDP also goes down by Proposition 7 (panel d). The combined effect on welfare is negative, as predicted by Corollary 4 (panel f). In this case, the reorganization of the network mitigates the adverse effect of the increase in volatility on welfare. Instead, if the network is fixed, an increase in $\Sigma_{55}$ does not affect expected log GDP but leads to an increase in the variance of log GDP. As a result, welfare drops substantially more than under an endogenous network, as implied by (\ref{eq-38}).
+	
+	\begin{figure}[ht]
+		\caption{The non-monotone impact of beliefs on GDP}
+		\centering
+		\begin{subfigure}[b]{0.32\textwidth} 
+			\caption{Impact of $\mu_5$ on $\mathbb{E}[y]$}
+			\includegraphics[width=\textwidth]{\basepath/fig3/E_log_C_mean.eps}
+			\label{fig:3-a}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.32\textwidth}
+			\caption{Impact of $\mu_5$ on $\mathbb{V}[y]$}
+			\includegraphics[width=\textwidth]{\basepath/fig3/V_log_C_mean.eps}
+			\label{fig:3-b}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.32\textwidth}
+			\caption{Impact of $\mu_5$ on $\mathbb{W}$}
+			\includegraphics[width=\textwidth]{\basepath/fig3/welfare_mean.eps}
+			\label{fig:3-c}
+		\end{subfigure}
+		
+		\begin{subfigure}[b]{0.32\textwidth} 
+			\caption{Impact of $\Sigma_{55}$ on $\mathbb{E}[y]$}
+			\includegraphics[width=\textwidth]{\basepath/fig3/E_log_C_var.eps}
+			\label{fig:3-d}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.32\textwidth}
+			\caption{Impact of $\Sigma_{55}$ on $\mathbb{V}[y]$}
+			\includegraphics[width=\textwidth]{\basepath/fig3/V_log_C_var.eps}
+			\label{fig:3-e}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.32\textwidth}
+			\caption{Impact of $\Sigma_{55}$ on $\mathbb{W}$}
+			\includegraphics[width=\textwidth]{\basepath/fig3/welfare_var.eps}
+			\label{fig:3-f}
+		\end{subfigure}
+		
+		\begin{subfigure}[b]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{\basepath/fig3/network.png}
+			\label{fig:3-g}
+		\end{subfigure}
+		\label{fig:3}
+	\end{figure}
+	
+	Notes: There is an arrow from $j$ to $i$ if $\alpha_{ij} > 0$. Household: $\rho = 2.5$ and $\beta_1 = \beta_2 = \beta_3 = \frac{1}{3} − \varepsilon$, $\beta_4 = \beta_5 = \frac{3}{2}\varepsilon$, where
+	$\varepsilon > 0$ is very small. $\mu = (0.1, 0.1, 0.1, 0.1, −0.08)$, $\Sigma$ is diagonal, with $\text{diag}(\Sigma) = (0.2, 0.2, 0.2, 0.2, 0.02)$. $a$ is as in (\ref{eq-2}) with $\alpha^{\circ}_{14} = \alpha^{\circ}_{15} = \alpha^{\circ}_{24} = \alpha^{\circ}_{25} = \alpha^{\circ}_{34} = \alpha^{\circ}_{35} = 0.25$; all other $\alpha^{\circ}_{ij}$ are zero. $H_4 = H_5$ are matrices with $−50$ on the diagonal. $H_1 = H_2 = H_3$ with $[H_1]_{11} = [H_1]_{22} = [H_1]{33} = −50$, $[H_1]_{44} = [H_1]_{55} = −2$. In panels (a)-(c), $\mu_5$ goes from −0.08 to 0.1; 4 and 5 are substitutes, $[H_1]_{45} = −1.9$. In panels (d)-(f), $\Sigma_{55}$ goes from 0.02 to 0.2; 4 and 5 are complements, $[H_1]_{45}$ = 1.9.
+	
+	\clearpage
+	\section{A basic calibration of the model}
+	The analysis above highlights the economic forces that determine how the production network, GDP and welfare respond to changes in the productivity process. Clearly, the model is too stylized to capture all the fluctuations in the production network observed in reality, and other mechanisms, not present in our model, may also be important in practice. With that caveat in mind, we present in this section results from a basic calibration of the model to the United States economy to get a sense of the quantitative potential of our main mechanisms.
+	
+	Below, we first describe how the model is parameterized and briefly go over which features of the US economy the model matches well, and in what dimensions it falls short. Finally, we explore how beliefs shape the production network and investigate how the changing structure of the network influences aggregate output and welfare in our stylized model. We keep the analysis succinct but provide more details in Appendix B.
+	
+	\subsection{Parametrization}
+	The Bureau of Economic Analysis (BEA) provides U.S. sectoral input-output tables for $n = 37$ sectors at an annual frequency from 1948 to 2020. From these data, we compute the input shares $\alpha_{ijt}$ of each sector in each year $t$, the average consumption expenditure share of each sector $\beta_i$, and sectoral TFP measured as the Solow residual.
+	
+	To calibrate the model, we need to make explicit assumptions about the process for TFP. For the endogenous productivity shifter $A_i(\alpha_{it})$ we adopt a particular version of form (\ref{eq-2}) which includes a diagonal component for $\bar{H}_i$ are a penalty for deviating from an ideal labor share (see (69) inthe appendix). We set the ideal shares $(\alpha_1^{\circ},\cdots,\alpha_n^{\circ})$ equal to the time average of the input shares observed in the data. The exogenous sectoral productivity process $\varepsilon_t$ is assumed to follow a random walk with drift,
+	\begin{align}
+		\varepsilon_t = \gamma + \varepsilon_{t-1} + u_t, \label{eq-42}
+	\end{align}
+	where $\gamma$ is an $n \times 1$ vector of deterministic drifts and $u_t \sim \text{iid} \mathcal{N}(0, \Sigma_t)$ is a vector of shocks. We further assume that firms know $\gamma$ and $\varepsilon_t$ at time $t$, so that the conditional mean and the covariance of beliefs are given by $\mu_t = \gamma + \varepsilon_{t-1}$ and $\Sigma_t$. Importantly, we allow uncertainty $\Sigma_t$ to vary over time and estimate it from TFP data using a rolling window that puts more weight on more recent observations.
+	
+	We use a simple moment-matching strategy to pin down the 1) relative risk aversion parameter $\rho$ of the household, 2) the TFP shifter functions $\bar{H}_i$ and 3) the time-varying beliefs $(\mu_t, \Sigma_t)$. We describe this procedure in Appendix B.
+		
+	The calibrated coefficient of relative risk aversion $\hat{\rho}$ is 4.3, which is similar to values used orestimated in the macroeconomics literature. Our procedure also provides time-series for the vector $\mu_t$ and the matrix $\Sigma_t$, and we aggregate these variables across sectors to obtain economy-wide measures of the expected value $\bar{\mu}_t$ and the variance $\bar{\Sigma}_t$ of aggregate TFP. As we might expect, these measures are cyclical, with $\bar{\mu}_t$ falling and $\bar{\Sigma}_t$ rising during recessions. Overall, our measure of aggregate uncertainty $\bar{\Sigma}_t$ has been relatively stable since 1980, with occasional sharp spikes, most notably during the Great Recession of 2007–2009 (see Figure 5 in Appendix B.3).
+	
+	We next assess how well the calibrated model fits key moments in the data. As we have seen above, the Domar weights, and how they react to changes in $\mu_t$ and $\Sigma_t$, are central for the mechanisms of the model. The model is able to roughly replicate features of the empirical Domar weights, with a cross-sectional correlation between the time-averaged Domar weights in the model and in the data of 0.96. However, the average Domar weight in the model (0.03) is lower than its data counterpart (0.05). Overall, the model can account for about 40\% of the over-time standard deviation of Domar weights, which indicates that other mechanisms, such as technological progress that might expand the set of available techniques, might be at work in reality.
+	
+	The mechanisms of the model predict that a decline in the expected productivity of a sector $\mu_i$, or an increase in its variance $\Sigma_{ii}$, should push firms to reduce the importance of that sector as an input provider, leading to a decline in its Domar weight. Reassuringly, these correlations are visible in the data, where $\text{Corr}(\omega_{jt},\mu_{jt}) = 0.1$, and $\text{Corr}(\omega_{jt}, \Sigma_{jjt}) = -0.4$. The calibrated model is also able to roughly match these correlations, and the corresponding numbers are 0.1 and −0.3.
+	
+	\subsection{The production network, welfare and output}
+	To evaluate the quantitative potential of an endogenous production network for welfare and GDP, we compare the calibrated model to two sets of alternative economies. First, we compare our baseline model to an economy in which the network is kept completely fixed at its sample average. This exercise therefore informs us about the overall impact of changes in the structure of the production network. We then investigate the role of uncertainty alone in shaping the production network. We do so by considering 1) an economy in which production techniques are chosen as if $\Sigma_t = 0$, and 2) a perfect-foresight economy in which firms observe the realization of $\varepsilon_t$ before making technique choices (the ``known $\varepsilon_t$'' economy). In both cases, uncertainty is irrelevant for decisions, and so these exercises allow us to isolate the impact of uncertainty on the production network and, through that channel, on macroeconomic aggregates.
+	
+	We find that expected log GDP in the ``fixed network'' economy is 2.1\% lower than in our baseline calibration with a flexible network. Intuitively, as some sectors become more productive over time, the goods that they produce become cheaper, and firms would like to rely more on them. With a flexible network this is possible, and the aggregate economy becomes more productive as aresult. The difference in welfare between the two models is about 2.1\% as well.
+	
+	When we isolate the role of uncertainty, however, these numbers become smaller. In line withthe theory, the baseline economy is on average less productive and less volatile than under the	``as if $\Sigma_t = 0$'' alternative but the numbers are small, on the order of 0.01\% for $\mathbb{E}[y]$ and 0.10\% for $\mathbb{V}[y]$. This suggests that, for most of the sample period, uncertainty is sufficiently low that firms simply buy their inputs from the most productive suppliers without much concern for any risk involved.
+	
+	The differences between our calibrated economy and the ``no uncertainty'' alternatives are however larger during high-uncertainty episodes like the Great Recession. The top row of Figure 4 shows that expected log GDP in the baseline economy is about 0.25\% lower in 2009 than in the alternative ``as if $\Sigma_t = 0$'' economy. Because of the large increase in uncertainty, firms adjust their production techniques toward safer but less productive suppliers to avoid potentially large increases in costs. The result in terms of aggregate volatility is visible in the top-right panel, where we see that log GDP is about 2.4\% less volatile in 2009 in the baseline economy. Interestingly, realized log GDP, shown in the left-bottom panel, is substantially higher in the baseline economy than in the ``as if $\Sigma_t = 0$'' alternative. Essentially, firms took out an insurance against particularly bad TFP draws and opted for safer suppliers. When these fears were realized, this insurance policy paid off so that the baseline economy fared about 2.7\% better in terms of realized log GDP compared to the alternative.
+	
+	The right-bottom panel provides the same information for the ``known $\varepsilon_t$'' alternative. In this case, beliefs $(\mu_t, \Sigma_t)$, and in particular uncertainty, play no role in shaping the network and, from the planner’s problem, the optimal network is simply the one that maximizes (realized) consumption. It follows that realized consumption (or GDP) is always larger than in the baseline model. Unsurprisingly, the difference is particularly pronounced during episodes of high uncertainty, when knowing $\varepsilon_t$ provides a larger advantage, and reaches a high of 3\% during the Great Recession.
+	
+	Overall, our findings suggest that, while uncertainty might have a limited impact on the economy on average, it may play a larger role in shaping the production network during high-uncertainty periods, with consequences for expected and realized GDP, as well as for welfare. Given the stylized nature of the model, these findings should be interpreted with caution. The model abstracts from other forces that might affect the production network, such as changes in demand and technological progress that would expand the set of production techniques. Similarly, the production function might not be Cobb-Douglas in reality, in which case changes in prices would affect Domar weights. We also made the implicit assumption that it takes one year (the frequency of our data) for firms to change production techniques. While this assumption might be reasonable for some sectors, it is likely that the time it takes to retool a factory varies significantly by industry, or even depending on what the new and the old techniques are. While we believe that the mechanisms that we explore in this paper would still be present in a richer model, more work would be needed to fully assess their importance.
+	
+	\begin{figure}[ht]
+		\caption{The role of uncertainty in the postwar period.\\ First row: ``as if $\Sigma_t = 0$'' as the alternative}
+		\centering
+		\begin{subfigure}[b]{0.48\textwidth} 
+			\includegraphics[width=\textwidth]{\basepath/fig4/EC_full_no_unc.eps}
+			\caption{Difference in expected log GDP [\%]}
+			\label{fig:4-a}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.48\textwidth}
+			\includegraphics[width=\textwidth]{\basepath/fig4/VC_full_no_unc.eps}
+			\caption{Difference in expected st. dev. of log GDP [\%]}
+			\label{fig:4-b}
+		\end{subfigure}
+
+		\begin{subfigure}[b]{0.48\textwidth}
+			\caption{Left column: ``as if $\Sigma_t = 0$'' as alternative\\ Difference in realized log GDP [\%]}
+			\includegraphics[width=\textwidth]{\basepath/fig4/C_full_no_unc.eps}
+			\label{fig:4-c}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.48\textwidth} 
+			\caption{Right column: ``known $\varepsilon_t$'' as alternative\\ Difference in realized log GDP [\%]}
+			\includegraphics[width=\textwidth]{\basepath/fig4/C_full_known_shocks.eps}
+			\label{fig:4-d}
+		\end{subfigure}
+		\label{fig:4}
+	\end{figure}
+	
+	
+	\section{Model-free evidence for the mechanisms}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
