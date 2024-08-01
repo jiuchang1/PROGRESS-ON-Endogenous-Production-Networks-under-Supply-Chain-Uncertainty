@@ -62,4 +62,7 @@
 \contentsline {section}{\numberline {9}Model-free evidence for the mechanisms}{36}{section.9}%
 \contentsline {subsection}{\numberline {9.1}Uncertainty and Domar weights}{36}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2}Uncertainty and link destruction}{36}{subsection.9.2}%
-\contentsline {section}{\numberline {10}Appendix}{38}{section.10}%
+\contentsline {section}{\numberline {10}Additional results related to the calibrated economy}{38}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Data}{38}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Calibratyion procedure}{38}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}The calibrated economy}{40}{subsection.10.3}%

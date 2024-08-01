@@ -976,8 +976,72 @@ skipbelow=10pt
 	\end{table}
 	
 	\clearpage
-	\section{Appendix}
+	\section{Additional results related to the calibrated economy}
+	\subsection{Data}
+	The Bureau of Economic Analysis (BEA) provides sectoral input-output tables that allow us to compute the intermediate input shares as well as the shares of final consumption expenditure accounted for by different sectors. We rely on the harmonized tables constructed by Vom Lehn and Winberry (2022) that provide consistent annual data for n = 37 sectors over the period 1948-2020. 
 	
+	\subsection{Calibratyion procedure}
+	The three groups of parameters that we need to calibrate are 1) the household’s preferences, i.e. the consumption shares $\beta$ and the risk-aversion $\rho$, 2) the parameters of the TFP shifter function (\ref{eq-2}), and 3) the processes for the exogenous sectoral productivity shocks, i.e. µt and $\Sigma_t$. Some of these parameters can be computed directly from the data. The other ones are estimated using a combination of indirect inference and standard time-series methods. Below, we describe the exact procedure used for each set of parameters.
+	
+	\subsection*{Household preferences}
+	Since the preference parameter βi corresponds to the household’s expenditure share of good $i$, we pin down its value directly from the data by averaging the consumption share of good $i$ over time. The sectors with the largest consumption shares are ``Real estate'' (14\%), ``Retail trade'' (12\%) and ``Health care'' (11\%). See Supplemental Appendix H in Kopytov et al. (2024) for a version of the calibrated economy with time-varying $\beta$’s.
+	
+	The relative risk aversion parameter $\rho$ determines to what extent firms are willing to trade off higher input prices for access to more stable suppliers. The literature uses a broad range of values for $\rho$ and it is unclear a prior $i$ which one is best for our application. We therefore estimate $\rho$ using a method of simulated moments (MSM) described below.
+	
+	\subsection*{Endogenous productivity shifter}
+	We specialize the TFP shifter function (\ref{eq-2}) to
+	\setcounter{equation}{68}
+	\begin{align}
+		\log A_i(\alpha_i) = a_i^{\circ} - \sum\limits_{j=1}^n \kappa_{ij}(\alpha_{ij}-\alpha_{ij}^{\circ})^2 - \kappa_{i0}\left(\sum\limits_{j=1}^n \alpha_{ij} - \sum\limits_{j=1}^n \alpha_{ij}^{\circ}\right)^2 ,\label{eq1-41}
+	\end{align}
+	where the last term can provide a penalty from deviating from an ideal labor share. We denote by $\kappa$ the matrix with typical element $\kappa_{ij}$. This functional form takes as inputs the ideal shares $\alpha_{ij}^{\circ}$, the actual shares $\alpha_{ijt}$, the coefficients $\kappa_{ij}$ and the constant $a_i^{\circ}$. The ideal shares $\alpha_{ij}^{\circ}$ are set to the time average of the input shares observed in the data. We set the constant $a_i^{\circ}$ equal to the average TFP of sector $i$. The coefficients $\kappa_{ij}$, which determine how costly it is to deviate from the ideal shares in terms of productivity, are estimated using the MSM procedure described below. Without any restrictions the matrix $\kappa$ would have $n \times (n + 1) = 1406$ elements. To reduce the number offree parameters to estimate, we restrict $\kappa$ to be of the form $\kappa = \kappa^i\kappa^j$ where $\kappa^i$ is an $n \times 1$ column vector and $\kappa^j$ is an $1 \times (n + 1)$ row vector. The $k$th element of $\kappa^i$ then scales the cost for producer $k$ of changing the share of any of its inputs, and the $l$th element in $\kappa^j$ scales the cost of changing the share of input $l$ for any producer. We normalize the first element in $\kappa^i$ to pin down the scaleof $\kappa^i$ and $\kappa^j$. The matrix $\kappa$ then contains only $2n = 74$ free parameters to estimate.
+	
+	\subsection*{Exogenous productivity process}
+	The source of uncertainty in the model is the vector of productivity shocks $\varepsilon_t \sim \mathcal{N} (\mu_t, \Sigma_t)$. In the calibrated model, we allow $\mu_t$ and $\Sigma_t$ to vary over time to account for changes in the stochastic process for $\varepsilon_t$ over the sample period. To parameterize the evolution of $\mu_t$ and $\Sigma_t$, we first filter out the endogenous productivity shifter $A_i (\alpha_{it})$ and the normalization term $\zeta(\alpha_{it})$ from the measured sectoral TFP, $e^{\varepsilon_{it}}Ai(\alpha_{it})\zeta(\alpha_{it})$, implied by the production function (\ref{eq-1}). We then estimate the evolution of $\mu_t$ and $\Sigma_t$ from the remaining component. To do so, we assume that $\varepsilon_t$ follows a random walk with drift,
+	\begin{align}
+		\varepsilon_t = \gamma + \varepsilon_{t-1} + u_t \label{eq1-42} 
+	\end{align}
+	where $\gamma$ is an $n × 1$ vector of deterministic drifts and $u_t \sim \text{iid}\mathcal{N}(0, \Sigma_t)$ is a vector of shocks. We estimate $\gamma$ by computing the average of the productivity growth rates $\Delta\varepsilon_t = \varepsilon_t - \varepsilon_{t−1}$ over time.
+	
+	When making decisions in period $t$, firms know the past realizations of $\varepsilon_t$ so that the conditionalmean of $\varepsilon_t$ is given by $\mu_t = \gamma + \varepsilon_{t−1}$. The covariance $\Sigma_t$ of the innovation $u_t$ is estimated usinga rolling window that puts more weight on more recent observations to allow for time-varying uncertainty about sectoral productivity. Specifically, we estimate the covariance between sector $i$ and $j$ at time $t$ by computing $\Sigma_{ijt} = \sum\limits_{s=1}^{t-1}\phi^{t-s-1}u_{is}u_{js}$, where $0 < \phi < 1$ is a parameter that determines the relative weight of more recent observations. Its value is set to the sectoral average of the corresponding parameters of a GARCH$(1,1)$ model estimated on each sector’s productivity innovation uit. In the calibrated economy, its value is $\phi = 0.47$. Note that this procedure implies that the time series for $\varepsilon_t$ depends on the parameters of the TFP shifters. Therefore, the estimation of the stochastic process for sectoral productivity has to be done jointly with the estimation of $\kappa$.
+	
+	\subsection*{Matching model and data moments}
+	We use an indirect inference approach and estimate the parameters $\Theta \equiv \{\rho, \kappa\}$ by minimizing
+	\begin{align*}
+		\hat{\Theta} = \underset{\Theta}{\arg\min} (m(z) - m(\Theta))^T W (m(z) - m(\Theta))
+	\end{align*}
+	where $m (z)$ is a vector of moments computed from the data, and $m (\Theta)$ is the vector of corresponding model-implied moments conditional on the parameters $\Theta$. The moments that we target are the time series of the production shares $\alpha_{ijt}$, normalized by their average in the data, and the demeaned time series of aggregate consumption growth, normalized by the average of its absolute value in the data. We target consumption since the stochastic discount factor of the household is central to the trade-off that firms face when choosing production techniques.
+	
+	We match $n^2\times T + T - 1$ moments with only $2n+1$ free parameters. The model is thus strongly over-identified. We use particle swarm optimization to find the global minimizer $\Theta$ (Kennedy and Eberhart, 1995). The estimated coefficient of relative risk aversion $\hat{\rho}$ is $4.27$, which is similar tovalues used or estimated in the macroeconomics literature.
+	
+	\subsection{The calibrated economy}
+	We want our model to fit key features of the data that relate to 1) the structure of the production network, 2) how the network responds to changes in beliefs, and 3) how this response affects macroeconomic aggregates. As we have seen earlier, the Domar weights, and how they react to changes in $\mu_t$ and $\Sigma_t$, play a central role for these mechanisms. In this section, we first describe the evolution of $\mu_t$ and $\Sigma_t$ in the calibrated economy. We then report unconditional moments of the model-implied Domar weights and how they compare to the data. Finally, we look at the relationship between the Domar weights and the beliefs $\mu_t$ and $\Sigma_t$ and verify that the correlations predicted by the mechanisms of the model are present in the data.
+	
+	\subsection*{Evolution of beliefs in the data}
+	Our estimation procedure provides a time-series for $\mu_t$ and $\Sigma_t$. To illustrate the overall evolution of beliefs over our sample period, we compute two measures that capture the aggregate impact of changes in $\mu_t$ and $\Sigma_t$. The first measure is the Domar-weighted average growth in the conditional mean of productivity, defined as
+	\setcounter{equation}{69}
+	\begin{align}
+		\Delta\bar{\mu}_t = \sum\limits_{j=1}^n \omega_{jt}\Delta\mu_{jt}\label{eq-70}
+	\end{align}
+	
+	We use the Domar weights ωjt in this equation to properly reflect the importance of a sector for GDP, as implied by (\ref{eq-13}). The solid blue line in Figure 5 shows the evolution of $\Delta\bar{\mu}_t$ over the sample period. As expected, $\Delta\bar{\mu}_t$ tends to go below zero during NBER recessions and is positive during expansions.
+	
+	To describe how aggregate uncertainty evolves in the calibrated economy, we also compute the within-period perceived standard deviation of log GDP. From (\ref{eq-14}), this can be written as
+	\begin{align}
+		\sigma_{yt} = \sqrt{\mathbb{Y}[y]} = \sqrt{\omega_y^T \Sigma_t \omega_t} \label{eq-71}
+	\end{align}
+	
+	\begin{figure}[ht]
+		\caption{Domar-weighted TFP and uncertainty changes}
+		\includegraphics[width=0.9\textwidth]{\basepath/fig5/domar_weighted_uncertainty_tfp.eps}
+		\label{fig:5}
+	\end{figure}
+	
+	The red dashed line in Figure 5 represents the evolution of $\Sigma_{yt}$ over the sample period. While uncertainty is on average relatively low, especially during the Great Moderation era, spikes are clearly visible in the earlier years and, in particular, during the Great Recession of 2007-2009.
+	
+	Notes: Solid blue line: Domar-weighted average growth in the conditional mean of productivity, $\Delta\bar{\mu}_t = \sum\limits_{j=1}^n \omega_{jt}\Delta\mu_{jt}$. Red dashed line: Domar-weighted conditional variance of productivity, $\Sigma_{yt} = \sqrt{\omega_t^T \Sigma_t \omega_t}$. Shaded areas represent NBER recessions.
+	
+	\subsection*{Unconditional Domar weights}
 	
 	
 	
