@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.28)  29 JUL 2024 11:02
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.28)  30 JUL 2024 10:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1184,7 +1184,7 @@ stic tuple $\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 P[]; C[]; L[]; X[]; Q[]\OT1
  []
 
 [11] [12]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 359
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 370
 .
  (d:/texlive/2022/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
@@ -1237,7 +1237,7 @@ gures/fig3/network.png Graphic file (type bmp)
 /fig3/network.png>
 
 
-LaTeX Warning: Float too large for page by 30.96132pt on input line 846.
+LaTeX Warning: Float too large for page by 30.96132pt on input line 857.
 
 Missing character: There is no − ("2212) in font cmr10!
 Missing character: There is no − ("2212) in font cmr10!
@@ -1264,20 +1264,22 @@ File: F:/12004835/replication_package_final/replication_package_final/output_fi
 gures/fig4/C_full_known_shocks.eps Graphic file (type eps)
 <F:/12004835/replication_package_final/replication_package_final/output_figures
 /fig4/C_full_known_shocks.eps>
- [35] (./main_progress.aux)
+ [35] [36] [37] [38
+
+] (./main_progress.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main_progress.out' has not changed.
-(rerunfilecheck)             Checksum: 6ACA5954DB6D65A12479DD6DAA825F9F;4391.
+(rerunfilecheck)             Checksum: 1E2FBB162F44FA912F9F1C31CA9D1AEA;4915.
  ) 
 Here is how much of TeX's memory you used:
- 29493 strings out of 476179
- 581759 string characters out of 5813072
+ 29518 strings out of 476179
+ 582376 string characters out of 5813072
  1069514 words of memory out of 5000000
- 49666 multiletter control sequences out of 15000+600000
- 481509 words of font info for 96 fonts, out of 8000000 for 9000
+ 49689 multiletter control sequences out of 15000+600000
+ 481517 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 100i,19n,104p,1235b,813s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 100i,19n,104p,1279b,813s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main_progress.pdf (35 pages).
+Output written on main_progress.pdf (38 pages).

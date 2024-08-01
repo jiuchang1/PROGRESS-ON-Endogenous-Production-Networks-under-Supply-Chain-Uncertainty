@@ -36,13 +36,13 @@
 \contentsline {section}{\numberline {3}Equilibirum prices and GDP in a fixed-network economy}{11}{section.3}%
 \contentsline {paragraph}{Domar weight}{11}{section*.30}%
 \contentsline {paragraph}{The first and second moments}{12}{section*.31}%
-\contentsline {section}{\numberline {4}Firm decisions}{12}{section.4}%
-\contentsline {paragraph}{Log of those things}{12}{section*.32}%
-\contentsline {paragraph}{Probelm of the firm}{12}{section*.33}%
+\contentsline {section}{\numberline {4}Firm decisions}{13}{section.4}%
+\contentsline {paragraph}{Log of those things}{13}{section*.32}%
+\contentsline {paragraph}{Probelm of the firm}{13}{section*.33}%
 \contentsline {paragraph}{First-order Condition}{15}{section*.34}%
 \contentsline {paragraph}{Substitutes and Complements}{15}{section*.35}%
-\contentsline {section}{\numberline {5}Equilibrium existence, uniqueness and efficiency}{17}{section.5}%
-\contentsline {subsection}{\numberline {5.1}The efficient allocation}{17}{subsection.5.1}%
+\contentsline {section}{\numberline {5}Equilibrium existence, uniqueness and efficiency}{16}{section.5}%
+\contentsline {subsection}{\numberline {5.1}The efficient allocation}{16}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Fundamental properties of the equilibrium}{18}{subsection.5.2}%
 \contentsline {section}{\numberline {6}Beliefs and the production network}{19}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Domar weights}{19}{subsection.6.1}%
@@ -59,4 +59,7 @@
 \contentsline {section}{\numberline {8}A basic calibration of the model}{32}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Parametrization}{32}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}The production network, welfare and output}{33}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Model-free evidence for the mechanisms}{35}{section.9}%
+\contentsline {section}{\numberline {9}Model-free evidence for the mechanisms}{36}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Uncertainty and Domar weights}{36}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Uncertainty and link destruction}{36}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Appendix}{38}{section.10}%

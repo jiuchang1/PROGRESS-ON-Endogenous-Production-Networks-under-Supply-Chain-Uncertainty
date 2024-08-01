@@ -301,6 +301,17 @@ skipbelow=10pt
 		\end{align}
 		where $a(\alpha) = (\log A_i(\alpha_i),\cdots, \log A_n(\alpha_n))$
 	\end{lemma}
+	\begin{proof}
+		Combining the unit cost equation (\ref{eq-8}) with the equilibrium condition (\ref{eq-10}) and taking the log we could get
+		\begin{align*}
+			\color{blue} p_i = \log P_i = \log K_i(\alpha,P) = -\varepsilon_i - \log A_i(\alpha_i) + \sum\limits_{j=1}^n \alpha_{ij}\log P_j = -\varepsilon_i - a_i(\alpha_i) + \sum\limits_{j=1}^n \alpha_{ij} p_j
+		\end{align*}
+		where $a_i(\alpha_i) = \log(A_i(\alpha_i))$. This is a system of linear equations whose solution is (\ref{eq-12}). The log price vector is also normally distributed since it is a linear transformation of normal random variable. Combining with (\ref{eq-6}) yields (\ref{eq-13}).
+		\begin{align*}
+			\color{blue} y = -\beta^T p = \eqnmarkbox[red]{1}{-\beta^T -\mathcal{L}}(\alpha) (\varepsilon + a(\alpha)) = \omega^T (\varepsilon + a(\alpha))
+		\end{align*}
+		\annotate[yshift=-0.5em]{below,left}{1}{$\omega^T = \beta^T \mathcal{L}(\alpha)$}
+	\end{proof}
 	
 	
 	\paragraph{The first and second moments}
@@ -913,19 +924,59 @@ skipbelow=10pt
 		\label{fig:4}
 	\end{figure}
 	
-	
+	\newpage
 	\section{Model-free evidence for the mechanisms}
+	The model proposed in this paper relies on simplifying assumptions for tractability. In this section, we present additional evidence in support of the main mechanisms of the model that does not rely on this structure. Through firm-level regressions that closely follow Alfaro, Bloom, and Lin (2019) we document that 1) higher uncertainty about a firm leads to a decline in its Domar weight, and 2) network connections involving riskier suppliers are more likely to break down. We test these predictions at the firm level to take advantage of the abundance of data and of instrumental variables that are available at this level of aggregation. Supplemental Appendix E in Kopytov et al. (2024) describes the data and the instruments in detail.
 	
+	\subsection{Uncertainty and Domar weights}
+	We first test the model’s prediction that Domar weights decrease with uncertainty. We use annual U.S. data from 1963 to 2016 provided by Compustat. Our main variables of interest area firm’s Domar weight, constructed by dividing its sales by nominal GDP, and a measure of itsstock price volatility, which we use as a proxy for uncertainty. We then regress the change in Domar weight on the change in stock price volatility. The results are presented in the first column of Table I. In column (2), we follow Alfaro et al. (2019) and address potential endogeneity concerns by instrumenting stock price volatility with industry-level exposure to ten aggregate sources of uncertainty shocks. In column (3), we use option prices to back out an implied measure of future volatility. In all cases, we find a negative and significant relationship between uncertainty and Domar weights. The effect is also economically large with a decline in Domar weight of about 18\% following a doubling in firm-level volatility (roughly a 3.3 standard deviation volatility shock), according to the IV estimates. Overall, these results provide evidence that higher uncertainty leads to lower Domar weights, in line with the predictions of our theoretical model.
 	
+	\begin{table}[ht]
+		\centering
+		\caption{Domar weights and uncertainty}
+		\begin{tabular}{lccc}
+			\hline
+			& \multicolumn{3}{c}{Change in Domar weight} \\
+			\cline{2-4}
+			& (1): OLS & (2): IV & (3): IV \\
+			\hline
+			$\Delta$ Volatility$_{i,t-1}$ & -0.058*** & -0.137*** & -0.218*** \\
+			& (0.004) & (0.034) & (0.073) \\
+			1st moment 10IV$_{i,t-1}$ & No & Yes & Yes \\
+			Type of volatility & Realized & Realized & Implied \\
+			Fixed effects & Yes & Yes & Yes \\
+			Observations & 112,563 & 27,380 & 17,151 \\
+			F-statistic & --- & 14.2 & 9.8 \\
+			\hline
+		\end{tabular}
+	\end{table}
 	
+	% \clearpage
+	\subsection{Uncertainty and link destruction}
+	We conduct a similar exercise, this time at the firm-to-firm relationship level, to investigate whether higher supplier uncertainty is associated with a higher likelihood of link destruction. We proceed by combining the uncertainty data described above with data from 2003 to 2016 about firm-level supply relationships provided by Factset. We then regress a dummy variable that equals one in the last year of a relationship on the change in the supplier’s stock price volatility. The results are presented in column (1) of Table II. As in the last exercise, column (2) uses industry level sensitivity to aggregate shocks as instruments, and column (3) uses implied volatility from option prices as a measure of uncertainty. In all cases, we find a positive and statistically significant relationship between supplier volatility and the end of supply relationships, which is consistent with buyers moving away from riskier suppliers. The effect is also economically large with a doubling in volatility associated with a 12 percentage point increase in the likelihood that a relationship is destroyed, according to the IV estimates.
 	
+	\begin{table}[ht]
+		\centering
+		\caption{Link destruction and supplier volatility}
+		\begin{tabular}{lccc}
+				\hline
+				& \multicolumn{3}{c}{Dummy for last year of supply relationship} \\
+				\cline{2-4}
+				& (1): OLS & (2): IV & (3): IV \\
+				\hline
+				$\Delta$Volatility$_{t-1}$ of supplier & 0.026** & 0.097*** & 0.144** \\
+				& (0.012) & (0.035) & (0.063) \\
+				1st moment 10IV$_{t-1}$ of supplier & No & Yes & Yes \\
+				Type of volatility & Realized & Realized & Implied \\
+				Fixed effects & Yes & Yes & Yes \\
+				Observations & 35,629 & 35,620 & 26,195 \\
+				F-statistic & --- & 22.9 & 10.4 \\
+				\hline
+		\end{tabular}
+	\end{table}
 	
-	
-	
-	
-	
-	
-	
+	\clearpage
+	\section{Appendix}
 	
 	
 	
