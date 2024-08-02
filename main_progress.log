@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.28)  1 AUG 2024 10:01
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.28)  2 AUG 2024 10:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1280,23 +1280,65 @@ File: F:/12004835/replication_package_final/replication_package_final/output_fi
 gures/fig5/domar_weighted_uncertainty_tfp.eps Graphic file (type eps)
 <F:/12004835/replication_package_final/replication_package_final/output_figures
 /fig5/domar_weighted_uncertainty_tfp.eps>
-[41] [42] (./main_progress.aux)
+[41]
+File: F:/12004835/replication_package_final/replication_package_final/output_fi
+gures/fig6/domar_weights_data_vs_model_v2.eps Graphic file (type eps)
+<F:/12004835/replication_package_final/replication_package_final/output_figures
+/fig6/domar_weights_data_vs_model_v2.eps>
+ [42]
+File: F:/12004835/replication_package_final/replication_package_final/output_fi
+gures/fig7/correlation_cs.eps Graphic file (type eps)
+<F:/12004835/replication_package_final/replication_package_final/output_figures
+/fig7/correlation_cs.eps>
+ [43]
+File: F:/12004835/replication_package_final/replication_package_final/output_fi
+gures/fig8/EC_full_no_unc.eps Graphic file (type eps)
+<F:/12004835/replication_package_final/replication_package_final/output_figures
+/fig8/EC_full_no_unc.eps>
+File: F:/12004835/replication_package_final/replication_package_final/output_fi
+gures/fig8/EC_full_known_shocks.eps Graphic file (type eps)
+<F:/12004835/replication_package_final/replication_package_final/output_figures
+/fig8/EC_full_known_shocks.eps>
+File: F:/12004835/replication_package_final/replication_package_final/output_fi
+gures/fig8/VC_full_no_unc.eps Graphic file (type eps)
+<F:/12004835/replication_package_final/replication_package_final/output_figures
+/fig8/VC_full_no_unc.eps>
+File: F:/12004835/replication_package_final/replication_package_final/output_fi
+gures/fig8/VC_full_known_shocks.eps Graphic file (type eps)
+<F:/12004835/replication_package_final/replication_package_final/output_figures
+/fig8/VC_full_known_shocks.eps>
+File: F:/12004835/replication_package_final/replication_package_final/output_fi
+gures/fig8/W_full_no_unc.eps Graphic file (type eps)
+<F:/12004835/replication_package_final/replication_package_final/output_figures
+/fig8/W_full_no_unc.eps>
+File: F:/12004835/replication_package_final/replication_package_final/output_fi
+gures/fig8/W_full_known_shocks.eps Graphic file (type eps)
+<F:/12004835/replication_package_final/replication_package_final/output_figures
+/fig8/W_full_known_shocks.eps>
+File: F:/12004835/replication_package_final/replication_package_final/output_fi
+gures/fig8/C_full_no_unc.eps Graphic file (type eps)
+<F:/12004835/replication_package_final/replication_package_final/output_figures
+/fig8/C_full_no_unc.eps>
+File: F:/12004835/replication_package_final/replication_package_final/output_fi
+gures/fig8/C_full_known_shocks.eps Graphic file (type eps)
+<F:/12004835/replication_package_final/replication_package_final/output_figures
+/fig8/C_full_known_shocks.eps>
+ [44
+
+] [45] (./main_progress.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main_progress.out' has not changed.
-(rerunfilecheck)             Checksum: D6567238E4C95961BEB58673B32F9032;5582.
+(rerunfilecheck)             Checksum: 484865F98D37BDB739FE270E3AE02D6D;5765.
  ) 
 Here is how much of TeX's memory you used:
- 29531 strings out of 476179
- 583124 string characters out of 5813072
+ 29602 strings out of 476179
+ 588455 string characters out of 5813072
  1069514 words of memory out of 5000000
- 49699 multiletter control sequences out of 15000+600000
+ 49758 multiletter control sequences out of 15000+600000
  481517 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  100i,19n,104p,1415b,813s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main_progress.pdf (42 pages).
+Output written on main_progress.pdf (45 pages).

@@ -1043,13 +1043,112 @@ skipbelow=10pt
 	
 	\subsection*{Unconditional Domar weights}
 	
+	\begin{figure}[ht]
+		\centering
+		\caption{Sectoral Domar weights in the data and the model}
+		\includegraphics[width=0.8\textwidth]{\basepath/fig6/domar_weights_data_vs_model_v2.eps}
+		\label{fig:6}
+	\end{figure}
 	
+	Figure 6 shows the average Domar weight of each sector in the data (blue bars) and in the model (black line). The sectors with the highest Domar weights in the data are ``Real estate'', ``Food and beverage'', ``Retail trade'', ``Finance and insurance'' and ``Health care''. According to our theory (Corollary 4), changes in the expected level and variance of productivity in those sectors will have the largest effects on welfare.
 	
+	The cross-sectional correlation between the average Domar weights in the model and in the data is 0.96, so that the calibrated model fits this important feature of the production network well. However, the average Domar weight in the model (0.032) is lower than its counterpart in the data (0.047). This is because the estimation also targets aggregate consumption growth. Given the observed variation in TFP, if the model were to match the Domar weights perfectly, consumption would be too volatile compared to the data. Under our calibration, the volatility of consumption growth in the model is 2.73\%, close to its data target of 2.65\% (row (6) of Table IV).
 	
+	The model can account for about 40\% of the observed average standard deviation of the Domar weights over time, as shown in row (2) of Table IV. Row (3) also reports that the coefficient of variation of the Domar weights in the model is 0.07 compared to 0.11 in the data. Once we take into account their relative scale, the model can thus account for a sizable portion of the variation in a key moment that characterizes the production network.
 	
+	\setcounter{table}{3}
+	\begin{table}[ht]
+		\centering
+		\caption{Domar weights, consumption and TFP in the model and in the data}
+		\begin{tabular}{clcc}
+			\hline
+			& \textbf{Statistic} & \textbf{Data} & \textbf{Model} \\
+			\hline
+			(1) & Average Domar weight $\bar{\omega}_j$ & 0.047 & 0.032 \\
+			(2) & Standard deviation $\sigma(\omega_j)$ & 0.0050 & 0.0021 \\
+			(3) & Coefficient of variation $\sigma(\omega_j)/\bar{\omega}_j$ & 0.107 & 0.066 \\
+			(4) & Corr $(\omega_{jt}, \mu_{jt})$ & 0.08 & 0.08 \\
+			(5) & Corr $(\omega_{jt}, \Sigma_{jjt})$ & -0.37 & -0.31 \\
+			(6) & Consumption growth volatility & 2.65\% & 2.73\% \\
+			(7) & TFP growth volatility & 1.83\% & 2.73\% \\
+			\hline
+		\end{tabular}
+	\end{table}
 	
+	\begin{figure}[ht]
+		\centering
+		\caption{Cross-sector correlations in the model and in the data}
+		\includegraphics[width=0.5\textwidth]{\basepath/fig7/correlation_cs.eps}
+		\label{fig:7}
+	\end{figure}
 	
+	\clearpage
+	\subsection*{Domar weights and beliefs}
+	One of the key mechanisms of the model predicts that a decline in the expected productivity of a sector, or an increase in its variance, should lead firms to reduce the importance of that sector as an input provider, leading to a decline in its Domar weight. Proposition 2 makes this point formally for a single change in $\mu_i$ or $\Sigma_{ii}$. Of course, in the data multiple changes in $\mu_t$ and $\Sigma_t$ occur at the same time, and it would be difficult to isolate the impact of a single change on the Domar weights. Instead, we look at simple cross-sector correlations between the Domar weights $\omega_{it}$ and the first ($\mu_{it}$) and the second moments ($\Sigma_{iit}$) of sectoral TFPs, both in the data and in the model. These correlations provide a straightforward, albeit noisy, measure of the interrelations between $\omega_t$, $\mu_t$ and $\Sigma_t$. As can be seen in rows (\ref{eq-4}) and (\ref{eq-5}) of Table IV, the predictions of the model are borne out in the data. The model is thus able to capture well the impact of beliefs on the structure of the production network.
 	
+	\subsection*{Sectoral correlations}
+	The model is also able to replicate features of the correlation between sectoral outputs. We focus on growth rates to accommodate different trends in the data and in the model. For each pair of sectors, we compute the correlation in their output growth in the model and in the data, and plot them in Figure 7. The model reasonably captures cross-sectoral comovements: We find that the correlation between the data- and model-implied values is 0.44. On average, sectoral outputs are positively correlated in the model and in the data, although the model correlation is somewhat weaker on average (see the first column of Table V).
+	
+	Table V also reports averages of these correlations during periods of low and high TFP growth and uncertainty growth, as measured by (70) and (71). We see that in the data these correlations are lower in good times, when TFP growth is high and uncertainty growth is low. The model is able to replicate this ranking. Intuitively, in bad times consumption is low and so the household is particularly worried about bad shocks. To avoid them, firms rely more on the most stable producers. As firms are mostly purchasing from the same sectors, sectoral outputs become more correlated.
+	
+	\subsection{Counterfactual exercises}
+	\begin{figure}[ht]
+		\caption{The role of uncertainty in the postwar period}
+		\centering
+		\begin{subfigure}[b]{0.48\textwidth} 
+			\caption{Left column: the ``as if $\Sigma_t=0$'' alternative \\
+			Difference in expected log GDP [\%]}
+			\includegraphics[width=\textwidth]{\basepath/fig8/EC_full_no_unc.eps}
+			\label{fig:8-a}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.48\textwidth}
+			\caption{Left column: the ``the known $\varepsilon_t$'' alternative \\
+				Difference in expected log GDP [\%]}
+			\includegraphics[width=\textwidth]{\basepath/fig8/EC_full_known_shocks.eps}
+			\label{fig:8-b}
+		\end{subfigure}
+		
+		\begin{subfigure}[b]{0.48\textwidth} 
+			\caption{Difference in expected st. dev. of log GDP [\%]}
+			\includegraphics[width=\textwidth]{\basepath/fig8/VC_full_no_unc.eps}
+			\label{fig:8-c}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.48\textwidth}
+			\caption{Difference in expected st. dev. of log GDP [\%]}
+			\includegraphics[width=\textwidth]{\basepath/fig8/VC_full_known_shocks.eps}
+			\label{fig:8-d}
+		\end{subfigure}
+		
+		\begin{subfigure}[b]{0.48\textwidth} 
+			\caption{Difference in expected welfare [\%]}
+			\includegraphics[width=\textwidth]{\basepath/fig8/W_full_no_unc.eps}
+			\label{fig:8-e}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.48\textwidth}
+			\caption{Difference in expected welfare [\%]}
+			\includegraphics[width=\textwidth]{\basepath/fig8/W_full_known_shocks.eps}
+			\label{fig:8-f}
+		\end{subfigure}
+		
+		\begin{subfigure}[b]{0.48\textwidth} 
+			\caption{Difference in realized log GDP [\%]}
+			\includegraphics[width=\textwidth]{\basepath/fig8/C_full_no_unc.eps}
+			\label{fig:8-g}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.48\textwidth}
+			\caption{Difference in realized log GDP [\%]}
+			\includegraphics[width=\textwidth]{\basepath/fig8/C_full_known_shocks.eps}
+			\label{fig:8-h}
+		\end{subfigure}
+		
+		\label{fig:8}
+	\end{figure}
+	
+	\clearpage
 	
 	
 	
