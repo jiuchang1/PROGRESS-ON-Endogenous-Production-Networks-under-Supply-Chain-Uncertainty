@@ -1,69 +1,116 @@
-\contentsline {section}{\numberline {1}Some Notes on Introdution Part}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Definitions}{3}{subsection.1.1}%
-\contentsline {paragraph}{Production Network}{3}{section*.2}%
-\contentsline {paragraph}{Domar Weights}{3}{section*.3}%
-\contentsline {paragraph}{Rish-averse representative household}{3}{section*.4}%
-\contentsline {paragraph}{TFP Process}{3}{section*.5}%
-\contentsline {paragraph}{Risk exposure}{4}{section*.6}%
-\contentsline {paragraph}{Hulten's Theorem}{4}{section*.7}%
-\contentsline {paragraph}{Alternative Economy}{5}{section*.8}%
-\contentsline {paragraph}{Multi-sector economy}{5}{section*.9}%
-\contentsline {paragraph}{Productivity shifter}{5}{section*.10}%
-\contentsline {paragraph}{Aggregate Risk}{5}{section*.11}%
-\contentsline {paragraph}{Pareto Efficient Allocations}{5}{section*.12}%
-\contentsline {subsection}{\numberline {1.2}Summary for innovations}{6}{subsection.1.2}%
-\contentsline {paragraph}{Modeling Supply Chain Uncertainty}{6}{section*.13}%
-\contentsline {paragraph}{Focus on Uncertainty}{6}{section*.14}%
-\contentsline {paragraph}{Technique Choice and Production Network}{6}{section*.15}%
-\contentsline {paragraph}{Risk-Adjusted Prices}{6}{section*.16}%
-\contentsline {paragraph}{Empirical Relevance}{6}{section*.17}%
-\contentsline {paragraph}{Comparative Analysis with Alternative Economies}{6}{section*.18}%
-\contentsline {section}{\numberline {2}Model}{7}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Firms and production functions}{8}{subsection.2.1}%
-\contentsline {paragraph}{The corresponding production function}{8}{section*.21}%
-\contentsline {paragraph}{Set of feasible production techniques}{8}{section*.22}%
-\contentsline {paragraph}{Example}{8}{section*.23}%
-\contentsline {subsection}{\numberline {2.2}Household preferences}{8}{subsection.2.2}%
-\contentsline {paragraph}{CRRA}{8}{section*.24}%
-\contentsline {paragraph}{Stochastic discount factor}{9}{section*.25}%
-\contentsline {paragraph}{Log GDP}{9}{section*.26}%
-\contentsline {subsection}{\numberline {2.3}Unit cost minimization}{9}{subsection.2.3}%
-\contentsline {paragraph}{The second stage problem}{9}{section*.27}%
-\contentsline {subsection}{\numberline {2.4}Technique choice}{10}{subsection.2.4}%
-\contentsline {paragraph}{The first stage problem}{10}{section*.28}%
-\contentsline {subsection}{\numberline {2.5}Equilibrium conditions}{11}{subsection.2.5}%
-\contentsline {paragraph}{Competitive Pressure}{11}{section*.29}%
-\contentsline {section}{\numberline {3}Equilibirum prices and GDP in a fixed-network economy}{11}{section.3}%
-\contentsline {paragraph}{Domar weight}{11}{section*.30}%
-\contentsline {paragraph}{The first and second moments}{12}{section*.31}%
-\contentsline {section}{\numberline {4}Firm decisions}{13}{section.4}%
-\contentsline {paragraph}{Log of those things}{13}{section*.32}%
-\contentsline {paragraph}{Probelm of the firm}{13}{section*.33}%
-\contentsline {paragraph}{First-order Condition}{15}{section*.34}%
-\contentsline {paragraph}{Substitutes and Complements}{15}{section*.35}%
-\contentsline {section}{\numberline {5}Equilibrium existence, uniqueness and efficiency}{16}{section.5}%
-\contentsline {subsection}{\numberline {5.1}The efficient allocation}{16}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Fundamental properties of the equilibrium}{18}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Beliefs and the production network}{19}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Domar weights}{19}{subsection.6.1}%
-\contentsline {paragraph}{Global complements and substitutes}{20}{section*.41}%
-\contentsline {paragraph}{$\Sigma $ and global substition patterns}{21}{section*.42}%
-\contentsline {paragraph}{$\nabla ^2\bar {a}$ and global substitution patterns}{21}{section*.43}%
-\contentsline {paragraph}{Impact of Lemma 6}{21}{section*.44}%
-\contentsline {paragraph}{Parametrize $H_i$}{22}{section*.45}%
-\contentsline {paragraph}{An approximate equation for the equilibrium Domar weights}{22}{section*.46}%
-\contentsline {paragraph}{Impacts of Lemma 8}{23}{section*.47}%
-\contentsline {subsection}{\numberline {6.2}The production network}{23}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Implications for GDP and welfare}{26}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Beliefs and GDP}{27}{subsection.7.1}%
-\contentsline {section}{\numberline {8}A basic calibration of the model}{32}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Parametrization}{32}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}The production network, welfare and output}{33}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Model-free evidence for the mechanisms}{36}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Uncertainty and Domar weights}{36}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Uncertainty and link destruction}{36}{subsection.9.2}%
-\contentsline {section}{\numberline {10}Additional results related to the calibrated economy}{38}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Data}{38}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Calibratyion procedure}{38}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}The calibrated economy}{40}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Counterfactual exercises}{44}{subsection.10.4}%
+\contentsline {section}{\numberline {1}Some Notes on Introdution Part}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Definitions}{5}{subsection.1.1}%
+\contentsline {paragraph}{Production Network}{5}{section*.2}%
+\contentsline {paragraph}{Domar Weights}{5}{section*.3}%
+\contentsline {paragraph}{Rish-averse representative household}{5}{section*.4}%
+\contentsline {paragraph}{TFP Process}{5}{section*.5}%
+\contentsline {paragraph}{Risk exposure}{6}{section*.6}%
+\contentsline {paragraph}{Hulten's Theorem}{6}{section*.7}%
+\contentsline {paragraph}{Alternative Economy}{7}{section*.8}%
+\contentsline {paragraph}{Multi-sector economy}{7}{section*.9}%
+\contentsline {paragraph}{Productivity shifter}{7}{section*.10}%
+\contentsline {paragraph}{Aggregate Risk}{7}{section*.11}%
+\contentsline {paragraph}{Pareto Efficient Allocations}{7}{section*.12}%
+\contentsline {subsection}{\numberline {1.2}Summary for innovations}{8}{subsection.1.2}%
+\contentsline {paragraph}{Modeling Supply Chain Uncertainty}{8}{section*.13}%
+\contentsline {paragraph}{Focus on Uncertainty}{8}{section*.14}%
+\contentsline {paragraph}{Technique Choice and Production Network}{8}{section*.15}%
+\contentsline {paragraph}{Risk-Adjusted Prices}{8}{section*.16}%
+\contentsline {paragraph}{Empirical Relevance}{8}{section*.17}%
+\contentsline {paragraph}{Comparative Analysis with Alternative Economies}{8}{section*.18}%
+\contentsline {section}{\numberline {2}Model}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Firms and production functions}{10}{subsection.2.1}%
+\contentsline {paragraph}{The corresponding production function}{10}{section*.21}%
+\contentsline {paragraph}{Set of feasible production techniques}{10}{section*.22}%
+\contentsline {paragraph}{Example}{10}{section*.23}%
+\contentsline {subsection}{\numberline {2.2}Household preferences}{10}{subsection.2.2}%
+\contentsline {paragraph}{CRRA}{10}{section*.24}%
+\contentsline {paragraph}{Stochastic discount factor}{11}{section*.25}%
+\contentsline {paragraph}{Log GDP}{11}{section*.26}%
+\contentsline {subsection}{\numberline {2.3}Unit cost minimization}{11}{subsection.2.3}%
+\contentsline {paragraph}{The second stage problem}{11}{section*.27}%
+\contentsline {subsection}{\numberline {2.4}Technique choice}{12}{subsection.2.4}%
+\contentsline {paragraph}{The first stage problem}{12}{section*.28}%
+\contentsline {subsection}{\numberline {2.5}Equilibrium conditions}{13}{subsection.2.5}%
+\contentsline {paragraph}{Competitive Pressure}{13}{section*.29}%
+\contentsline {section}{\numberline {3}Equilibirum prices and GDP in a fixed-network economy}{13}{section.3}%
+\contentsline {paragraph}{Domar weight}{13}{section*.30}%
+\contentsline {paragraph}{The first and second moments}{14}{section*.31}%
+\contentsline {section}{\numberline {4}Firm decisions}{15}{section.4}%
+\contentsline {paragraph}{Log of those things}{15}{section*.32}%
+\contentsline {paragraph}{Probelm of the firm}{15}{section*.33}%
+\contentsline {paragraph}{First-order Condition}{17}{section*.34}%
+\contentsline {paragraph}{Substitutes and Complements}{17}{section*.35}%
+\contentsline {section}{\numberline {5}Equilibrium existence, uniqueness and efficiency}{18}{section.5}%
+\contentsline {subsection}{\numberline {5.1}The efficient allocation}{18}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Fundamental properties of the equilibrium}{20}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Beliefs and the production network}{21}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Domar weights}{21}{subsection.6.1}%
+\contentsline {paragraph}{Global complements and substitutes}{22}{section*.41}%
+\contentsline {paragraph}{$\Sigma $ and global substition patterns}{23}{section*.42}%
+\contentsline {paragraph}{$\nabla ^2\bar {a}$ and global substitution patterns}{23}{section*.43}%
+\contentsline {paragraph}{Impact of Lemma 6}{23}{section*.44}%
+\contentsline {paragraph}{Parametrize $H_i$}{24}{section*.45}%
+\contentsline {paragraph}{An approximate equation for the equilibrium Domar weights}{24}{section*.46}%
+\contentsline {paragraph}{Impacts of Lemma 8}{25}{section*.47}%
+\contentsline {subsection}{\numberline {6.2}The production network}{25}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Implications for GDP and welfare}{28}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Beliefs and GDP}{29}{subsection.7.1}%
+\contentsline {section}{\numberline {8}A basic calibration of the model}{34}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Parametrization}{34}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}The production network, welfare and output}{35}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Model-free evidence for the mechanisms}{38}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Uncertainty and Domar weights}{38}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Uncertainty and link destruction}{38}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Additional results related to the calibrated economy}{40}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Data}{40}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Calibratyion procedure}{40}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}The calibrated economy}{42}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Counterfactual exercises}{46}{subsection.10.4}%
+\contentsline {section}{\numberline {11}Code}{48}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Table 1}{48}{subsection.11.1}%
+\contentsline {subsubsection}{\numberline {11.1.1}domar\_volatility.do}{48}{subsubsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.2}Table 2}{50}{subsection.11.2}%
+\contentsline {subsubsection}{\numberline {11.2.1}clean\_factset\_data.do}{50}{subsubsection.11.2.1}%
+\contentsline {subsubsection}{\numberline {11.2.2}links\_volatility.do}{54}{subsubsection.11.2.2}%
+\contentsline {subsection}{\numberline {11.3}Figure 1}{59}{subsection.11.3}%
+\contentsline {subsubsection}{\numberline {11.3.1}main.m}{59}{subsubsection.11.3.1}%
+\contentsline {subsubsection}{\numberline {11.3.2}to\_minimize.m}{63}{subsubsection.11.3.2}%
+\contentsline {subsection}{\numberline {11.4}Figure 2}{65}{subsection.11.4}%
+\contentsline {subsubsection}{\numberline {11.4.1}main.m}{65}{subsubsection.11.4.1}%
+\contentsline {subsubsection}{\numberline {11.4.2}compute\_eq.m}{67}{subsubsection.11.4.2}%
+\contentsline {subsubsection}{\numberline {11.4.3}solve\_firm\_problem.m}{69}{subsubsection.11.4.3}%
+\contentsline {subsubsection}{\numberline {11.4.4}a\_alpha\_star.m}{70}{subsubsection.11.4.4}%
+\contentsline {subsection}{\numberline {11.5}Figure 3}{72}{subsection.11.5}%
+\contentsline {subsubsection}{\numberline {11.5.1}main.m}{72}{subsubsection.11.5.1}%
+\contentsline {subsubsection}{\numberline {11.5.2}compute\_eq.m}{82}{subsubsection.11.5.2}%
+\contentsline {subsubsection}{\numberline {11.5.3}solve\_firm\_problem.m}{84}{subsubsection.11.5.3}%
+\contentsline {subsubsection}{\numberline {11.5.4}a\_alpha\_star.m}{86}{subsubsection.11.5.4}%
+\contentsline {subsubsection}{\numberline {11.5.5}compute\_moments.m}{87}{subsubsection.11.5.5}%
+\contentsline {subsection}{\numberline {11.6}Quantitative analysis}{88}{subsection.11.6}%
+\contentsline {subsubsection}{\numberline {11.6.1}Replication.m}{88}{subsubsection.11.6.1}%
+\contentsline {subsubsection}{\numberline {11.6.2}TFP.m}{89}{subsubsection.11.6.2}%
+\contentsline {subsubsection}{\numberline {11.6.3}Check.m}{91}{subsubsection.11.6.3}%
+\contentsline {subsubsection}{\numberline {11.6.4}Getdata.m}{104}{subsubsection.11.6.4}%
+\contentsline {subsubsection}{\numberline {11.6.5}LoadIOMat.m}{108}{subsubsection.11.6.5}%
+\contentsline {subsubsection}{\numberline {11.6.6}Mergedata.m}{120}{subsubsection.11.6.6}%
+\contentsline {subsubsection}{\numberline {11.6.7}Processdata.m}{123}{subsubsection.11.6.7}%
+\contentsline {subsubsection}{\numberline {11.6.8}Storedata.m}{143}{subsubsection.11.6.8}%
+\contentsline {subsection}{\numberline {11.7}Figures 4-8 and Supplemental Appendix Figures 1-6}{146}{subsection.11.7}%
+\contentsline {subsubsection}{\numberline {11.7.1}main.m}{146}{subsubsection.11.7.1}%
+\contentsline {subsubsection}{\numberline {11.7.2}analysis\_calib.m}{150}{subsubsection.11.7.2}%
+\contentsline {subsubsection}{\numberline {11.7.3}obj\_calib\_kappa.m}{156}{subsubsection.11.7.3}%
+\contentsline {subsubsection}{\numberline {11.7.4}compute\_eq\_time\_series.m}{157}{subsubsection.11.7.4}%
+\contentsline {subsubsection}{\numberline {11.7.5}bar\_func.m}{160}{subsubsection.11.7.5}%
+\contentsline {subsubsection}{\numberline {11.7.6}a\_alpha\_star.m}{161}{subsubsection.11.7.6}%
+\contentsline {subsubsection}{\numberline {11.7.7}analysis\_fixed\_rho\_calib.m}{162}{subsubsection.11.7.7}%
+\contentsline {subsubsection}{\numberline {11.7.8}compute\_eq.m}{167}{subsubsection.11.7.8}%
+\contentsline {subsubsection}{\numberline {11.7.9}compute\_eq\_firm\_iteration.m}{170}{subsubsection.11.7.9}%
+\contentsline {subsubsection}{\numberline {11.7.10}compute\_eq\_time\_series.m}{172}{subsubsection.11.7.10}%
+\contentsline {subsubsection}{\numberline {11.7.11}compute\_eq\_time\_series\_alt\_eps.m}{175}{subsubsection.11.7.11}%
+\contentsline {subsubsection}{\numberline {11.7.12}estimate\_tfp.m}{177}{subsubsection.11.7.12}%
+\contentsline {subsubsection}{\numberline {11.7.13}garch\_tfp.m}{180}{subsubsection.11.7.13}%
+\contentsline {subsubsection}{\numberline {11.7.14}hessian\_func.m}{181}{subsubsection.11.7.14}%
+\contentsline {subsubsection}{\numberline {11.7.15}load\_data.m}{182}{subsubsection.11.7.15}%
+\contentsline {subsubsection}{\numberline {11.7.16}obj\_calib\_kappa\_est.m}{184}{subsubsection.11.7.16}%
+\contentsline {subsubsection}{\numberline {11.7.17}solve\_firm\_problem.m}{185}{subsubsection.11.7.17}%

@@ -65,6 +65,7 @@ skipbelow=10pt
 \linespread{1.3}
 
 \newcommand{\basepath}{F:/12004835/replication_package_final/replication_package_final/output_figures}
+\newcommand{\codepath}{F:/12004835/replication_package_final/replication_package_final}
 
 \begin{document}
 	\maketitle
@@ -391,7 +392,7 @@ skipbelow=10pt
 	\begin{align*}
 		\text{Cov}[\lambda,k_i] = \text{Corr}[\lambda, k_i]\sqrt{\mathbb{V}[\lambda]}\sqrt{\mathbb{V}[k_i]}
 	\end{align*}
-	which implies that the firm tries to minimize the correlation of its unit cost with λ$\lambda$. Furthermore, since prices and GDP tend to move in opposite directions (see Lemma 1), $\text{Corr}[\lambda, k_i]$ is typically positive, and so firms seek to minimize the variance of their unit cost. This has several implications for their choice of suppliers. To see this, we can use (\ref{eq-8}) to write
+	which implies that the firm tries to minimize the correlation of its unit cost with $\lambda$. Furthermore, since prices and GDP tend to move in opposite directions (see Lemma 1), $\text{Corr}[\lambda, k_i]$ is typically positive, and so firms seek to minimize the variance of their unit cost. This has several implications for their choice of suppliers. To see this, we can use (\ref{eq-8}) to write
 	\textcolor{blue}{\begin{align*}
 		\mathbb{V}[k_i(\alpha_i,\alpha)] &= \mathbb{V}[\log K_i(\alpha_i,\alpha)] = \mathbb{V}[-\varepsilon_i - \log A_i(\alpha_i) + \sum\limits_{j=1}^n \alpha_{ij} P_j] \\
 		& = \Sigma_{ii} + \sum\limits_{j=1}^n \alpha_{ij} \mathbb{V}[p_j] + \sum\limits_{j\neq k} \alpha_{ij}\alpha_{ik} \text{Cov}[p_j,p_k] + 2\text{Cov}\left[-\varepsilon_i,\sum\limits_{j=1}^n \alpha_{ij}p_j \right] 
@@ -785,7 +786,7 @@ skipbelow=10pt
 		\end{enumerate} 
 	\end{cor}
 	
-	After an increase in the TFP mean ($\mu_i$) of a sector, the Domar weight ($\omega_i$) of that sector increases, which pushes up the variance of log GDP ($\mathbb{V}[y]$). However, if the sector's TFP variance ($\Sigma_{ii}$) is small, the increase in $\mathbb{V}[y]$ is also small. Since other sectors are global substitutes with this sector, the increase in ωi leads to a decline in the Domar weights of all other sectors. If the variances of these other sectors are large relative to Σii, this decline in their Domar weights results in a substantial decrease in $\mathbb{V}[y]$. According to the logic of Proposition 7, this means that the expected log GDP ($\mathbb{E}[y]$) must increase by less than the fixed-network term ωi. Similarly, an increase in Σii leads to an increase in $\mathbb{V}[y]$ that is larger than under a fixed network. In this case, $\mathbb{E}[y]$ increases in response to the higher $\Sigma_{ii}$, indicating that uncertainty can be beneficial to expected log GDP at the margin.
+	After an increase in the TFP mean ($\mu_i$) of a sector, the Domar weight ($\omega_i$) of that sector increases, which pushes up the variance of log GDP ($\mathbb{V}[y]$). However, if the sector's TFP variance ($\Sigma_{ii}$) is small, the increase in $\mathbb{V}[y]$ is also small. Since other sectors are global substitutes with this sector, the increase in $\omega_i$ leads to a decline in the Domar weights of all other sectors. If the variances of these other sectors are large relative to Σii, this decline in their Domar weights results in a substantial decrease in $\mathbb{V}[y]$. According to the logic of Proposition 7, this means that the expected log GDP ($\mathbb{E}[y]$) must increase by less than the fixed-network term $\omega_i$. Similarly, an increase in Σii leads to an increase in $\mathbb{V}[y]$ that is larger than under a fixed network. In this case, $\mathbb{E}[y]$ increases in response to the higher $\Sigma_{ii}$, indicating that uncertainty can be beneficial to expected log GDP at the margin.
 	
 	\subsection*{Counterintuitive implications of changes in beliefs}
 	\begin{enumerate}[leftmargin=1cm, label=\arabic*.]
@@ -856,8 +857,8 @@ skipbelow=10pt
 		\label{fig:3}
 	\end{figure}
 	
-	Notes: There is an arrow from $j$ to $i$ if $\alpha_{ij} > 0$. Household: $\rho = 2.5$ and $\beta_1 = \beta_2 = \beta_3 = \frac{1}{3} − \varepsilon$, $\beta_4 = \beta_5 = \frac{3}{2}\varepsilon$, where
-	$\varepsilon > 0$ is very small. $\mu = (0.1, 0.1, 0.1, 0.1, −0.08)$, $\Sigma$ is diagonal, with $\text{diag}(\Sigma) = (0.2, 0.2, 0.2, 0.2, 0.02)$. $a$ is as in (\ref{eq-2}) with $\alpha^{\circ}_{14} = \alpha^{\circ}_{15} = \alpha^{\circ}_{24} = \alpha^{\circ}_{25} = \alpha^{\circ}_{34} = \alpha^{\circ}_{35} = 0.25$; all other $\alpha^{\circ}_{ij}$ are zero. $H_4 = H_5$ are matrices with $−50$ on the diagonal. $H_1 = H_2 = H_3$ with $[H_1]_{11} = [H_1]_{22} = [H_1]{33} = −50$, $[H_1]_{44} = [H_1]_{55} = −2$. In panels (a)-(c), $\mu_5$ goes from −0.08 to 0.1; 4 and 5 are substitutes, $[H_1]_{45} = −1.9$. In panels (d)-(f), $\Sigma_{55}$ goes from 0.02 to 0.2; 4 and 5 are complements, $[H_1]_{45}$ = 1.9.
+	Notes: There is an arrow from $j$ to $i$ if $\alpha_{ij} > 0$. Household: $\rho = 2.5$ and $\beta_1 = \beta_2 = \beta_3 = \frac{1}{3} - \varepsilon$, $\beta_4 = \beta_5 = \frac{3}{2}\varepsilon$, where
+	$\varepsilon > 0$ is very small. $\mu = (0.1, 0.1, 0.1, 0.1, -0.08)$, $\Sigma$ is diagonal, with $\text{diag}(\Sigma) = (0.2, 0.2, 0.2, 0.2, 0.02)$. $a$ is as in (\ref{eq-2}) with $\alpha^{\circ}_{14} = \alpha^{\circ}_{15} = \alpha^{\circ}_{24} = \alpha^{\circ}_{25} = \alpha^{\circ}_{34} = \alpha^{\circ}_{35} = 0.25$; all other $\alpha^{\circ}_{ij}$ are zero. $H_4 = H_5$ are matrices with $-50$ on the diagonal. $H_1 = H_2 = H_3$ with $[H_1]_{11} = [H_1]_{22} = [H_1]{33} = -50$, $[H_1]_{44} = [H_1]_{55} = -2$. In panels (a)-(c), $\mu_5$ goes from -0.08 to 0.1; 4 and 5 are substitutes, $[H_1]_{45} = -1.9$. In panels (d)-(f), $\Sigma_{55}$ goes from 0.02 to 0.2; 4 and 5 are complements, $[H_1]_{45}$ = 1.9.
 	
 	\clearpage
 	\section{A basic calibration of the model}
@@ -880,7 +881,7 @@ skipbelow=10pt
 	
 	We next assess how well the calibrated model fits key moments in the data. As we have seen above, the Domar weights, and how they react to changes in $\mu_t$ and $\Sigma_t$, are central for the mechanisms of the model. The model is able to roughly replicate features of the empirical Domar weights, with a cross-sectional correlation between the time-averaged Domar weights in the model and in the data of 0.96. However, the average Domar weight in the model (0.03) is lower than its data counterpart (0.05). Overall, the model can account for about 40\% of the over-time standard deviation of Domar weights, which indicates that other mechanisms, such as technological progress that might expand the set of available techniques, might be at work in reality.
 	
-	The mechanisms of the model predict that a decline in the expected productivity of a sector $\mu_i$, or an increase in its variance $\Sigma_{ii}$, should push firms to reduce the importance of that sector as an input provider, leading to a decline in its Domar weight. Reassuringly, these correlations are visible in the data, where $\text{Corr}(\omega_{jt},\mu_{jt}) = 0.1$, and $\text{Corr}(\omega_{jt}, \Sigma_{jjt}) = -0.4$. The calibrated model is also able to roughly match these correlations, and the corresponding numbers are 0.1 and −0.3.
+	The mechanisms of the model predict that a decline in the expected productivity of a sector $\mu_i$, or an increase in its variance $\Sigma_{ii}$, should push firms to reduce the importance of that sector as an input provider, leading to a decline in its Domar weight. Reassuringly, these correlations are visible in the data, where $\text{Corr}(\omega_{jt},\mu_{jt}) = 0.1$, and $\text{Corr}(\omega_{jt}, \Sigma_{jjt}) = -0.4$. The calibrated model is also able to roughly match these correlations, and the corresponding numbers are 0.1 and -0.3.
 	
 	\subsection{The production network, welfare and output}
 	To evaluate the quantitative potential of an endogenous production network for welfare and GDP, we compare the calibrated model to two sets of alternative economies. First, we compare our baseline model to an economy in which the network is kept completely fixed at its sample average. This exercise therefore informs us about the overall impact of changes in the structure of the production network. We then investigate the role of uncertainty alone in shaping the production network. We do so by considering 1) an economy in which production techniques are chosen as if $\Sigma_t = 0$, and 2) a perfect-foresight economy in which firms observe the realization of $\varepsilon_t$ before making technique choices (the ``known $\varepsilon_t$'' economy). In both cases, uncertainty is irrelevant for decisions, and so these exercises allow us to isolate the impact of uncertainty on the production network and, through that channel, on macroeconomic aggregates.
@@ -940,7 +941,7 @@ skipbelow=10pt
 			\cline{2-4}
 			& (1): OLS & (2): IV & (3): IV \\
 			\hline
-			$\Delta$ Volatility$_{i,t-1}$ & -0.058*** & -0.137*** & -0.218*** \\
+			$\Delta$ Volatility$_{i,t-1}$ & -0.058* & -0.137* & -0.218* \\
 			& (0.004) & (0.034) & (0.073) \\
 			1st moment 10IV$_{i,t-1}$ & No & Yes & Yes \\
 			Type of volatility & Realized & Realized & Implied \\
@@ -964,7 +965,7 @@ skipbelow=10pt
 				\cline{2-4}
 				& (1): OLS & (2): IV & (3): IV \\
 				\hline
-				$\Delta$Volatility$_{t-1}$ of supplier & 0.026** & 0.097*** & 0.144** \\
+				$\Delta$Volatility$_{t-1}$ of supplier & 0.026 & 0.097* & 0.144 \\
 				& (0.012) & (0.035) & (0.063) \\
 				1st moment 10IV$_{t-1}$ of supplier & No & Yes & Yes \\
 				Type of volatility & Realized & Realized & Implied \\
@@ -1001,9 +1002,9 @@ skipbelow=10pt
 	\begin{align}
 		\varepsilon_t = \gamma + \varepsilon_{t-1} + u_t \label{eq1-42} 
 	\end{align}
-	where $\gamma$ is an $n × 1$ vector of deterministic drifts and $u_t \sim \text{iid}\mathcal{N}(0, \Sigma_t)$ is a vector of shocks. We estimate $\gamma$ by computing the average of the productivity growth rates $\Delta\varepsilon_t = \varepsilon_t - \varepsilon_{t−1}$ over time.
+	where $\gamma$ is an $n × 1$ vector of deterministic drifts and $u_t \sim \text{iid}\mathcal{N}(0, \Sigma_t)$ is a vector of shocks. We estimate $\gamma$ by computing the average of the productivity growth rates $\Delta\varepsilon_t = \varepsilon_t - \varepsilon_{t-1}$ over time.
 	
-	When making decisions in period $t$, firms know the past realizations of $\varepsilon_t$ so that the conditionalmean of $\varepsilon_t$ is given by $\mu_t = \gamma + \varepsilon_{t−1}$. The covariance $\Sigma_t$ of the innovation $u_t$ is estimated usinga rolling window that puts more weight on more recent observations to allow for time-varying uncertainty about sectoral productivity. Specifically, we estimate the covariance between sector $i$ and $j$ at time $t$ by computing $\Sigma_{ijt} = \sum\limits_{s=1}^{t-1}\phi^{t-s-1}u_{is}u_{js}$, where $0 < \phi < 1$ is a parameter that determines the relative weight of more recent observations. Its value is set to the sectoral average of the corresponding parameters of a GARCH$(1,1)$ model estimated on each sector’s productivity innovation uit. In the calibrated economy, its value is $\phi = 0.47$. Note that this procedure implies that the time series for $\varepsilon_t$ depends on the parameters of the TFP shifters. Therefore, the estimation of the stochastic process for sectoral productivity has to be done jointly with the estimation of $\kappa$.
+	When making decisions in period $t$, firms know the past realizations of $\varepsilon_t$ so that the conditionalmean of $\varepsilon_t$ is given by $\mu_t = \gamma + \varepsilon_{t-1}$. The covariance $\Sigma_t$ of the innovation $u_t$ is estimated usinga rolling window that puts more weight on more recent observations to allow for time-varying uncertainty about sectoral productivity. Specifically, we estimate the covariance between sector $i$ and $j$ at time $t$ by computing $\Sigma_{ijt} = \sum\limits_{s=1}^{t-1}\phi^{t-s-1}u_{is}u_{js}$, where $0 < \phi < 1$ is a parameter that determines the relative weight of more recent observations. Its value is set to the sectoral average of the corresponding parameters of a GARCH$(1,1)$ model estimated on each sector’s productivity innovation uit. In the calibrated economy, its value is $\phi = 0.47$. Note that this procedure implies that the time series for $\varepsilon_t$ depends on the parameters of the TFP shifters. Therefore, the estimation of the stochastic process for sectoral productivity has to be done jointly with the estimation of $\kappa$.
 	
 	\subsection*{Matching model and data moments}
 	We use an indirect inference approach and estimate the parameters $\Theta \equiv \{\rho, \kappa\}$ by minimizing
@@ -1024,7 +1025,7 @@ skipbelow=10pt
 		\Delta\bar{\mu}_t = \sum\limits_{j=1}^n \omega_{jt}\Delta\mu_{jt}\label{eq-70}
 	\end{align}
 	
-	We use the Domar weights ωjt in this equation to properly reflect the importance of a sector for GDP, as implied by (\ref{eq-13}). The solid blue line in Figure 5 shows the evolution of $\Delta\bar{\mu}_t$ over the sample period. As expected, $\Delta\bar{\mu}_t$ tends to go below zero during NBER recessions and is positive during expansions.
+	We use the Domar weights $\omega_{jt}$ in this equation to properly reflect the importance of a sector for GDP, as implied by (\ref{eq-13}). The solid blue line in Figure 5 shows the evolution of $\Delta\bar{\mu}_t$ over the sample period. As expected, $\Delta\bar{\mu}_t$ tends to go below zero during NBER recessions and is positive during expansions.
 	
 	To describe how aggregate uncertainty evolves in the calibrated economy, we also compute the within-period perceived standard deviation of log GDP. From (\ref{eq-14}), this can be written as
 	\begin{align}
@@ -1149,8 +1150,1225 @@ skipbelow=10pt
 	\end{figure}
 	
 	\clearpage
+			\lstdefinestyle{matlab}{
+		language=Matlab, % 指定语言
+		basicstyle=\ttfamily\footnotesize,
+		columns=fixed,
+		numbers=left,
+		backgroundcolor=\color[RGB]{245,245,244},
+		keywordstyle=\color[RGB]{40,40,255},
+		numberstyle=\footnotesize\color{darkgray},
+		commentstyle=\color[RGB]{0,96,96},
+		stringstyle=\slshape\color[RGB]{128,0,0},
+		showstringspaces=false,
+		frame=shadowbox,
+		rulesepcolor=\color{red!20!green!20!blue!20},
+		morekeywords={break,case,catch,classdef,continue,else,elseif,end,for,function,global,if,otherwise,persistent,return,switch,try,while},
+		emph={clc,clear,disp,fprintf,plot,subplot,figure,hold,grid,on,off,axis,equal,tight,legend,xlabel,ylabel,zlabel,title,tic,toc},
+		emphstyle=\color{red},
+		breaklines=true,
+		flexiblecolumns=true,
+	}
+	% 定义 Stata 代码样式
+	\lstdefinestyle{ST}{
+		language=tex, % 指定语言
+		basicstyle=\ttfamily\footnotesize,
+		columns=fixed,
+		numbers=left,
+		backgroundcolor=\color[RGB]{245,245,244},
+		keywordstyle=\color[RGB]{40,40,255},
+		numberstyle=\footnotesize\color{darkgray},
+		commentstyle=\color[RGB]{0,96,96},
+		stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},
+		showstringspaces=false,
+		frame=shadowbox,
+		rulesepcolor=\color{red!20!green!20!blue!20},
+		morekeywords={use,regress,reg,sum,display,dis,cd},
+		emph={clear},
+		emphstyle=\color{red},
+		breaklines=true,
+		flexiblecolumns=true,
+	}
+	\newpage
+	\section{Code}
+	\subsection{Table 1}
+	\subsubsection{domar\_volatility.do}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+1. lag_log_sales: The logarithm of the previous period's sales.
+2. dhs_sale: A measure related to sales, likely based on the Davis-Haltiwanger (1992) growth definition.
+3. year: The year associated with each observation.
+4. permno: A unique identifier for each company.
+5. gdp: Gross Domestic Product, used to calculate the Domar weight.
+6. sic_3_digit: The 3-digit Standard Industrial Classification code for each company.
+
+Output Variables
+1. lag_sales: The previous period's sales, calculated as the exponential of `lag_log_sales`.
+2. sales: The current period's sales, derived using the Davis-Haltiwanger growth measure.
+3. domar: A weight calculated as the ratio of `sales` to `gdp`.
+4. dhs_domar: The Davis-Haltiwanger growth measure for `domar`, calculated as the difference in `domar` from the previous period, standardized.
+5. sic_2_digit: The 2-digit Standard Industrial Classification code, derived from `sic_3_digit`.
+
+Auxiliary Code
+No additional functions are called; all operations are performed using built-in Stata commands.
+	\end{lstlisting}
+	\lstinputlisting[style=ST]{\codepath/regressions/domar_volatility.do}
+	
+	\subsection{Table 2}
+	\subsubsection{clean\_factset\_data.do}
+	\begin{lstlisting}[style=Matlab]
+ Input Variables
+1. company_id: Company identifier in the `company_info_synth.dta` dataset.
+2. country: Country associated with each company in the `company_info_synth.dta` dataset.
+3. start_: Start date for the relationship in the `raw_data_synth.dta` dataset.
+4. end_: End date for the relationship in the `raw_data_synth.dta` dataset.
+5. source_company_id: Company identifier for the source company in the `raw_data_synth.dta` dataset.
+6. target_company_id: Company identifier for the target company in the `raw_data_synth.dta` dataset.
+7. source_ticker: Ticker symbol for the source company in the `raw_data_synth.dta` dataset.
+8. target_ticker: Ticker symbol for the target company in the `raw_data_synth.dta` dataset.
+9. rel_type: Relationship type (either "CUSTOMER" or "SUPPLIER") in the `raw_data_synth.dta` dataset.
+10. source_cusip: CUSIP code for the source company in the `raw_data_synth.dta` dataset.
+11. target_cusip: CUSIP code for the target company in the `raw_data_synth.dta` dataset.
+
+ Output Variables
+1. source_company_id: Renamed from `company_id` in `company_info_synth.dta` and later merged.
+2. source_country: Renamed from `country` in `company_info_synth.dta`.
+3. target_company_id: Renamed from `company_id` in `company_info_synth.dta` and later merged.
+4. target_country: Renamed from `country` in `company_info_synth.dta`.
+5. rel_type: Formatted as a string variable.
+6. source_ticker: Formatted as a string variable.
+7. target_ticker: Formatted as a string variable.
+8. source_cusip: Converted to a 6-character CUSIP code.
+9. target_cusip: Converted to a 6-character CUSIP code.
+10. year_start: Year extracted from `start_` date.
+11. year_end: Year extracted from `end_` date and capped at 2017.
+12. year: Generated for each year the relationship is active.
+13. supp: Long variable for supplier company ID.
+14. cust: Long variable for customer company ID.
+15. supp_cusip: CUSIP code for the supplier company.
+16. cust_cusip: CUSIP code for the customer company.
+17. supp_ticker: Ticker symbol for the supplier company.
+18. cust_ticker: Ticker symbol for the customer company.
+19. supp_country: Country for the supplier company.
+20. cust_country: Country for the customer company.
+
+ Auxiliary Code
+No additional functions are called; all operations are performed using built-in Stata commands.
+	\end{lstlisting}
+	\lstinputlisting[style=ST]{\codepath/regressions/data/FactSet_Revere/clean_factset_data.do}
+	
+	\subsubsection{links\_volatility.do}
+	\begin{lstlisting}[style=Matlab]
+ Input Variables
+1. permno: Unique identifier for each company in the Excel file.
+2. gvkey: Global company key from the Excel file.
+3. NCUSIP: CUSIP code from the Excel file.
+4. TICKER: Ticker symbol from the Excel file.
+5. year: Year associated with each observation in the Excel file and `network_factset_synth.dta`.
+6. supp_cusip: Supplier CUSIP code from `network_factset_synth.dta`.
+7. start_: Start date for the relationship in `network_factset_synth.dta`.
+8. end_: End date for the relationship in `network_factset_synth.dta`.
+9. cust: Customer company identifier in `network_factset_synth.dta`.
+10. source_company_id: Source company identifier in `network_factset_synth.dta`.
+
+ Output Variables
+1. cusip_full: Full CUSIP code from the Excel file, renamed from `cusip`.
+2. cusip: 6-character CUSIP code, derived from `cusip_full`.
+3. year_start: Year extracted from `start_` date.
+4. year_end: Year extracted from `end_` date, capped at 2017.
+5. year: Year for each observation where the relationship is active.
+6. supp_permno: Supplier company identifier, renamed from `permno`.
+7. cust_id: Customer company identifier, renamed from `cust`.
+8. supp_id: Supplier company identifier, renamed from `supp`.
+9. max_year_cust: Maximum year for customer observations.
+10. max_year_supp: Maximum year for supplier observations.
+11. max_year: Maximum year for each relationship spell.
+12. min_year: Minimum year for each relationship spell.
+13. nb_year: Number of years each relationship is active.
+14. last_year_link: Indicator for the last year the link is active.
+15. total_last_link: Total number of last year links per year.
+16. total_obs: Total number of observations per year.
+17. supp_sic_2_digit: 2-digit SIC code for suppliers, derived from `supp_sic_3_digit`.
+18. supp_sic_1_digit: 1-digit SIC code for suppliers, derived from `supp_sic_2_digit`.
+
+ Auxiliary Code
+No additional functions are called; all operations are performed using built-in Stata commands.
+	\end{lstlisting}
+	\lstinputlisting[style=ST]{\codepath/regressions/links_volatility.do}
+	
+	\subsection{Figure 1}
+	\subsubsection{main.m}
+	\begin{lstlisting}[style=Matlab]
+ Input Variables
+1. param.A_i_o: TFP under ideal shares.
+2. param.alpha_o: Ideal shares for three goods.
+3. param.kappa: Penalty from deviating from the ideal shares.
+4. param.psi1: Parameter related to the firm's cost function.
+5. param.psi2: Parameter related to the firm's cost function.
+6. param.Vlambda: Parameter for variance of prices.
+7. param.Cplambda: Parameter for mean of prices.
+8. n_Ep: Number of points in the grid for the mean of price for good 1.
+9. n_Vp: Number of points in the grid for the variance of price for good 1.
+10. Ep1_grid: Grid of mean prices for good 1.
+11. Vp1_grid: Grid of variance prices for good 1.
+12. Ep1: Mean price for good 1 (unchanged).
+13. Vp1: Variance of price for good 1 (unchanged).
+14. Ep2: Mean price for good 2.
+15. Vp2: Variance of price for good 2.
+16. Ep3: Mean price for good 3.
+17. Vp3: Variance of price for good 3.
+18. alphai1_Ep1: Input shares for good 1 when changing mean prices.
+19. alphai2_Ep1: Input shares for good 2 when changing mean prices.
+20. alphai3_Ep1: Input shares for good 3 when changing mean prices.
+21. alphai1_Vp1: Input shares for good 1 when changing variance of prices.
+22. alphai2_Vp1: Input shares for good 2 when changing variance of prices.
+23. alphai3_Vp1: Input shares for good 3 when changing variance of prices.
+
+ Output Variables
+1. alphai1_Ep1: Optimized input shares for good 1 when mean prices vary.
+2. alphai2_Ep1: Optimized input shares for good 2 when mean prices vary.
+3. alphai3_Ep1: Optimized input shares for good 3 when mean prices vary.
+4. alphai1_Vp1: Optimized input shares for good 1 when variance of prices vary.
+5. alphai2_Vp1: Optimized input shares for good 2 when variance of prices vary.
+6. alphai3_Vp1: Optimized input shares for good 3 when variance of prices vary.
+
+ Auxiliary Code
+No additional functions are called; all operations are performed using built-in MATLAB commands and the custom function `to_minimize` which is used to solve the optimization problem.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/examples/Example_steel/main.m}
+	
+	\subsubsection{to\_minimize.m}
+	\begin{lstlisting}[style=Matlab]
+ Input Variables
+1. a: Input shares vector for the three goods.
+2. Ep: Expected (mean) prices vector for the three goods.
+3. Vp: Variance of prices vector for the three goods.
+4. param.alpha_o: Ideal shares for the three goods.
+5. param.kappa: Penalty parameters for deviating from the ideal shares.
+6. param.Vlambda: Variance parameter for price uncertainty.
+7. param.Cplambda: Coefficient parameter for price uncertainty.
+8. param.psi1: Parameter for the cost function related to the difference in input shares.
+9. param.psi2: Parameter for the cost function related to the total deviation from ideal shares.
+
+ Output Variable
+1. output: The value of the objective function to be minimized, which represents the costs and adjustments associated with the input shares `a` given the expected prices `Ep` and price variances `Vp`.
+
+ Auxiliary Code
+No additional functions are called; all operations are performed using built-in MATLAB commands and the provided parameters. The custom function `to_minimize` calculates the objective function value based on the input shares, expected prices, price variances, and the given parameters.
+
+ Explanation of the Function
+1. a0: Extracts the ideal shares from the `param` structure.
+2. kappa: Extracts the penalty parameters from the `param` structure.
+3. Vlambda: Extracts the variance parameter from the `param` structure.
+4. Cplambda: Extracts the coefficient parameter from the `param` structure.
+5. psi1: Extracts the first cost function parameter from the `param` structure.
+6. psi2: Extracts the second cost function parameter from the `param` structure.
+7. R1, R2, R3: Calculates the adjusted prices for the three goods based on their expected prices, price variances, and the uncertainty parameters.
+8. output: Calculates the objective function value based on the penalties for deviating from ideal shares, the costs associated with differences in input shares, and the total costs associated with the input shares and adjusted prices.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/examples/Example_steel/to_minimize.m}
+	
+	\subsection{Figure 2}
+	\subsubsection{main.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+n: Number of goods.
+mu: Mean vector for random variables.
+mu_high: High mean value for the fourth good.
+sigma: Covariance matrix for random variables.
+beta: Weight vector for goods.
+rho: Risk aversion parameter.
+kappa: Penalty matrix for deviating from ideal shares.
+kappa_inf: Infinite penalty value.
+kappa_bar: Zero penalty value.
+LS_min: Minimum labor share allowed.
+alpha_bar: Ideal share matrix for each good and share.
+alpha_inf: Infinite ideal share value.
+alpha_zer: Zero ideal share value.
+param: Structure containing all parameters.
+
+Output Variables
+alpha_star_1: Equilibrium input shares with initial sigma.
+alpha_star_2: Equilibrium input shares with updated sigma.
+
+Auxiliary Code
+compute_eq: Custom function called to compute the equilibrium input shares given the parameters.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/examples/Example_chain_safety/main.m}
+	
+	\subsubsection{compute\_eq.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+param: Structure containing all parameters including n (number of goods), initial expected benefit matrix, and other relevant parameters.
+
+Output Variables
+alpha_star: Equilibrium input shares for each firm after convergence.
+
+Auxiliary Code
+solve_firm_problem: Custom function called within the loop to solve the optimization problem for each firm, given the current input shares. This function computes the optimal input shares for each firm.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/examples/Example_chain_safety/compute_eq.m}
+	
+	\subsubsection{solve\_firm\_problem.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+param: Structure containing all model parameters including mu, sigma, n, rho, LS_min, kappa, alpha_bar, and beta.
+i_firm: Index of the firm for which the problem is being solved.
+alpha_star: Current input shares for all firms.
+
+Output Variables
+alpha_chosen: Optimized input shares for the given firm.
+
+Auxiliary Code
+a_alpha_star: Custom function called to compute the equilibrium TFP of the firms given the current input shares and parameters.
+quadprog: MATLAB built-in function used to solve the quadratic programming problem.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/examples/Example_chain_safety/solve_firm_problem.m}
 	
 	
+	\subsubsection{a\_alpha\_star.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+alpha_star: Current input shares for all firms.
+param: Structure containing all model parameters including n, kappa, and alpha_bar.
+
+Output Variables
+a_star: Equilibrium TFP term for each firm.
+
+Auxiliary Code
+No additional functions are called; all operations are performed using built-in MATLAB commands and the provided parameters.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/examples/Example_chain_safety/a_alpha_star.m}
+	
+	\subsection{Figure 3}
+	\subsubsection{main.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+example_mean_flag: Flag to determine if example with varying mean should be used.
+example_sigma_flag: Flag to determine if example with varying variance should be used.
+save_flag: Flag to determine if figures should be saved.
+n: Number of firms.
+N: Number of points in the grid for mean and variance of shocks.
+mu_arr: Array of mean values for the shocks.
+sigma_arr: Array of variance values for the shocks.
+param.mu: Mean vector for shocks.
+param.sigma: Covariance matrix for shocks.
+param.n: Number of firms.
+param.rho: CRRA risk aversion parameter.
+param.H_inv: Inverse of the Hessian matrix.
+param.alpha_bar: Ideal share matrix for each good and share.
+param.LS_min: Minimum labor share allowed.
+param.beta: Weight vector for firms.
+
+Output Variables
+E_log_C_arr: Array of expected log consumption for each grid point.
+V_log_C_arr: Array of variance of log consumption for each grid point.
+welfare_mu_arr: Array of welfare for each grid point with varying mean.
+mean_log_P_arr: Array of mean log prices for each firm.
+alpha_star_arr: Array of equilibrium input shares for each firm.
+E_log_C_fixed_network_arr: Array of expected log consumption for fixed network.
+V_log_C_fixed_network_arr: Array of variance of log consumption for fixed network.
+domar: Array of Domar weights for each firm.
+global_inv_H: Array of global inverse Hessian matrices.
+H_inv: Inverse Hessian matrix for each firm.
+E_log_C_deriv: Derivative of expected log consumption.
+V_log_C_deriv: Derivative of variance of log consumption.
+domar_deriv: Derivative of Domar weights.
+welfare_arr: Array of welfare for each grid point.
+welfare_fixed_network_arr: Array of welfare for fixed network.
+
+Auxiliary Code
+compute_eq: Custom function called to compute the equilibrium input shares given the parameters and initial input shares.
+compute_moments: Custom function called to compute moments of the distribution such as expected log consumption, variance, mean log prices, etc.
+exportgraphics: MATLAB built-in function used to save the figures to files.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/examples/Example_non_monotone/main.m}
+	
+	
+	\subsubsection{compute\_eq.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+param: Structure containing all model parameters including n.
+alpha_star_init: Initial guess for the input shares.
+
+Output Variables
+alpha_star: Equilibrium input shares for each firm after convergence.
+conv_flag: Flag indicating whether the algorithm converged (1) or not (0).
+
+Auxiliary Code
+solve_firm_problem: Custom function called within the loop to solve the optimization problem for each firm, given the current input shares. This function computes the optimal input shares for each firm.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/examples/Example_non_monotone/compute_eq.m}
+	
+	
+	\subsubsection{solve\_firm\_problem.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+param: Structure containing all model parameters including mu, sigma, n, rho, LS_min, H_inv, alpha_bar, and beta.
+i_firm: Index of the firm for which the problem is being solved.
+alpha_star: Current input shares for all firms.
+
+Output Variables
+alpha_chosen: Optimized input shares for the given firm.
+
+Auxiliary Code
+a_alpha_star: Custom function called to compute the equilibrium TFP of the firms given the current input shares and parameters.
+quadprog: MATLAB built-in function used to solve the quadratic programming problem.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/examples/Example_non_monotone/solve_firm_problem.m}
+	
+	
+	\subsubsection{a\_alpha\_star.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+alpha_star: Current input shares for all firms.
+param: Structure containing all model parameters including n, H_inv, and alpha_bar.
+
+Output Variables
+a_star: Equilibrium TFP term for each firm.
+
+Auxiliary Code
+No additional functions are called; all operations are performed using built-in MATLAB commands and the provided parameters.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/examples/Example_non_monotone/a_alpha_star.m}
+	
+	
+	\subsubsection{compute\_moments.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+alpha_star: Current input shares for all firms.
+param: Structure containing all model parameters including mu, sigma, n, and beta.
+
+Output Variables
+E_log_C: Expected log consumption.
+V_log_C: Variance of log consumption.
+mean_LS: Mean labor share.
+mean_log_P: Mean log prices.
+covar_log_P: Covariance of log prices.
+
+Auxiliary Code
+a_alpha_star: Custom function called to compute the equilibrium TFP term given the current input shares and parameters.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/examples/Example_non_monotone/compute_moments.m}
+	
+	\subsection{Quantitative analysis}
+	\subsubsection{Replication.m}
+	\begin{lstlisting}[style=Matlab]
+Input:
+Files in various directories (Dir.Data, Dir.Input, Dir.Output, Dir.DataPr) containing sector data (e.g., real gross output, real intermediate input, etc.)
+Directory paths for different data types.
+Source and variable types used in Getdata.m function to fetch data.
+
+Output:
+Files generated in the Processed Data folder containing harmonized sector data from 1948-2020.
+Final message indicating whether the data processing was successful or not.
+
+Auxiliary:
+Functions like Getdata, Processdata, Mergedata, and Storedata are used extensively.
+Directory structure setup ensuring the code works on any machine.
+Loading data using specific functions and then processing it using custom logic defined in Processdata.m.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/data_work/SectorAggregateData/Code/Replication.m}
+	
+
+	\subsubsection{TFP.m}
+	\begin{lstlisting}[style=Matlab]
+Input:
+'37 Sector Data' files from the processed data folder.
+Various economic indicators such as real gross output, real intermediate inputs, employment, labor share, etc.
+
+Output:
+TFP (Total Factor Productivity) data stored in TFP_GO_nsm_nn.xlsx.
+Messages indicating the success or failure of the data generation process.
+
+Auxiliary:
+Functions to fetch and process data (Getdata, Processdata).
+Directory paths to locate input and output files.
+Logic to calculate TFP using various economic indicators and processing steps.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/data_work/SectorAggregateData/Code/TFP.m}
+	
+	
+	\subsubsection{Check.m}
+	\begin{lstlisting}[style=Matlab]
+Input:
+Generated TFP data files from both Matlab and Stata.
+Other processed data files for real VA, nominal VA, real GO, etc.
+
+Output:
+Printed messages comparing the TFP data generated by Matlab and Stata.
+Comparison results for the period 1948-2020 and 1948-2018 for various data sets like real VA, nominal VA, real GO, nominal GO, etc.
+
+Auxiliary:
+Functions to read and compare data from Excel files.
+Logic to compute maximum differences between datasets to validate the consistency.
+Directory paths to locate and store comparison results.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/data_work/SectorAggregateData/Code/Check.m}
+	
+	
+	\subsubsection{Getdata.m}
+	\begin{lstlisting}[style=Matlab]
+Input:
+Directory paths for different data types.
+Source and variable types to fetch the corresponding data.
+
+Output:
+Data tables for various economic indicators fetched from specified directories.
+
+Auxiliary:
+Logic to handle different sources and variable types.
+Functions to copy and read data from Excel files based on specified criteria.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/data_work/SectorAggregateData/Code/Getdata.m}
+	
+	\subsubsection{LoadIOMat.m}
+	\begin{lstlisting}[style=Matlab]
+Input:
+Files from raw data directory containing Input-Output Accounts and Fixed Assets data.
+
+Output:
+Various IO matrices, value-added data, consumption data, investment data, and capital stock data.
+
+Auxiliary:
+Directory structure setup ensuring the code works on any machine.
+Logic to load data from Excel files into Matlab.
+Processing steps to create consistent IO tables and depreciation rates.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/data_work/SectorAggregateData/Code/LoadIOMat.m}
+	
+	
+	\subsubsection{Mergedata.m}
+	\begin{lstlisting}[style=Matlab]
+Input:
+Input data to be merged.
+Directory paths and variable types to fetch and merge corresponding data.
+
+Output:
+Merged data tables containing harmonized sector data.
+
+Auxiliary:
+Logic to handle different variable types and merge data accordingly.
+Functions to fetch and process data from various sources.	
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/data_work/SectorAggregateData/Code/Mergedata.m}
+	
+	
+	\subsubsection{Processdata.m}
+	\begin{lstlisting}[style=Matlab]
+Input:
+Input data to be processed.
+Directory paths and variable types to process corresponding data.
+
+Output:
+Processed data tables containing various economic indicators.
+
+Auxiliary:
+Logic to handle different variable types and process data accordingly.
+Functions to fetch and process data from various sources.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/data_work/SectorAggregateData/Code/Processdata.m}
+	
+	\subsubsection{Storedata.m}
+	\begin{lstlisting}[style=Matlab]
+Input:
+Processed data to be stored.
+Directory paths and variable types to store corresponding data.
+
+Output:
+Status indicating whether the data storage was successful or not.
+
+Auxiliary:
+Functions to store data in specified Excel files and sheets.
+Logic to handle different variable types and store data accordingly.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/data_work/SectorAggregateData/Code/Storedata.m}
+	
+	
+	\subsection{Figures 4-8 and Supplemental Appendix Figures 1-6}
+	\subsubsection{main.m}
+	\begin{lstlisting}[style=Matlab]
+Inputs:
+flag.time_varying_beta: A flag variable indicating whether to use time-varying consumption allocation coefficients.
+save_fig_flag: A flag variable indicating whether to save figures.
+est_flag: A flag variable indicating whether to perform parameter optimization.
+endo_lambda_flag: A flag variable indicating whether to use endogenous lambda parameter.
+post_calib_flag: A flag variable indicating whether to perform post-calibration analysis.
+LS_min: Minimum labor share allowed, set to 0.02.
+Data loaded from load_data function, including:
+alpha_data: A 3D matrix containing allocation coefficients for different periods.
+tfp_data: A matrix containing total factor productivity data for different periods.
+Cons47bea: A matrix containing consumption data starting from 1947.
+price_va: A matrix containing price data for different periods.
+VA47bea: A matrix containing value-added data starting from 1947.
+vec_star: A vector containing the results of the parameter optimization.
+
+Outputs:
+output_real: A vector containing the log values of the actual output.
+domar_weight_data: A matrix containing Domar weights for different periods.
+cons_gr_data: A vector containing the consumption growth data.
+
+Auxiliary Code:
+Data Preprocessing: The load_data function loads the necessary datasets.
+Parameter Optimization: The fmincon function is used to perform parameter optimization if est_flag is set to 1.
+Post-Calibration Analysis: The analysis_calib and analysis_fixed_rho_calib functions are used to perform post-calibration analysis if post_calib_flag is set to 1.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/main.m}
+	
+	\subsubsection{analysis\_calib.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+vec_star: Optimal parameter vector obtained from the calibration  
+alpha_bar: Ideal shares, mean of alpha_data  
+alpha_data: Data on alpha (shares)  
+tfp_data: Total factor productivity data  
+LS_min: Minimum labor share allowed  
+beta: Consumption shares  
+endo_lambda_flag: Flag for endogenous lambda usage  
+flag: Structure with various flags (e.g., time_varying_beta)  
+epsilon: Shocks  
+mu_drift: Drift in the shocks  
+sigma_t: Volatility matrix over time  
+a0: Initial parameter for the a_alpha_star function  
+rho: Risk aversion parameter  
+n: Number of sectors  
+T: Number of time periods  
+sector_names: Names of the sectors  
+
+Output Variables
+kappa: Parameter from obj_calib_kappa  
+alpha_star: Calibrated alpha star matrix  
+C: Consumption vector  
+EC: Expected consumption  
+VC: Variance of consumption  
+mu_drift: Drift in the shocks (unchanged)  
+sigma_t: Volatility matrix over time (unchanged)  
+epsilon: Shocks (unchanged)  
+a0: Initial parameter for the a_alpha_star function (unchanged)  
+rho: Risk aversion parameter (unchanged)  
+kappa_i: Kappa parameters for sector i  
+kappa_j: Kappa parameters for sector j  
+tfp_model: TFP model  
+lambda: Weight of past observations in estimation of volatility  
+a_tfp_data: TFP data parameter  
+zeta_tfp_data: TFP data parameter  
+a_tfp_model: TFP model parameter  
+zeta_tfp_model: TFP model parameter  
+alpha_star_base: Alpha star matrix for the baseline scenario  
+domar_star_base: Domar weight matrix for the baseline scenario  
+C_base: Consumption vector for the baseline scenario  
+EC_base: Expected consumption for the baseline scenario  
+VC_base: Variance of consumption for the baseline scenario  
+alpha_star_sig0: Alpha star matrix for the zero sigma scenario  
+domar_star_sig0: Domar weight matrix for the zero sigma scenario  
+C_sig0: Consumption vector for the zero sigma scenario  
+EC_sig0: Expected consumption for the zero sigma scenario  
+VC_sig0: Variance of consumption for the zero sigma scenario  
+alpha_star_known_shocks: Alpha star matrix for the known shocks scenario  
+domar_star_known_shocks: Domar weight matrix for the known shocks scenario  
+C_known_shocks: Consumption vector for the known shocks scenario  
+W_base: Welfare for the baseline scenario  
+W_sig0: Welfare for the zero sigma scenario  
+alpha_star_fixed: Fixed alpha star matrix  
+C_fixed: Fixed consumption vector  
+EC_fixed: Fixed expected consumption  
+VC_fixed: Fixed variance of consumption  
+W_fixed: Fixed welfare  
+EC_known_shocks: Known shocks expected consumption  
+VC_known_shocks: Known shocks variance of consumption  
+W_known_shocks: Known shocks welfare  
+
+Auxiliary Code (External Function Calls)
+
+obj_calib_kappa(vec_star, alpha_bar, alpha_data, tfp_data, LS_min, beta, endo_lambda_flag, 0, flag)
+
+compute_eq_time_series(epsilon, mu_drift, sigma_t, kappa, alpha_bar, rho, LS_min, beta, a0, 0, flag)
+
+bar_func(n, kappa, alpha_bar)
+
+a_alpha_star(alpha_star_cur, n, A_bar, B_bar, C_bar, a0)
+
+fig_kappas.m
+
+results_TFP.m
+
+results_trends.m
+
+results_Sigma_matrix.m
+
+fig_TFP.m
+
+fig_domar.m
+
+fig_GR.m
+
+results_counterfactuals.m
+
+results_domar.m
+
+results_correlations.m
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/analysis_calib.m}
+	
+	
+	
+	\subsubsection{obj\_calib\_kappa.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+x: Parameter vector to be calibrated
+alpha_bar: Ideal shares, mean of alpha_data
+alpha_data: Data on alpha (shares)
+tfp_data: Total factor productivity data
+LS_min: Minimum labor share allowed
+beta: Consumption shares
+endo_lambda_flag: Flag for endogenous lambda usage
+known_shocks_flag: Flag indicating if known shocks are considered
+flag: Structure with various flags (e.g., time_varying_beta)
+
+Output Variables
+kappa: Calibrated kappa parameter matrix
+alpha_bar: Ideal shares, mean of alpha_data (unchanged)
+alpha_star: Calibrated alpha star matrix
+C: Consumption vector
+EC: Expected consumption
+VC: Variance of consumption
+mu_drift: Drift in the shocks
+sigma_t: Volatility matrix over time
+epsilon: Shocks
+a0: Initial parameter for the a_alpha_star function
+rho: Risk aversion parameter
+kappa_i: Kappa parameters for sector i
+kappa_j: Kappa parameters for sector j
+TFP: Total factor productivity
+lambda: Weight of past observations in estimation of volatility
+a_tfp_data: TFP data parameter
+zeta_tfp_data: TFP data parameter
+a_tfp_model: TFP model parameter
+zeta_tfp_model: TFP model parameter
+
+Auxiliary Code (External Function Calls)
+estimate_tfp(tfp_data, alpha_bar, alpha_data, kappa, a0, endo_lambda_flag)
+compute_eq_time_series(epsilon, mu_drift, sigma_t, kappa, alpha_bar, rho, LS_min, beta, a0, known_shocks_flag, flag)
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/obj_calib_kappa.m}
+	
+	
+	
+	\subsubsection{compute\_eq\_time\_series.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+epsilon: Shocks data (n x T matrix)
+mu_drift: Drift in the shocks (n x 1 vector)
+sigma_t: Volatility matrix over time (n x n x T tensor)
+kappa: Calibrated kappa parameter matrix (n x n matrix)
+alpha_bar: Ideal shares, mean of alpha_data (n x n+1 matrix)
+rho: Risk aversion parameter (scalar)
+LS_min: Minimum labor share allowed (scalar)
+beta: Consumption shares (n x T or n x 1 matrix)
+a0: Initial parameter for the a_alpha_star function (n x 1 vector)
+known_shocks_flag: Flag indicating if known shocks are considered (scalar)
+flag: Structure with various flags (e.g., time_varying_beta)
+
+Output Variables
+alpha_star: Calibrated alpha star matrix (n x n x T tensor)
+domar_star: Domar weight matrix (n x T matrix)
+C: Consumption vector (T x 1 vector)
+EC: Expected consumption (T x 1 vector)
+VC: Variance of consumption (T x 1 vector)
+TFP: Total factor productivity (n x T matrix)
+a_alpha_star_tfp: TFP data parameter (n x T matrix)
+zeta_tfp: TFP data parameter (n x T matrix)
+error_flag: Error flag for each time period (T x 1 vector)
+
+Auxiliary Code (External Function Calls)
+bar_func(n, kappa, alpha_bar)
+compute_eq(kappa, alpha_bar, mu, sigma, rho, LS_min, beta, epsilon, A_bar, B_bar, C_bar, a0)
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/compute_eq_time_series.m}
+	
+	
+	
+	
+	\subsubsection{bar\_func.m}
+	\begin{lstlisting}[style=Matlab]
+### Input Variables
+
+1. `n`: Number of sectors (scalar).
+2. `kappa`: Calibrated kappa parameter matrix (n x n+1 matrix).
+3. `alpha_bar`: Ideal shares, mean of alpha_data (n x n+1 matrix).
+
+### Output Variables
+
+1. `A_bar`: Auxiliary matrix for the `a_alpha_star` function (n x n x n tensor).
+2. `B_bar`: Auxiliary matrix for the `a_alpha_star` function (n x n matrix).
+3. `C_bar`: Auxiliary matrix for the `a_alpha_star` function (n x 1 vector).
+
+### Auxiliary Code (External Function Calls)
+
+1. `fig_kappas.m`: Generates plots and statistics for kappas.
+2. `results_TFP.m`: Calculates and plots TFP in the data and model.
+3. `results_trends.m`: Calculates and plots sectoral trends.
+4. `results_Sigma_matrix.m`: Statistics on the Sigma matrix.
+5. `fig_TFP.m`: Plots time series of TFP and uncertainty.
+6. `fig_domar.m`: Graphs Domar weights in data and model.
+7. `fig_GR.m`: Comparison across different models (GR and full sample).
+8. `results_counterfactuals.m`: Counterfactual analysis (fixed network, no uncertainty, known shocks).
+9. `results_domar.m`: Calculates and plots Domar weights in the data and model.
+10. `results_correlations.m`: Calculates and plots correlations between sectors.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/bar_func.m}
+	
+	
+	\subsubsection{a\_alpha\_star.m}
+	\begin{lstlisting}[style=Matlab]
+### Input Variables
+
+1. `alpha_star`: Equilibrium input shares (n x n matrix).
+2. `n`: Number of sectors (scalar).
+3. `A_bar`: Auxiliary matrix for the `a_alpha_star` function (n x n x n tensor).
+4. `B_bar`: Auxiliary matrix for the `a_alpha_star` function (n x n matrix).
+5. `C_bar`: Auxiliary matrix for the `a_alpha_star` function (n x 1 vector).
+6. `a0`: Mean of TFP data (n x 1 vector).
+
+### Output Variables
+
+1. `a_star`: Equilibrium TFP term coming from the input choice (n x 1 vector).
+
+### Auxiliary Code (External Function Calls)
+
+1. `fig_kappas.m`: Generates plots and statistics for kappas.
+2. `results_TFP.m`: Calculates and plots TFP in the data and model.
+3. `results_trends.m`: Calculates and plots sectoral trends.
+4. `results_Sigma_matrix.m`: Statistics on the Sigma matrix.
+5. `fig_TFP.m`: Plots time series of TFP and uncertainty.
+6. `fig_domar.m`: Graphs Domar weights in data and model.
+7. `fig_GR.m`: Comparison across different models (GR and full sample).
+8. `results_counterfactuals.m`: Counterfactual analysis (fixed network, no uncertainty, known shocks).
+9. `results_domar.m`: Calculates and plots Domar weights in the data and model.
+10. `results_correlations.m`: Calculates and plots correlations between sectors.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/a_alpha_star.m}
+	
+	
+	
+	\subsubsection{analysis\_fixed\_rho\_calib.m}
+	\begin{lstlisting}[style=Matlab]
+### Input Variables
+
+1. `vec_star`: Optimized parameter vector.
+2. `tfp_data`: Total Factor Productivity data.
+3. `alpha_bar`: Ideal shares.
+4. `alpha_data`: Actual shares data.
+5. `kappa`: Parameter matrix.
+6. `a0`: Mean of TFP data.
+7. `endo_lambda_flag`: Flag for endogenous lambda.
+8. `flag`: Struct containing model flags.
+9. `LS_min`: Minimum labor share allowed.
+10. `beta`: Consumption shares.
+11. `save_fig_flag`: Flag to save figures.
+12. `save_folder`: Folder to save figures.
+13. `T`: Number of time periods.
+14. `rho_arr`: Array of risk aversion parameters.
+15. `rho_init`: Initial risk aversion parameter.
+16. `N_rho`: Number of risk aversion parameters.
+
+### Output Variables
+
+1. `C_base_arr`: Baseline consumption array (T x N_rho).
+2. `EC_base_arr`: Baseline expected consumption array (T x N_rho).
+3. `VC_base_arr`: Baseline consumption variance array (T x N_rho).
+4. `W_base_arr`: Baseline welfare array (T x N_rho).
+5. `C_sig0_arr`: Consumption array with sigma=0 (T x N_rho).
+6. `EC_sig0_arr`: Expected consumption array with sigma=0 (T x N_rho).
+7. `VC_sig0_arr`: Consumption variance array with sigma=0 (T x N_rho).
+8. `W_sig0_arr`: Welfare array with sigma=0 (T x N_rho).
+
+### Auxiliary Code (External Function Calls)
+
+1. `fig_kappas.m`: Generates plots and statistics for kappas.
+2. `results_TFP.m`: Calculates and plots TFP in the data and model.
+3. `results_trends.m`: Calculates and plots sectoral trends.
+4. `results_Sigma_matrix.m`: Statistics on the Sigma matrix.
+5. `fig_TFP.m`: Plots time series of TFP and uncertainty.
+6. `fig_domar.m`: Graphs Domar weights in data and model.
+7. `fig_GR.m`: Comparison across different models (GR and full sample).
+8. `results_counterfactuals.m`: Counterfactual analysis (fixed network, no uncertainty, known shocks).
+9. `results_domar.m`: Calculates and plots Domar weights in the data and model.
+10. `results_correlations.m`: Calculates and plots correlations between sectors.
+11. `estimate_tfp.m`: Estimates TFP, mu, sigma, and epsilon.
+12. `compute_eq_time_series.m`: Computes equilibrium time series.
+13. `compute_eq.m`: Computes equilibrium.
+14. `bar_func.m`: Computes auxiliary matrices A_bar, B_bar, and C_bar.
+15. `a_alpha_star.m`: Computes equilibrium TFP term from input choice.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/analysis_fixed_rho_calib.m}
+	
+	
+	
+	\subsubsection{compute\_eq.m}
+	\begin{lstlisting}[style=Matlab]
+### Input Variables
+
+1. `vec_star`: Optimized parameter vector.
+2. `tfp_data`: Total Factor Productivity data.
+3. `alpha_bar`: Ideal shares.
+4. `alpha_data`: Actual shares data.
+5. `kappa`: Parameter matrix.
+6. `a0`: Mean of TFP data.
+7. `endo_lambda_flag`: Flag for endogenous lambda.
+8. `flag`: Struct containing model flags.
+9. `LS_min`: Minimum labor share allowed.
+10. `beta`: Consumption shares.
+11. `save_fig_flag`: Flag to save figures.
+12. `save_folder`: Folder to save figures.
+13. `T`: Number of time periods.
+14. `rho_arr`: Array of risk aversion parameters.
+15. `rho_init`: Initial risk aversion parameter.
+16. `N_rho`: Number of risk aversion parameters.
+17. `mu`: Drift term of TFP.
+18. `sigma`: Variance term of TFP.
+19. `epsilon`: Shock term of TFP.
+20. `A_bar`: Auxiliary matrix A_bar.
+21. `B_bar`: Auxiliary matrix B_bar.
+22. `C_bar`: Auxiliary matrix C_bar.
+
+### Output Variables
+
+1. `C_base_arr`: Baseline consumption array (T x N_rho).
+2. `EC_base_arr`: Baseline expected consumption array (T x N_rho).
+3. `VC_base_arr`: Baseline consumption variance array (T x N_rho).
+4. `W_base_arr`: Baseline welfare array (T x N_rho).
+5. `C_sig0_arr`: Consumption array with sigma=0 (T x N_rho).
+6. `EC_sig0_arr`: Expected consumption array with sigma=0 (T x N_rho).
+7. `VC_sig0_arr`: Consumption variance array with sigma=0 (T x N_rho).
+8. `W_sig0_arr`: Welfare array with sigma=0 (T x N_rho).
+9. `alpha_star`: Equilibrium input shares.
+10. `domar`: Domar weights.
+11. `C`: Consumption.
+12. `EC`: Expected consumption.
+13. `VC`: Consumption variance.
+14. `TFP`: Total Factor Productivity.
+15. `error_flag`: Error flag for convergence.
+16. `a_alpha_star_temp`: Equilibrium TFP term.
+17. `zeta_tfp`: Adjustment factor for TFP.
+
+### Auxiliary Code (External Function Calls)
+
+1. `fig_kappas.m`: Generates plots and statistics for kappas.
+2. `results_TFP.m`: Calculates and plots TFP in the data and model.
+3. `results_trends.m`: Calculates and plots sectoral trends.
+4. `results_Sigma_matrix.m`: Statistics on the Sigma matrix.
+5. `fig_TFP.m`: Plots time series of TFP and uncertainty.
+6. `fig_domar.m`: Graphs Domar weights in data and model.
+7. `fig_GR.m`: Comparison across different models (GR and full sample).
+8. `results_counterfactuals.m`: Counterfactual analysis (fixed network, no uncertainty, known shocks).
+9. `results_domar.m`: Calculates and plots Domar weights in the data and model.
+10. `results_correlations.m`: Calculates and plots correlations between sectors.
+11. `estimate_tfp.m`: Estimates TFP, mu, sigma, and epsilon.
+12. `compute_eq_time_series.m`: Computes equilibrium time series.
+13. `compute_eq.m`: Computes equilibrium.
+14. `bar_func.m`: Computes auxiliary matrices A_bar, B_bar, and C_bar.
+15. `a_alpha_star.m`: Computes equilibrium TFP term from input choice.
+16. `compute_eq_firm_iteration.m`: Iterates on the firm's problem to compute equilibrium input shares.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/compute_eq.m}
+	
+	
+	
+	
+	\subsubsection{compute\_eq\_firm\_iteration.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+mu: Drift term of TFP.
+sigma: Variance term of TFP.
+n: Number of firms or sectors.
+rho: Risk aversion parameter.
+LS_min: Minimum labor share allowed.
+beta: Consumption shares.
+A_bar: Auxiliary matrix A_bar.
+B_bar: Auxiliary matrix B_bar.
+C_bar: Auxiliary matrix C_bar.
+a0: Mean of TFP data.
+init_alpha: Initial input shares.
+
+Output Variables
+alpha_star: Equilibrium input shares.
+error_flag: Error flag for convergence.
+
+Auxiliary Code (External Function Calls)
+a_alpha_star.m: Computes equilibrium TFP term from input choice.
+solve_firm_problem.m: Solves the firm's problem to compute equilibrium input shares.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/compute_eq_firm_iteration.m}
+	
+	
+	
+	\subsubsection{compute\_eq\_time\_series.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+vec_star: Optimized parameter vector.
+tfp_data: Total Factor Productivity data.
+alpha_bar: Ideal shares.
+alpha_data: Actual shares data.
+kappa: Parameter matrix.
+a0: Mean of TFP data.
+endo_lambda_flag: Flag for endogenous lambda.
+flag: Struct containing model flags.
+LS_min: Minimum labor share allowed.
+beta: Consumption shares.
+save_fig_flag: Flag to save figures.
+save_folder: Folder to save figures.
+T: Number of time periods.
+rho_arr: Array of risk aversion parameters.
+rho_init: Initial risk aversion parameter.
+N_rho: Number of risk aversion parameters.
+mu: Drift term of TFP.
+sigma: Variance term of TFP.
+epsilon: Shock term of TFP.
+A_bar: Auxiliary matrix A_bar.
+B_bar: Auxiliary matrix B_bar.
+C_bar: Auxiliary matrix C_bar.
+
+Output Variables
+C_base_arr: Baseline consumption array (T x N_rho).
+EC_base_arr: Baseline expected consumption array (T x N_rho).
+VC_base_arr: Baseline consumption variance array (T x N_rho).
+W_base_arr: Baseline welfare array (T x N_rho).
+C_sig0_arr: Consumption array with sigma=0 (T x N_rho).
+EC_sig0_arr: Expected consumption array with sigma=0 (T x N_rho).
+VC_sig0_arr: Consumption variance array with sigma=0 (T x N_rho).
+W_sig0_arr: Welfare array with sigma=0 (T x N_rho).
+alpha_star: Equilibrium input shares.
+domar: Domar weights.
+C: Consumption.
+EC: Expected consumption.
+VC: Consumption variance.
+TFP: Total Factor Productivity.
+error_flag: Error flag for convergence.
+a_alpha_star_temp: Equilibrium TFP term.
+zeta_tfp: Adjustment factor for TFP.
+
+Auxiliary Code (External Function Calls)
+fig_kappas.m: Generates plots and statistics for kappas.
+results_TFP.m: Calculates and plots TFP in the data and model.
+results_trends.m: Calculates and plots sectoral trends.
+results_Sigma_matrix.m: Statistics on the Sigma matrix.
+fig_TFP.m: Plots time series of TFP and uncertainty.
+fig_domar.m: Graphs Domar weights in data and model.
+fig_GR.m: Comparison across different models (GR and full sample).
+results_counterfactuals.m: Counterfactual analysis (fixed network, no uncertainty, known shocks).
+results_domar.m: Calculates and plots Domar weights in the data and model.
+results_correlations.m: Calculates and plots correlations between sectors.
+estimate_tfp.m: Estimates TFP, mu, sigma, and epsilon.
+compute_eq_time_series.m: Computes equilibrium time series.
+compute_eq.m: Computes equilibrium.
+bar_func.m: Computes auxiliary matrices A_bar, B_bar, and C_bar.
+a_alpha_star.m: Computes equilibrium TFP term from input choice.
+compute_eq_firm_iteration.m: Iterates on the firm's problem to compute equilibrium input shares.
+solve_firm_problem.m: Solves the firm's optimization problem.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/compute_eq_time_series.m}
+	
+	
+	
+	\subsubsection{compute\_eq\_time\_series\_alt\_eps.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+epsilon: Shock term of TFP (n x T matrix).
+mu_drift: Drift term of TFP (n x 1 vector).
+sigma_t: Time-varying covariance matrix of TFP (n x n x T array).
+kappa: Parameter matrix (n x (n+1) matrix).
+alpha_bar: Ideal shares (n x (n+1) matrix).
+rho: Risk aversion parameter (scalar).
+LS_min: Minimum labor share allowed (scalar).
+beta: Consumption shares (n x 1 vector or n x T matrix).
+a0: Mean of TFP data (n x 1 vector).
+known_shocks_flag: Flag for known shocks (boolean).
+flag: Struct containing model flags (struct).
+
+Output Variables
+alpha_star: Equilibrium input shares (n x n x T array).
+domar_star: Domar weights (n x T matrix).
+C: Consumption (T x 1 vector).
+EC: Expected consumption (T x 1 vector).
+VC: Consumption variance (T x 1 vector).
+TFP: Total Factor Productivity (n x T matrix).
+a_alpha_star_tfp: Equilibrium TFP term (n x T matrix).
+zeta_tfp: Adjustment factor for TFP (n x T matrix).
+error_flag: Error flag for convergence (T x 1 vector).
+
+Auxiliary Code (External Function Calls)
+fig_kappas.m: Generates plots and statistics for kappas.
+results_TFP.m: Calculates and plots TFP in the data and model.
+results_trends.m: Calculates and plots sectoral trends.
+results_Sigma_matrix.m: Statistics on the Sigma matrix.
+fig_TFP.m: Plots time series of TFP and uncertainty.
+fig_domar.m: Graphs Domar weights in data and model.
+fig_GR.m: Comparison across different models (GR and full sample).
+results_counterfactuals.m: Counterfactual analysis (fixed network, no uncertainty, known shocks).
+results_domar.m: Calculates and plots Domar weights in the data and model.
+results_correlations.m: Calculates and plots correlations between sectors.
+estimate_tfp.m: Estimates TFP, mu, sigma, and epsilon.
+compute_eq_time_series.m: Computes equilibrium time series.
+compute_eq.m: Computes equilibrium.
+bar_func.m: Computes auxiliary matrices A_bar, B_bar, and C_bar.
+a_alpha_star.m: Computes equilibrium TFP term from input choice.
+compute_eq_firm_iteration.m: Iterates on the firm's problem to compute equilibrium input shares.
+solve_firm_problem.m: Solves the firm's optimization problem.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/compute_eq_time_series_alt_eps.m}
+	
+	
+	
+	\subsubsection{estimate\_tfp.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+tfp_data: Total Factor Productivity data (n x T matrix).
+alpha_bar: Ideal shares (n x (n+1) matrix).
+alpha_data: Data-implied shares (n x n x T array).
+kappa: Parameter matrix (n x (n+1) matrix).
+a0: Mean of TFP data (n x 1 vector).
+endo_lambda_flag: Flag for endogenous lambda (boolean).
+
+Output Variables
+mu_drift: Drift term of TFP (n x 1 vector).
+sigma_t: Time-varying covariance matrix of TFP (n x n x T array).
+a_tfp: Endogenous part of TFP due to shares adjustment (n x T matrix).
+zeta_tfp: Adjustment factor for TFP (n x T matrix).
+exo_tfp: Exogenous part of TFP as residual (n x T matrix).
+lambda: Weight for time-varying variance (scalar).
+
+Auxiliary Code (External Function Calls)
+bar_func.m: Computes auxiliary matrices A_bar, B_bar, and C_bar.
+a_alpha_star.m: Computes equilibrium TFP term from input choice.
+garch_tfp.m: Estimates GARCH coefficients for TFP data.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/estimate_tfp.m}
+	
+	
+	
+	\subsubsection{garch\_tfp.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+tfp_data: Total Factor Productivity data (n x T matrix).
+alpha_bar: Ideal shares (n x (n+1) matrix).
+alpha_data: Data-implied shares (n x n x T array).
+kappa: Parameter matrix (n x (n+1) matrix).
+a0: Mean of TFP data (n x 1 vector).
+endo_lambda_flag: Flag for endogenous lambda (boolean).
+
+Output Variables
+mu_drift: Drift term of TFP (n x 1 vector).
+sigma_t: Time-varying covariance matrix of TFP (n x n x T array).
+a_tfp: Endogenous part of TFP due to shares adjustment (n x T matrix).
+zeta_tfp: Adjustment factor for TFP (n x T matrix).
+exo_tfp: Exogenous part of TFP as residual (n x T matrix).
+lambda: Weight for time-varying variance (scalar).
+
+Auxiliary Code (External Function Calls)
+bar_func.m: Computes auxiliary matrices A_bar, B_bar, and C_bar.
+a_alpha_star.m: Computes equilibrium TFP term from input choice.
+garch_tfp.m: Estimates GARCH coefficients for TFP data.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/garch_tfp.m}
+	
+	
+	
+	\subsubsection{hessian\_func.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+tfp_data: Total Factor Productivity data (n x T matrix).
+alpha_bar: Ideal shares (n x (n+1) matrix).
+alpha_data: Data-implied shares (n x n x T array).
+kappa: Parameter matrix (n x (n+1) matrix).
+a0: Mean of TFP data (n x 1 vector).
+endo_lambda_flag: Flag for endogenous lambda (boolean).
+
+Output Variables
+mu_drift: Drift term of TFP (n x 1 vector).
+sigma_t: Time-varying covariance matrix of TFP (n x n x T array).
+a_tfp: Endogenous part of TFP due to shares adjustment (n x T matrix).
+zeta_tfp: Adjustment factor for TFP (n x T matrix).
+exo_tfp: Exogenous part of TFP as residual (n x T matrix).
+lambda: Weight for time-varying variance (scalar).
+
+Auxiliary Code (External Function Calls)
+bar_func.m: Computes auxiliary matrices A_bar, B_bar, and C_bar.
+a_alpha_star.m: Computes equilibrium TFP term from input choice.
+garch_tfp.m: Estimates GARCH coefficients for TFP data.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/hessian_func.m}
+	
+	
+	
+	\subsubsection{load\_data.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+alpha_data: Data-implied shares from von Lehm and Winberry (2021) (n x n x T array).
+tfp_data: Logarithm of TFP data from von Lehm and Winberry (2021) (n x T matrix).
+cons: Consumption data from von Lehm and Winberry (2021) (vector or matrix depending on the structure in Cons47bea).
+price_va: Price value-added data from von Lehm and Winberry (2021) (vector or matrix depending on the structure in PriceVA47bea).
+
+ Variables
+No explicit output variables are specified here, as the code snippet mainly involves data loading.
+
+Auxiliary Code (External Function Calls)
+No external functions are called in this snippet.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/load_data.m}
+	
+	
+	
+	\subsubsection{obj\_calib\_kappa\_est.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+x: Vector of optimization parameters including elements of kappa_i, kappa_j, and rho.
+alpha_bar: Baseline input shares (n x n matrix).
+alpha_data: Actual input shares from data (n x n x T array).
+tfp_data: Logarithm of TFP data (n x T matrix).
+LS_min: Minimum labor supply (scalar).
+beta: Vector of discount factors (n x 1 or n x T).
+endo_lambda_flag: Flag indicating whether to use endogenous lambda (scalar).
+known_shocks_flag: Flag indicating whether to use known shocks (scalar).
+flag: Structure with various configuration flags (struct).
+cons_gr_data: Consumption growth data (vector).
+
+Output Variables
+distance: Scalar measure of the distance between the model and data.
+
+Auxiliary Code (External Function Calls)
+estimate_tfp.m: Function to estimate TFP parameters.
+compute_eq_time_series.m: Function to compute equilibrium time series.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/obj_calib_kappa_est.m}
+	
+	
+	
+	
+	\subsubsection{solve\_firm\_problem.m}
+	\begin{lstlisting}[style=Matlab]
+Input Variables
+mu: Drift term for the firm's problem (n x 1 vector).
+sigma: Covariance matrix (n x n matrix).
+n: Number of firms (scalar).
+rho: Risk aversion parameter (scalar).
+LS_min: Minimum labor supply (scalar).
+beta: Discount factors (n x 1 or n x T).
+i_firm: Index of the current firm (scalar).
+alpha_star: Equilibrium input shares (n x n matrix).
+a_star: Equilibrium TFP term (n x 1 vector).
+A_bar: Matrix A_bar for the firm's problem (n x n matrix).
+B_bar: Vector B_bar for the firm's problem (n x 1 vector).
+options: Options for the quadprog function (structure).
+
+Output Variables
+alpha_chosen: Chosen input shares for the firm (n x 1 vector).
+exitflag: Exit flag from the quadprog function (scalar).
+
+Auxiliary Code (External Function Calls)
+quadprog: MATLAB function for quadratic programming.
+	\end{lstlisting}
+	\lstinputlisting[style=Matlab]{\codepath/simulations/main_model/solve_firm_problem.m}
 	
 	
 \end{document}
